@@ -1,0 +1,5 @@
+#frequenza	#errore
+990			10
+9.8e3		1e2
+1e5			1e3
+9.9e5		1e3

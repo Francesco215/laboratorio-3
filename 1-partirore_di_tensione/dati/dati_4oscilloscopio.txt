@@ -1,0 +1,5 @@
+#frequenze rilevate automaticamende dall'oscilloscopio
+997
+9.9e3
+99.9e3
+1.004e6
