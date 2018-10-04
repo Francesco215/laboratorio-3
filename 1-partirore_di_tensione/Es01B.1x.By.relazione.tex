@@ -1,0 +1,176 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\newcommand{\rem}[1]{[\emph{#1}]}
+\newcommand{\exn}{\phantom{xxx}}
+
+\author{Gruppo 1x.By \\ Mario Rossi, Anna Bianchi \rem{non dimenticate i nomi}}
+\title{Es01B: Misure di tensione, corrente, tempi, frequenza.}
+\begin{document}
+\date{23 ottembre 2150}
+\maketitle
+
+\setcounter{section}{1}
+\section{Misure di tensione e corrente}
+
+\paragraph{2.b Partitore con resistenze da circa 1~k}
+Valori misurati $R_1$ e $R_2$ e valore atteso di $A_\mathrm{exp}$:
+\[
+R_1 = ( \exn \pm \exn ) \,\mathrm{k}\Omega, \quad
+R_2 = ( \exn \pm \exn ) \,\mathrm{k}\Omega, \quad
+A_\mathrm{exp} = ( \exn \pm \exn ) 
+\]
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
+\hline 
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\hline 
+\end{tabular} 
+\caption{(2.b) Partitore di tensione con resistenze da circa 1k. Tutte le tensioni in V.\label{t:par1}}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+%\includegraphics[scale=0.4]{part1.pdf}
+\framebox(200,200){(2.b) Inserire il grafico $V_{out}$ vs. $V_{in}$ }
+
+\caption{(2.b) Grafico $V_{out}$ vs. $V_{in}$ con resistenze di circa 1k \label{f:par1}}
+\end{figure}
+
+\framebox(400,30){Inserire commento sul confronto tra valori misurati ed attesi.}
+
+
+\paragraph{2.c Partitore con resistenze da circa 4M}
+Valori misurati $R_1$ e $R_2$ e valore atteso di $A_\mathrm{exp}$:
+\[
+R_1 = ( \exn \pm \exn ) \,\mathrm{k}\Omega, \quad
+R_2 = ( \exn \pm \exn ) \,\mathrm{k}\Omega, \quad
+A_\mathrm{exp} = ( \exn \pm \exn ) 
+\]
+
+
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
+\hline 
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\hline 
+\end{tabular} 
+\caption{(2.c) Partitore di tensione con resistenze da circa 4M. Tutte le tensioni in V.\label{t:par2}}
+\end{table}
+
+
+\begin{figure}[h]
+\centering
+%\includegraphics[scale=0.4]{part1.pdf}
+\framebox(200,200){ (2.c) Inserire il grafico $V_{out}$ vs. $V_{in}$ }
+
+\caption{(2.c) Grafico $V_{out}$ vs. $V_{in}$ con resistenze da circa 4M \label{f:par2}}
+\end{figure}
+
+\framebox(400,30){Inserire commento sul confronto tra valori misurati ed attesi.}
+
+
+
+\paragraph{2.d Resistenza di ingresso del tester}
+Usando il modello mostrato nella scheda si ottiene
+\[ \frac{R_1}{R_T} =  \frac{V_{IN}}{V_{OUT}} - (1 +  \frac{R_1}{R_2} )
+\]
+
+Con i dati del punto 2.b si ottiene
+\[ R_1/R_T = \exn  \pm  \exn   \rightarrow  R_1 > \exn k\Omega
+\]
+
+
+Con i dati del punto 2.c si ottiene
+\[ R_1/R_T = \exn  \pm  \exn   \rightarrow  R_1 = (\exn \pm  \exn)  M\Omega
+\]
+
+
+\framebox(400,30){Inserire commento sulla sensibilit\`a sperimentale della misura.} 
+
+
+\section{Uso dell'oscilloscopio}
+
+\paragraph{3.b Misure di tensione} 
+Vengono ripetute le misure del punto 2.c  ma con pochi punti e senza grafico
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
+\hline 
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\hline 
+\end{tabular} 
+\caption{(3.b) Partitore di tensione con resistenze da circa 4M, misura con oscilloscopio. Tutte le tensioni in V.}
+\end{table}
+
+
+\paragraph{3.d Impedenza di ingresso dell'oscilloscopio} Si ripete l'analisi del punto 2.d
+
+\[ R_1/R_{IN} = \exn  \pm  \exn   \rightarrow  R_{IN} = (\exn \pm  \exn)  M\Omega
+\]
+
+
+\section{Misure di frequenza e tempo}
+
+\paragraph{4.b Misure di frequenza}
+Misure con onda sinusoidale
+\begin{table}[h]
+\centering
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Periodo T (s)& $\sigma$ T (s)  &Frequenza f (Hz) & $\sigma$ f (Hz) & Misura oscilloscopio (Hz) & Differenza (Hz)\\
+\hline 
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\exn & \exn & \exn & \exn & \exn &\exn \\
+\hline 
+\end{tabular} 
+\caption{(4.b) Misura di frequenza di onde sinusoidali  e confronto con misurazione interna dell'oscilloscopio }
+\end{table}
+
+
+
+\section{Trigger dell'oscilloscopio}
+\paragraph{5.b Segnale pulse}
+Misure con segnale pulse del generatore di onde
+\begin{figure}[h]
+\centering
+%\includegraphics[scale=0.4]{part1.pdf}
+\framebox(400,200){ (5.b) Inserire lo screenshot dell'oscilloscopio del segnale pulse e dell'onda principale  }
+\caption{(5.b) Relazione temporale tra il segnale pulse e l'onda principale}
+\end{figure}
+
+
+\section{Conclusioni e commenti finali}
+\framebox(400,30){Inserire eventuali commenti e conclusioni finali}
+
+\section*{Dichiarazione}
+I firmatari di questa relazione dichiarano che il contenuto della relazione \`e originale, con misure effettuate dai membri del gruppo, e che tutti i firmatari hanno contribuito alla elaborazione della relazione stessa.
+
+\end{document}
