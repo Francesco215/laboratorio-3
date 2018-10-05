@@ -41,11 +41,12 @@ def plot_data(dati, popt) :
 #res_b=[974,1182]
 #res_c=[3.8e6,4.81e6]
     
-dati_2b = np.genfromtxt('dati\dati_2b.txt', skip_header=2, unpack=True)
-dati_2c = np.genfromtxt('dati\dati_2c.txt', skip_header=2, unpack=True)
-dati_3b = np.genfromtxt('dati\dati_3b.txt', skip_header=2, unpack=True)
-dati_3c = np.genfromtxt('dati\dati_3c.txt', skip_header=2, unpack=True)
+dati_2b = np.genfromtxt('dati/dati_2b.txt', skip_header=2, unpack=True)
+dati_2c = np.genfromtxt('dati/dati_2c.txt', skip_header=2, unpack=True)
+dati_3b = np.genfromtxt('dati/dati_3b.txt', skip_header=2, unpack=True)
+dati_3c = np.genfromtxt('dati/dati_3c.txt', skip_header=2, unpack=True)
 
+print(vf(dati_2c[0]))
 
 popt, pcov = fit_data(dati_2b)
 plot_data(dati_2b, popt)
