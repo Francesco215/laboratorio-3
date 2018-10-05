@@ -45,9 +45,11 @@ dati_2b = np.genfromtxt('dati/dati_2b.txt', skip_header=2, unpack=True)
 dati_2c = np.genfromtxt('dati/dati_2c.txt', skip_header=2, unpack=True)
 dati_3b = np.genfromtxt('dati/dati_3b.txt', skip_header=2, unpack=True)
 dati_3c = np.genfromtxt('dati/dati_3c.txt', skip_header=2, unpack=True)
+dati_4cursore = np.genfromtxt('dati/dati_4cursore.txt', skip_header=1, unpack=True)
+dati_4oscilloscopio = np.genfromtxt('dati/dati_4oscilloscopio.txt', skip_header=1, unpack=True)
 
-print(vf(dati_2c[0]))
-
+print(errore_res_digitale(971),errore_res_digitale(1182),errore_res_digitale(3.8e6),errore_res_digitale(4.81e6))
+"""
 popt, pcov = fit_data(dati_2b)
 plot_data(dati_2b, popt)
 popt_err = np.sqrt(np.diag(pcov))
@@ -58,3 +60,4 @@ dati_4cursore=[[990,9.8e3,1e5,9.9e5],
 dati_4oscilloscopio=[997,9.9e3,99.9e3,1.004e6]
 
 pl.show()
+"""
