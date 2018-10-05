@@ -47,10 +47,10 @@ dati_3b = np.genfromtxt('dati\dati_3b.txt', skip_header=2, unpack=True)
 dati_3c = np.genfromtxt('dati\dati_3c.txt', skip_header=2, unpack=True)
 
 
-popt, pcov = fit_data(dati_3b)
-plot_data(dati_3b, popt)
+popt, pcov = fit_data(dati_2b)
+plot_data(dati_2b, popt)
 popt_err = np.sqrt(np.diag(pcov))
-print("a = %.4f +- %.4f \n b = %.5f +- %.5f" % (popt[0], popt[1], popt_err[0], popt_err[1]))
+print("a = %.4f +- %.4f \nb = %.5f +- %.5f" % (popt[0], popt[1], popt_err[0], popt_err[1]))
 
 dati_4cursore=[[990,9.8e3,1e5,9.9e5],
         [10,1e2,1e3,1e3]]#questi sono gli errori
