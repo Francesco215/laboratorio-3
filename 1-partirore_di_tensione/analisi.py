@@ -1,5 +1,5 @@
 import numpy as np
-import pylab as pl
+import matplotlib.pyplot as pl
 import scipy.optimize
 
 def errore_volt_digitale(V):
@@ -34,8 +34,14 @@ def plot_data(dati, popt) :
     Vin, Vout = dati[0], dati[1]
     dVin, dVout = vf(Vin), vf(Vout)
     temp = np.linspace(0, 10, 2000)
-    pl.errorbar(Vin, Vout, dVin, dVout, fmt='o')
-    pl.plot(temp, funzione_fit(temp, *popt))
+    pl.figure()
+    pl.xlabel("Vin [V]")
+    pl.ylabel("Vout [V]")
+    pl.errorbar(Vin, Vout, dVin, dVout, fmt='.', label="Dati")
+    pl.plot(temp, funzione_fit(temp, *popt), linewidth=1, label="fit")
+    pl.legend()
+    pl.savefig("plot_2c.png")
+    pl.show()
 
     
 #res_b=[974,1182]
@@ -49,9 +55,9 @@ dati_4cursore = np.genfromtxt('dati/dati_4cursore.txt', skip_header=1, unpack=Tr
 dati_4oscilloscopio = np.genfromtxt('dati/dati_4oscilloscopio.txt', skip_header=1, unpack=True)
 
 print(errore_res_digitale(971),errore_res_digitale(1182),errore_res_digitale(3.8e6),errore_res_digitale(4.81e6))
-"""
-popt, pcov = fit_data(dati_2b)
-plot_data(dati_2b, popt)
+
+popt, pcov = fit_data(dati_2c)
+plot_data(dati_2c, popt)
 popt_err = np.sqrt(np.diag(pcov))
 print("a = %.4f +- %.4f \nb = %.5f +- %.5f" % (popt[0], popt[1], popt_err[0], popt_err[1]))
 
@@ -60,4 +66,4 @@ dati_4cursore=[[990,9.8e3,1e5,9.9e5],
 dati_4oscilloscopio=[997,9.9e3,99.9e3,1.004e6]
 
 pl.show()
-"""
+
