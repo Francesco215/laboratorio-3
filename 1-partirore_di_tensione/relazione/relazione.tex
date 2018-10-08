@@ -56,7 +56,7 @@ VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
 \caption{(2.b) Grafico $V_{out}$ vs. $V_{in}$ con resistenze di circa 1k \label{f:par1}}
 \end{figure}
 
-Risolvendo il circuito considerando un voltmetro ideale ci aspettiamo $V_{out}/V_{in} = R_2/(R_1+R_2)$ quindi facendo il grafico di $V_{out}$ vs $V_{in}$ ci aspettiamo una retta passante per l'origine con coefficiente angolare $R_2/(R_1+R_2) = 0.451 \pm 0.006$. Eseguendo il fit con la funzione curve-fit di scipy e lasciando absolute-sigma=False in quando gli errori non sono statistici otteniamo un coefficiente angolare $a=0.4514\pm0.0004$ e un intercetta $b=0.0004\pm0.0008$, entrambi compatibili con le aspettative. 
+Risolvendo il circuito considerando un voltmetro ideale si trova $V_{out}/V_{in} = R_2/(R_1+R_2)$ quindi facendo il grafico di $V_{out}$ vs $V_{in}$ ci aspettiamo una retta passante per l'origine con coefficiente angolare $R_2/(R_1+R_2) = 0.451 \pm 0.006$. Eseguendo il fit con la funzione curve-fit di scipy e lasciando absolute-sigma=False, in quando gli errori non sono statistici, otteniamo un coefficiente angolare $a=0.4514\pm0.0004$ e un intercetta $b=(0.4\pm0.8)\times10^{-3}$, entrambi compatibili con le aspettative. 
 
 
 \paragraph{2.c Partitore con resistenze da circa 4M}
@@ -97,7 +97,7 @@ VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
 \caption{(2.c) Grafico $V_{out}$ vs. $V_{in}$ con resistenze da circa 4M \label{f:par2}}
 \end{figure}
 
-Anche in questo caso, considerando un voltmetro ideale, ci aspettiamo $V_{out}/V_{in} = R_2/(R_1+R_2)$, facendo il grafico di $V_{out}$ vs $V_{in}$ ci aspettiamo una retta passante per l'origine con coefficiente angolare $R_2/(R_1+R_2) = 0.557 \pm 0.007$. Abbiamo eseguito il fit con la funzione curve-fit di scipy e lasciando absolute-sigma=False in quando gli errori non sono statistici ottenendo un coefficiente angolare $a=0.4605\pm0.0003$ e un intercetta $b=0.0003\pm0.0005$. Nonostante l'intercetta sia compatibile con le aspettative il coefficiente angolare è molte barre di errore all'infuori del valore misurato. Ciò potrebbe essere dovuto al fatto che il nostro voltmetro non sia ideale e di conseguenza ha resistenza interna molto grande ma finita.
+Anche in questo caso, considerando un voltmetro ideale, ci aspettiamo $V_{out}/V_{in} = R_2/(R_1+R_2)$, facendo il grafico di $V_{out}$ vs $V_{in}$ ci aspettiamo una retta passante per l'origine con coefficiente angolare $R_2/(R_1+R_2) = 0.557 \pm 0.007$. Eseguendo il fit con la funzione curve-fit di scipy e lasciando absolute-sigma=False in quando gli errori non sono statistici si trova un coefficiente angolare $a=0.4605\pm0.0003$ e un intercetta $b=(0.3\pm0.5)\times10^{-3}$. Nonostante l'intercetta sia compatibile con le aspettative il coefficiente angolare è molte barre di errore all'infuori del valore misurato, ciò potrebbe essere dovuto al fatto che il nostro voltmetro non sia ideale e di conseguenza ha resistenza interna molto grande ma finita.
 
 
 \paragraph{2.d Resistenza di ingresso del tester}
@@ -114,7 +114,7 @@ Con i dati del punto 2.c si ottiene
 \[ R_1/R_T = 0.38  \pm  0.01   \rightarrow  R_T = ( 9.9\pm  0.3)  M\Omega
 \]
 
-Usando resistenze da circa $1 k\Omega$ il rapporto $R_1/R_T$ risulta compatibile con 0, tuttavia, sappiamo che $R_1/R_T$ è un numero strettamente maggiore di 0, e minore di 0.01, di conseguenza si può porre un limite inferiore alla resistenza del tester, $R_T>100 k\Omega$. Aumentando i valori delle resistenze nell'ordine dei $4M\Omega$ si ottiene $R_1/R_T = 0.38  \pm  0.01$, non più compatibile con 0, questo ci permette di stimare $c$  con un errore relativo del $3\%$
+Usando resistenze da circa $1 k\Omega$ il rapporto $R_1/R_T$ risulta compatibile con 0, tuttavia, sappiamo che $R_1/R_T$ è un numero strettamente maggiore di 0 e minore di 0.01, di conseguenza si può porre un limite inferiore alla resistenza del tester: $R_T>100 k\Omega$. Aumentando i valori delle resistenze nell'ordine dei $4M\Omega$ si ottiene $R_1/R_T = 0.38  \pm  0.01$, non più compatibile con 0, questo ci permette di stimare $R_T$ con un errore relativo del $3\%$
 
 
 \section{Uso dell'oscilloscopio}
@@ -153,10 +153,10 @@ Misure con onda sinusoidale
 \hline 
 Periodo T (s)& $\sigma$ T (s)  &Frequenza f (Hz) & $\sigma$ f (Hz) & Misura oscilloscopio (Hz) & Differenza (Hz)\\
 \hline 
-1,01 \times 10^{-3} & 0,01 \times 10^{-3} & 997 & 10 & 997 &7 \\
+1,01 \times 10^{-3} & 0,01 \times 10^{-3} & 990 & 10 & 997 &7 \\
 1,02 \times 10^{-4} & 0,01 \times 10^{-4}& 9,8 \times 10^3 & 0,1 \times 10^3 & 9,9\times10^3 &10^2 \\
-1,00 \times 10^{-5} &0,01 \times 10^{-5}& 1,0 \times 10^5 & 0,01 \times 10^5  & 9,99\times10^3 &10^2\\
-1,01 \times 10^{-6} &0,01 \times 10^{-6}& 9,90 \times 10^5 & 0,01 \times 10^5 & 1,00\times 10^6 &1,4\times10^4 \\
+1,00 \times 10^{-5} &0,01 \times 10^{-5}& 1,0 \times 10^5 & 0,01 \times 10^5  & 9,99\times10^4 &10^2\\
+1,01 \times 10^{-6} &0,01 \times 10^{-6}& 9,90 \times 10^5 & 0,1 \times 10^5 & 1,00\times 10^6 &10^5 \\
 \hline 
 \end{tabular} 
 \caption{(4.b) Misura di frequenza di onde sinusoidali  e confronto con misurazione interna dell'oscilloscopio }
@@ -175,7 +175,8 @@ Misure con segnale pulse del generatore di onde
 
 
 \section{Conclusioni e commenti finali}
-Nel caso di resistenze da 1k il valore del coefficiente angolare misurato è in accordo con quello atteso, mentre per resistenze più elevate questo non è valido. Tuttavia questa discrepanza può essere giustificata considerando la resistenza interna del voltmetro. Inoltre, sfruttando la differenza tra valore misurato e atteso siamo riusciti a stimare la resistenza interna del multimetro digitale per misure di ddp, che risulta $R_T = ( 9.9\pm  0.3)  M\Omega$. Inoltre, con lo stesso metodo, abbiamo misurato anche la resistenza interna dell'oscilloscopio che risulta $R_{IN} = (0.98 \pm  0.01)  M\Omega$ 
+Nel caso di resistenze da 1k il valore del coefficiente angolare misurato è in accordo con quello atteso, mentre per resistenze più elevate questo non è valido. Tuttavia questa discrepanza può essere giustificata considerando la resistenza interna del voltmetro. Inoltre, sfruttando la differenza tra valore misurato e atteso siamo riusciti a stimare la resistenza interna del multimetro digitale per misure di ddp, che risulta $R_T = ( 9.9\pm  0.3)  M\Omega$. Inoltre, con lo stesso metodo, abbiamo misurato anche la resistenza interna dell'oscilloscopio che risulta $R_{IN} = (0.98 \pm  0.01)  M\Omega$. \\\\
+Nelle misure della frequenza con  l'oscilloscopio, confrontando il valore della frequenza per segnali sinusoidali letti dall'oscilloscopio e la nostra stima (calcolata misurando il periodo dell'onda e facendo l'inverso) notiamo che i valori sono compatibili, entro una barra di errore, per tutte le frequenze in esame. Tuttavia, il fatto che la misura di frequenza che esegue l'oscilloscopio non ha errore e non sappiamo bene ne come calcolarlo ne come funziona l'algoritmo che calcola la frequenza, non possiamo usare questo metodo per fare misure. Inoltre, pur funzionando bene per segnali sinusoidali, non possiamo essere sicuri che calcoli adeguatamente la frequenza per altri tipi di segnali.
 
 \section*{Dichiarazione}
 I firmatari di questa relazione dichiarano che il contenuto della relazione \`e originale, con misure effettuate dai membri del gruppo, e che tutti i firmatari hanno contribuito alla elaborazione della relazione stessa.
