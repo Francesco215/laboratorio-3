@@ -43,7 +43,9 @@ def plot_data(dati, popt) :
     pl.savefig("plot_2c.png")
     pl.show()
 
-    
+def errore_rapporto(x,dx,y,dy):
+    return(y**(-2))*np.sqrt(x**2*dy**2+y**2*dx**2)
+
 #res_b=[974,1182]
 #res_c=[3.8e6,4.81e6]
     
@@ -54,9 +56,23 @@ dati_3c = np.genfromtxt('dati/dati_3c.txt', skip_header=2, unpack=True)
 dati_4cursore = np.genfromtxt('dati/dati_4cursore.txt', skip_header=1, unpack=True)
 dati_4oscilloscopio = np.genfromtxt('dati/dati_4oscilloscopio.txt', skip_header=1, unpack=True)
 
-popt, pcov = fit_data(dati_2c)
+popt, pcov = fit_data(dati_3c)
 popt_err = np.sqrt(np.diag(pcov))
 print("a = %.4f +- %.4f \nb = %.5f +- %.5f" % (popt[0], popt[1], popt_err[0], popt_err[1]))
+
+R2=4.81e6
+dR2=errore_res_digitale(R2)
+R1=3.80e6
+dR1=errore_res_digitale(R1)
+a=popt[0]-1-R1/R2
+da=errore_rapporto(R1,dR1,R2,dR2)
+print(a,da)
+print(R1/a,errore_rapporto(R1,dR1,a,da))
+
+Vinn,Voutt=dati_3c
+print(Vinn,Vinn*0.04,Voutt,Voutt*0.04)
+print(Voutt/Vinn,errore_rapporto(Voutt,Voutt*0.04,Vinn,Vinn*0.04))
+
 #plot_data(dati_2b, popt)
 
 dati_4cursore=[[990,9.8e3,1e5,9.9e5],
