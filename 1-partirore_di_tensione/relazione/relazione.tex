@@ -21,8 +21,8 @@
 \paragraph{2.b Partitore con resistenze da circa 1~k}
 Valori misurati $R_1$ e $R_2$ e valore atteso di $A_\mathrm{exp}$:
 \[
-R_1 = (1182 \pm 9) \,\mathrm{k}\Omega, \quad
-R_2 = (971 \pm 7) \,\mathrm{k}\Omega, \quad
+R_1 = (1182 \pm 9) \,\Omega, \quad
+R_2 = (971 \pm 7) \,\Omega, \quad
 A_\mathrm{exp} = ( 0.452 \pm 0.004 ) 
 \]
 
@@ -56,7 +56,7 @@ VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
 \caption{(2.b) Grafico $V_{out}$ vs. $V_{in}$ con resistenze di circa 1k \label{f:par1}}
 \end{figure}
 
-\framebox(400,30){Inserire commento sul confronto tra valori misurati ed attesi.}
+Risolvendo il circuito considerando un voltmetro ideale ci aspettiamo $V_{out}/V_{in} = R_2/(R_1+R_2)$ quindi facendo il grafico di $V_{out}$ vs $V_{in}$ ci aspettiamo una retta passante per l'origine con coefficiente angolare $R_2/(R_1+R_2) = 0.451 \pm 0.006$. Eseguendo il fit con la funzione curve-fit di scipy e lasciando absolute-sigma=False in quando gli errori non sono statistici otteniamo un coefficiente angolare $a=0.4514\pm0.0004$ e un intercetta $b=0.0004\pm0.0008$, entrambi compatibili con le aspettative. 
 
 
 \paragraph{2.c Partitore con resistenze da circa 4M}
@@ -97,8 +97,7 @@ VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
 \caption{(2.c) Grafico $V_{out}$ vs. $V_{in}$ con resistenze da circa 4M \label{f:par2}}
 \end{figure}
 
-\framebox(400,30){Inserire commento sul confronto tra valori misurati ed attesi.}
-
+Anche in questo caso, considerando un voltmetro ideale, ci aspettiamo $V_{out}/V_{in} = R_2/(R_1+R_2)$, facendo il grafico di $V_{out}$ vs $V_{in}$ ci aspettiamo una retta passante per l'origine con coefficiente angolare $R_2/(R_1+R_2) = 0.557 \pm 0.007$. Abbiamo eseguito il fit con la funzione curve-fit di scipy e lasciando absolute-sigma=False in quando gli errori non sono statistici ottenendo un coefficiente angolare $a=0.4605\pm0.0003$ e un intercetta $b=0.0003\pm0.0005$. Nonostante l'intercetta sia compatibile con le aspettative il coefficiente angolare è molte barre di errore all'infuori del valore misurato. Ciò potrebbe essere dovuto al fatto che il nostro voltmetro non sia ideale e di conseguenza ha resistenza interna molto grande ma finita.
 
 
 \paragraph{2.d Resistenza di ingresso del tester}
@@ -107,16 +106,15 @@ Usando il modello mostrato nella scheda si ottiene
 \]
 
 Con i dati del punto 2.b si ottiene
-\[ R_1/R_T = \exn  \pm  \exn   \rightarrow  R_1 > \exn k\Omega
+\[ R_1/R_T = 0.00  \pm  0.01   \rightarrow  R_T > 100 k\Omega
 \]
 
 
 Con i dati del punto 2.c si ottiene
-\[ R_1/R_T = \exn  \pm  \exn   \rightarrow  R_1 = (\exn \pm  \exn)  M\Omega
+\[ R_1/R_T = 0.38  \pm  0.01   \rightarrow  R_T = ( 9.9\pm  0.3)  M\Omega
 \]
 
-
-\framebox(400,30){Inserire commento sulla sensibilit\`a sperimentale della misura.} 
+Usando resistenze da circa $1 k\Omega$ il rapporto $R_1/R_T$ risulta compatibile con 0, tuttavia, sappiamo che $R_1/R_T$ è un numero strettamente maggiore di 0, e minore di 0.01, di conseguenza si può porre un limite inferiore alla resistenza del tester, $R_T>100 k\Omega$. Aumentando i valori delle resistenze nell'ordine dei $4M\Omega$ si ottiene $R_1/R_T = 0.38  \pm  0.01$, non più compatibile con 0, questo ci permette di stimare $R_T=( 9.9\pm  0.3)  M\Omega$  con un errore relativo del $3\%$
 
 
 \section{Uso dell'oscilloscopio}
@@ -141,7 +139,7 @@ VIN& $\sigma$ VIN  &VOUT	 & $\sigma$ VOUT& VOUT/VIN & $\sigma$ VOUT/VIN \\
 
 \paragraph{3.d Impedenza di ingresso dell'oscilloscopio} Si ripete l'analisi del punto 2.d
 
-\[ R_1/R_{IN} = \exn  \pm  \exn   \rightarrow  R_{IN} = (\exn \pm  \exn)  M\Omega
+\[ R_1/R_{IN} = 0.44 \pm  0.02   \rightarrow  R_{IN} = (\exn \pm  \exn)  M\Omega
 \]
 
 
@@ -177,6 +175,7 @@ Misure con segnale pulse del generatore di onde
 
 
 \section{Conclusioni e commenti finali}
+Nel caso di resistenze da 1k il valore del coefficiente angolare misurato è in accordo con quello atteso, mentre per resistenze più elevate questo non è valido. Tuttavia questa discrepanza può essere giustificata considerando la resistenza interna del voltmetro, e permette di stimarne la resistenza interna. 
 \framebox(400,30){Inserire eventuali commenti e conclusioni finali}
 
 \section*{Dichiarazione}
