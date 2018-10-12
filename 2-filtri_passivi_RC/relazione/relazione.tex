@@ -1,0 +1,26 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\author{Gruppo 1G.BT \\ Lorenzo Cavuoti, Francesco Sacco}
+\title{Es02B: Circuito RC - Filtri passivi}
+\begin{document}
+\maketitle
+
+\section{Filtro passa basso}
+	\subsection{}
+	Usando il multimetro digitale abbiamo misurato il valore di $R1=3.29\pm 0.03$
+	e il valore di $C1=9.9\pm 0.4$, la frequenza di taglio teorica risulta quindi
+	$F_{T,att}=4.9\pm 0.2$ con errore dominato dall'incertezza sulla misura della
+	capacità del condensatore. Sempre dalla teoria sappiamo che il guadagno è
+	dato da
+	\begin{equation}
+	    A_f = \frac{1}{\sqrt{1+(f/f_T)^2}}
+	\end{equation}
+	Per $f\approx0$ $A_f\approx1$, ovvero a bassa frequenza il filtro non attenua 	il segnale, per f=2kHz $A_f=0.93\pm0.02$ e $f=20kHz$ $A_f=0.238\pm0.006$
+\end{document}
