@@ -13,14 +13,36 @@
 \maketitle
 
 \section{Filtro passa basso}
-	\subsection{}
-	Usando il multimetro digitale abbiamo misurato il valore di $R1=3.29\pm 0.03$
-	e il valore di $C1=9.9\pm 0.4$, la frequenza di taglio teorica risulta quindi
-	$F_{T,att}=4.9\pm 0.2$ con errore dominato dall'incertezza sulla misura della
-	capacità del condensatore. Sempre dalla teoria sappiamo che il guadagno è
-	dato da
-	\begin{equation}
-	    A_f = \frac{1}{\sqrt{1+(f/f_T)^2}}
-	\end{equation}
-	Per $f\approx0$ $A_f\approx1$, ovvero a bassa frequenza il filtro non attenua 	il segnale, per f=2kHz $A_f=0.93\pm0.02$ e $f=20kHz$ $A_f=0.238\pm0.006$
+\subsection{}
+Usando il multimetro digitale abbiamo misurato il valore di $R1=3.29\pm 0.03$
+e il valore di $C1=9.9\pm 0.4$, la frequenza di taglio teorica risulta quindi
+$F_{T,teorica}=4.9\pm 0.2$ con errore dominato dall'incertezza sulla misura della
+capacità del condensatore. Sempre dalla teoria sappiamo che il guadagno è dato da
+\begin{equation}
+	A_f = \frac{1}{\sqrt{1+(f/f_T)^2}}
+\end{equation}
+Per $f\approx0$ $A_f\approx1$, ovvero a bassa frequenza il filtro non attenua 	il segnale, per $f=2kHz \quad A_V_{teorica}=0.93\pm0.02$ invece per $f=20kHz \quad A_{Vteorica}=0.238\pm0.006$
+\subsection{}
+Dalla misura con l'oscilloscopio risulta $A_V(2kHz)_{mis} = 0.92\pm0.05$ e $A_V(20kHz)_{mis} = 0.241\pm0.013$ entrambi compatibili entro una barra di errore dalla misura teorica.\\La frequenza di taglio misurata vedendo la frequenza a -3dB risulta $f_T=4.83\pm0.05kHz$ con errore dominato dall'incertezza sulla scelta della frequenza, anche in questo caso il risultato è compatibile con il valore teorico atteso.
+\begin{table}[h]
+	\centering
+	\begin{tabular}{ccccccc}
+		\hline
+f[Hz]&$V_{in}[V]$&$\sigma[V]$&$V_{out}[V]$&$\sigma[V]$&$A_V$&$\sigma$&
+		\hline
+		\hline
+56& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
+100& 12.5& 0.5& 12.5& 0.5& 1.0000& 0.06&
+194& 12.5& 0.5& 12.5& 0.5& 1.0000& 0.06&
+467& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
+2.08 k& 12.4& 0.5& 11.7& 0.5& 0.94& 0.06&
+4.85 k& 12.4& 0.5& 8.9& 0.4& 0.710& 0.04&
+8.56 k& 12.4& 0.5& 6.2& 0.3& 0.499& 0.03&
+22.5 k& 12.3& 0.5& 2.7& 0.1& 0.214& 0.012&
+76.1 k& 12.3& 0.5& 0.80& 0.04& 0.064& 0.003&
+225 k& 12.3& 0.5& 0.24& 0.01& 0.0195& 0.0010&
+1.07 M& 12.3& 0.5& 0.055& 0.002& 4.4\times10^{-3}& 0.1\times10^{-3}&
+	\end{tabular}
+	\caption{Valori di tensione in entrata e in uscita in funzione della frequenza misurati per il filtro passa basso}
+\end{table}
 \end{document}
