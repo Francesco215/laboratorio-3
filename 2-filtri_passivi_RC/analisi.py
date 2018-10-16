@@ -58,26 +58,25 @@ Vin=12.5
 dVin=mz.dVosc(12.5)
 A=Vout/Vin
 dA=errore_rapporto(Vout,mz.dVosc(Vout),Vin,dVin)
-pl.errorbar(freq,A,yerr=dA,fmt='.',markersize=1)
+pl.errorbar(freq,20*np.log10(A),yerr=dA,fmt='.',markersize=3)
 #qua faccio il punto 2.b.ii
 #la retta obliqua
-popt1,pcov1=curve_fit(lineare,np.log10(freq[7:]),np.log10(A[7:]))
+popt1,pcov1=curve_fit(lineare,np.log10(freq[7:]),np.log10(A[7:]),(1,1),dA[7:]/(A[7:]*np.log(10)))
 x=np.linspace(3.5,6.5,10)
-pl.plot(10**x,10**(lineare(x,*popt1)))
+pl.plot(10**x,20*(lineare(x,*popt1)))
 #la retta parallela
-popt2,pcov2=curve_fit(lineare,np.log10(freq[:4]),np.log10(A[:4]))
+popt2,pcov2=curve_fit(lineare,np.log10(freq[:4]),np.log10(A[:4]),(1,1),dA[:4]/(A[:4]*np.log(10)))
 x=np.linspace(1,4,10)
-pl.plot(10**x,10**(lineare(x,*popt2)))
+pl.plot(10**x,20*(lineare(x,*popt2)))
 #l'intersezione delle due rette
 x,y,dx=int_rette(popt1,popt2,pcov1,pcov2)
 #print(int_rette(popt1,popt2,pcov1,pcov2)) 
-pl.plot(10**x,10**y,'.')
+pl.plot(10**x,20*y,'.')
 
 
-pl.yscale('log')
 pl.ylabel('Vout/Vin')
 pl.xscale('log')
-pl.xlabel('frequenza')
+pl.xlabel('Frequenza [Hz]')
 pl.savefig('figure/a.png')
 
 

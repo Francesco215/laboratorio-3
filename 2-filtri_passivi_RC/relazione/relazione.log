@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.10.6)  13 OCT 2018 16:35
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2019/dev/Debian) (preloaded format=pdflatex 2018.10.16)  16 OCT 2018 22:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -298,15 +298,10 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 13.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-! Double subscript.
-l.24 ...ttenua 	il segnale, per $f=2kHz \quad A_V_
-                                                  {teorica}=0.93\pm0.02$ inv...
-I treat `x_1_2' essentially like `x_1{}_2'.
-
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.31 ...$&$V_{out}[V]$&$\sigma[V]$&$A_V$&$\sigma$&
+l.33 ...$&$V_{out}[V]$&$\sigma[V]$&$A_V$&$\sigma$&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -315,7 +310,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.34 56& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
+l.36 56& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
                                           
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -324,7 +319,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.35 100& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06&
+l.37 100& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06&
                                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -333,7 +328,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.36 194& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06&
+l.38 194& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06&
                                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -342,7 +337,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.37 467& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
+l.39 467& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
                                            
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -351,7 +346,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.38 2.08 k& 12.5& 0.5& 11.7& 0.5& 0.94& 0.06&
+l.40 2.08 k& 12.5& 0.5& 11.7& 0.5& 0.94& 0.06&
                                               
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -360,7 +355,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.39 4.85 k& 12.5& 0.5& 8.9& 0.4& 0.71& 0.04&
+l.41 4.85 k& 12.5& 0.5& 8.9& 0.4& 0.71& 0.04&
                                              
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -369,7 +364,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.40 8.56 k& 12.5& 0.5& 6.2& 0.3& 0.50& 0.03&
+l.42 8.56 k& 12.5& 0.5& 6.2& 0.3& 0.50& 0.03&
                                              
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -378,7 +373,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.41 20.0 k& 12.5& 0.5& 3.01& 0.13& 0.241& 0.015&
+l.43 20.0 k& 12.5& 0.5& 3.01& 0.13& 0.241& 0.015&
                                                  
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -387,7 +382,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.42 22.5 k& 12.5& 0.5& 2.68& 0.11& 0.214& 0.012&
+l.44 22.5 k& 12.5& 0.5& 2.68& 0.11& 0.214& 0.012&
                                                  
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -396,25 +391,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.43 76.1 k& 12.5& 0.5& 0.80& 0.04& 0.064& 0.004&
-                                                 
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.44 96.4 k& 12.5& 0.5& 0.63& 0.03& 0.050& 0.003&
-                                                 
-You have given more \span or & marks than there were
-in the preamble to the \halign or \valign now in progress.
-So I'll assume that you meant to type \cr instead.
-
-! Extra alignment tab has been changed to \cr.
-<recently read> \endtemplate 
-                             
-l.45 294 k& 12.5& 0.5& 0.21& 0.01& 0.0167& 0.0009&
+l.45 ...04& $64\times 10^{-3}$& $4\times 10^{-3}$&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -423,37 +400,91 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.46 ...& 12.5& 0.5& 0.055& 0.002& 0.0044& 0.0003&
+l.46 ...03& $50\times 10^{-3}$& $3\times 10^{-3}$&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.47 ...$16.7\times 10^{-3}$& $0.9\times 10^{-3}$&
+                                                  
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.48 ... $4.4\times 10^{-3}$& $0.3\times 10^{-3}$&
+                                                  
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+<a.png, id=1, 462.528pt x 346.896pt>
+File: a.png Graphic file (type png)
+<use a.png>
+Package pdftex.def Info: a.png  used on input line 54.
+(pdftex.def)             Requested size: 323.76738pt x 242.82553pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] (./relazione.aux) ) 
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 66.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 66.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.70 \\b
+        )
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.79 ...ga$ non si può trascurare $R_c$ $R_c\simR
+                                                  $, di conseguenza alle ste...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+[2 <./a.png>] [3] (./relazione.aux) ) 
 Here is how much of TeX's memory you used:
- 3355 strings out of 494543
- 44940 string characters out of 6176661
- 124080 words of memory out of 5000000
- 6941 multiletter control sequences out of 15000+600000
+ 3381 strings out of 494543
+ 45299 string characters out of 6176660
+ 126080 words of memory out of 5000000
+ 6962 multiletter control sequences out of 15000+600000
  11195 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,10n,25p,438b,201s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmsy10.pfb>
-Output written on relazione.pdf (1 page, 95430 bytes).
+ 41i,10n,25p,558b,219s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on relazione.pdf (3 pages, 127327 bytes).
 PDF statistics:
- 44 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
