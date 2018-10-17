@@ -88,6 +88,12 @@ Amis=Vout/Vin
 dAmis=errore_rapporto(Vout,dVout,Vin,dVin)
 #print(Amis,dAmis,A1)#stampo il guadagno misurato e il guadagno teorico
 
+#punto 3
+ft=1.1/(np.pi*74e-6)
+dft=errore_rapporto(1.1/np.pi,0,74e-6,2e-6)
+print(ft,dft)
+
+#punto 5
 R2=3.3e3
 C2=111.7e-9
 dR2=mz.dRdig(R2)
