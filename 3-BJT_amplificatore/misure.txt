@@ -1,0 +1,9 @@
+Vcc = 19.97 V
+
+R1 = 
+R2 = 
+Rc = 
+Re = 
+
+Cout = 110.7nf
+Cin = 221nf
