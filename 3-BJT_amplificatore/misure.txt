@@ -1,3 +1,4 @@
+2.a
 Vcc = 19.97 V
 
 R1 = 178500
@@ -7,3 +8,15 @@ Re = 1014
 
 Cout = 110.7nf
 Cin = 221nf
+
+ddp ai capi di Rc = 9.92
+ddp Vce_q misurata = 9.00
+
+2.b
+Vb = 1.647
+Ve = 1.034
+Vbe = 0.614
+Vc = 10.01
+
+ddp capi R2 = 18.24
+ddp capi R1 = 1.644
