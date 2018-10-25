@@ -20,3 +20,22 @@ Vc = 10.01
 
 ddp capi R2 = 18.24
 ddp capi R1 = 1.644
+
+3.1
+Immagine
+
+3.2
+Sinusoide
+Vout = 2.06 +- 0.04
+Vin = 0.222 +- 0.003
+
+Triangolare
+1.98
+0.218
+
+Triangolare
+1.51
+13.7
+
+Vout > 18.4 si ha clipping
+Vin > 1.78

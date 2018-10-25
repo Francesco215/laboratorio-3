@@ -1,5 +1,6 @@
 import numpy as np
 import menzalib as mz
+import pylab as plt
 
 def errore_rapporto(x,dx,y,dy):
     return(y**(-2))*np.sqrt(x**2*dy**2+y**2*dx**2)
@@ -18,7 +19,8 @@ Cin = 221e-9
 
 Vcc = 19.97
 Vbe = 0.614 # ddp base emettitore al punto di lavoro
-dVcc, dVbe = mz.dVdig([Vcc, Vbe])
+Vrc = 9.92
+dVcc, dVbe, dVrc = mz.dVdig([Vcc, Vbe, Vrc])
 
 Vbb = Vcc / (1+R1/R2)
 dVbb = errore_rapporto(Vcc, dVcc, 1+R1/R2, errore_rapporto(R1, dR1, R2, dR2))
@@ -30,4 +32,13 @@ dVce_q = dVcc + errore_prodotto(Vbb-Vbe, dVbb+dVbe, 1+(Rc/Re), errore_rapporto(R
 
 print("Ic_q %f+-%f\nVce_q %f+-%f" % (Ic_q, dIc_q, Vce_q, dVce_q))
 #print(18.24/R1, 1.644/R2, Ic_q/100)
-print(dIc_q/Ic_q)
+print(Vrc/Rc, errore_rapporto(Vrc, dVrc, Rc, dRc))
+
+
+Vin = 1
+Vout, f = np.genfromtxt("/home/lorenzo/Desktop/laboratorio-3/3-BJT_amplificatore/dati/dati.txt", unpack=True)
+plt.figure()
+plt.plot(f, Vout/Vin, 'o')
+plt.xscale("log")
+plt.yscale("log")
+plt.show()
