@@ -48,9 +48,10 @@ dVce_q = dVcc + errore_prodotto(Vbb-Vbe, dVbb+dVbe, 1+(Rc/Re), errore_rapporto(R
 
 
 print("Ic_q %f+-%f\nVce_q %f+-%f" % (Ic_q, dIc_q, Vce_q, dVce_q))
-#print(18.24/R1, 1.644/R2, Ic_q/100)
+print(Rc/Re, np.sqrt(2)*0.01*Rc/Re)
+#print(18.24/R1-1.644/R2, (9.92/Rc)/100)
+#print((18.24/R1+1.644/R2)/100)
 print(Vrc/Rc, errore_rapporto(Vrc, dVrc, Rc, dRc))
-
 
 Vin = 1
 Vout, f = np.genfromtxt("dati/dati.txt", unpack=True)
@@ -100,4 +101,3 @@ print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
 
 lf,asd,dlf=int_rette(popt2,popt3,pcov2,pcov3)
 print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
-

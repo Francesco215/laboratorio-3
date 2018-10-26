@@ -13,24 +13,46 @@
 \begin{document}
 	\maketitle
 	\section{Verifica del punto di lavoro}
-	
-	$V_{CEatt}^Q = 7.3\pm0.4$
-	$I_{Catt}^Q = 0.00117\pm0.00003$
+	Usando il multimetro digitale abbiamo misurato i valori delle resistenze e condensatori staccati dal circuito
+\begin{itemize}
+\item $R_1=(178.5\pm1.4)k\Omega$ 
+\item $R_2=(17.65\pm0.14)k\Omega$ 
+\item $R_C=(9.82\pm0.08)k\Omega$ 
+\item $R_E=(1.014\pm0.008)k\Omega$
+\item $C_{in}=(221\pm9)nF$
+\item $C_{out}=(111\pm4)nF$
+\end{itemize}
+\\
+\begin{enumerate}
+\item Accendendo soltanto il generatore di ddp continua $V_{CC}=(19.97\pm0.10)$ abbiamo calcolato e misurato il punto di lavoro del transistor che risulta:
+\begin{itemize}
+\item $V_{CE,att}^Q = (7.3\pm0.4)V$ $I_{C,att}^Q = (1.17\pm0.03)mA$
+\item $V_{CE,mis}^Q = (9.00\pm0.05)V$ $ I_{C,mis}^Q = (1.01\pm0.01)mA$
+\end{itemize}
+I due risultati non sono compatibili, tuttavia, come si vedrà anche in seguito, il circuito funziona correttamente, la discrepanza quindi si potrebbe attribuire a un errore nella presa dati nei calcoli
 
-	$V_{CEmis}^Q = 9.00\pm0.05$
-	$I_{Cmis}^Q = 0.00101\pm0.00001$
+\item Usando il multimetro digitale abbiamo misurato le tensioni ai terminali del transistor che risultano:
+\begin{itemize}
+\item $V_{B,mis} = 1.647\pm0.008$ $V_{E,mis} = 1.034\pm 0.005$ $V_{BE,mis} = 0.614\pm0.003$ $V_{C,mis} = 10.01\pm0.05$
+\item Mettere valori attesi
+\end{itemize}
+\item Sfruttando l'effetto transistor con $h_{fe}\approx 100$ abbiamo $I_B = I_C/h_{fe} \approx 10.1 \mu A$ dove $I_C$ è stata calcolata vedendo la ddp ai capi di $R_C$, inoltre sappiamo che $I_B = I_1-I_2 = (9\pm2)\mu A$ con $I_1$, $I_2$ calcolate prendendo la ddp su $R_1$, $R_2$ rispettivamente. L'errore risulta grande il quanto differenza di due misure simili, infatti $I_1=102.2\pm1.4\mu A$ $I_2=93.1\pm1.3\mu A$. Le due misure risultano compatibili, l'errore su 
+\end{enumerate}
 	
-	$V_{B} = 1.647\pm0.008$
-	$V_{E} = 1.034\pm 0.005$
-	$V_{BE} = 0.614\pm0.003$
-	$V_{C} = 10.01\pm0.05$
-	
-	\section{Risposta a segnali sinusoidali a frequenza fissa}
-	\begin{figure}
-	\centering
-	\includegraphics[scale=0.7]{3_1.png}
-	\caption{Inversione di fase tra ingresso e uscita} 
-	\end{figure}
-	Per $V_{in} = 0.222\pm0.003$ sinusoidale si ha $V_{out} = 2.06/pm0.04$ e ,$V_{in} = 0.218\pm0.003$ triangolare si ha $V_{out} = 1.98/pm0.04$, $V_{in} = 1.51\pm0.003$ triangolare si ha $V_{out} = 13.7/pm0.04$ 
+\section{Risposta a segnali sinusoidali a frequenza fissa}
+In questo punto colleghiamo il generatore di funzioni al circuito con $f=6.24kHz$
+\begin{enumerate}
+\item Vedendo $V_{in}$ e $V_{out}$ accoppiando l'oscilloscopio in AC notiamo che i due segnali sono in controfase con uno circa 10 volte l'altro (figura \ref{screen})
+\begin{figure}
+\centering
+\includegraphics[scale=1]{3_1.png}
+\caption{Inversione di fase tra ingresso e uscita, si notino le diverse scale su CH1 e CH2}
+\label{screen} 
+\end{figure}
+
+\item Il guadagno atteso per piccoli segnali risulta $A_{V,att}=9.68\pm0.14$, per un onda sinusoidale con $V_{in} = 0.22\pm0.01V$ si ha $V_{out} = 2.06\pm0.09V$, $A_V=9.3\pm0.6$. Con un onda triangolare $V_{in} = 0.22\pm0.01V$ si ha $V_{out} = 1.98\pm0.09V$ $A_V=9.1\pm0.6$, il guadagno atteso risulta compatibile con quello misurato.
+%$V_{in} = 1.51\pm0.06V$  triangolare si ha $V_{out} = 13.7\pm0.6V$ $A_V=9.1\pm0.6$ 
+\item Il circuito risulta lineare per $V_{in} 1.51 < \pm0.05V$ quindi $V_{out} = 18.4\pm0.6V$ oltre questa ddp si ha il clipping, inizialmente questo spiana l'onda ma alzando ancora di più il voltaggio l'onda si inarca all'interno. 
+\end{enumerate}		
 		
 \end{document}

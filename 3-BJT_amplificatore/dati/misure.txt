@@ -18,8 +18,8 @@ Ve = 1.034
 Vbe = 0.614
 Vc = 10.01
 
-ddp capi R2 = 18.24
-ddp capi R1 = 1.644
+ddp capi R1 = 18.24
+ddp capi R2 = 1.644
 
 3.1
 Immagine
@@ -37,5 +37,6 @@ Triangolare
 1.51
 13.7
 
+3.3
 Vout > 18.4 si ha clipping
 Vin > 1.78
