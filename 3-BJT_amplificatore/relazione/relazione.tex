@@ -58,8 +58,39 @@ Inoltre la forma d'onda è rimasta pressocchè inalterata, quindi tutte le armon
 
 \section{Risposta in frequenza}
 \begin{enumerate}
-    \item Analizzando il circuito possiamo notare che $C_{in}$ e $R_2$ compongono un filtro passa alto con $f_T=C/2\pi R=$ abbiamo misurato la risposta in frequenza per segnali sinusoidali del circuito 
+    \item Analizzando il circuito possiamo notare che $C_{in}$ e $R_2$ compongono un filtro passa alto con $f_T=1/(2\pi R_2 C_{in})=41\pm 2$ inoltre il transistor ha una piccola capacità e resistenza interna che si nota solo per frequenze elevate agendo da passa basso 
+    
+    \begin{figure}
+        \centering
+        \includegraphics{}
+        \caption{Grafico di bode del circuito}
+        \label{fig:my_label}
+    \end{figure}
+    
+    \begin{table}[]
+        \centering
+        \begin{tabular}{ccccccc}
+            $f [Hz]$& $V_{in} [V]$& $\sigma V_{in} [V]$& $V_{out} [V]$& $\sigma V_{out} [V]$& $A_V$& $\sigma A_V$&
+            13.7& 1.00& 0.04& 2.72& 0.12& 2.72& 0.17&
+            16.3& 1.00& 0.04& 3.02& 0.13& 3.02& 0.19&
+            47.0& 1.00& 0.04& 6.3& 0.3& 6.3& 0.4&
+            68.1& 1.00& 0.04& 7.4& 0.3& 7.4& 0.5&
+            98.4& 1.00& 0.04& 8.2& 0.4& 8.2& 0.5&
+            118& 1.00& 0.04& 8.6& 0.4& 8.6& 0.6&
+            213& 1.00& 0.04& 9.2& 0.4& 9.2& 0.6&
+            565& 1.00& 0.04& 9.3& 0.4& 9.3& 0.6&
+            1.18 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
+            2.11 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
+            11.7 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
+            20.3 k& 1.00& 0.04& 9.0& 0.4& 9.0& 0.6&
+            71.3 k& 1.00& 0.04& 7.3& 0.3& 7.3& 0.4&
+            209 k& 1.00& 0.04& 3.74& 0.16& 3.7& 0.2&
+            739 k& 1.00& 0.04& 1.14& 0.05& 1.14& 0.07&
+            2.10 M& 1.00& 0.04& 0.40& 0.02& 0.40& 0.03&
+        \end{tabular}
+        \caption{Dati della risposta in frequenza del circuito}
+        \label{tab:frequenza}
+    \end{table}
 \end{enumerate}
 		
-\end{document}
 \end{document}
