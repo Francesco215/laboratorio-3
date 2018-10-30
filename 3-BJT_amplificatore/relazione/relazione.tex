@@ -63,7 +63,9 @@ Abbiamo valutato la risposta in frequenza del circuito per segnali sinusoidali d
     \begin{table}[scale=0.8]
         \centering
         \begin{tabular}{ccccccc}
+        \hline
             $f [Hz]$& $V_{in} [V]$& $\sigma V_{in} [V]$& $V_{out} [V]$& $\sigma V_{out} [V]$& $A_V$& $\sigma A_V$&
+            \hline
             13.7& 1.00& 0.04& 2.72& 0.12& 2.72& 0.17&
             16.3& 1.00& 0.04& 3.02& 0.13& 3.02& 0.19&
             47.0& 1.00& 0.04& 6.3& 0.3& 6.3& 0.4&
@@ -86,7 +88,7 @@ Abbiamo valutato la risposta in frequenza del circuito per segnali sinusoidali d
     \end{table}
 
 \subparagraph{b}
-Abbiamo riportato i dati in un diagramma di bode ed eseguito un fit con la funzione curve_fit del modulo scipy di python usando absolute_sigma=False, gli errori sulle frequenze si sono trascurati in quanto molto minori di quelli sul guadagno (1\% vs 5-6\%). 
+Abbiamo riportato i dati in un diagramma di bode ed eseguito tre fit lineari con  la funzione curve_fit del modulo scipy di python usando absolute_sigma=False, gli errori sulle frequenze si sono trascurati in quanto il loro prodotto per la derivata della funzione è molto minore degli errori sul guadagno (1\% vs 5-6\%). Il fit a basse frequenze presenta un $\Chi^2=$
 
 \begin{figure}
 	\centering
@@ -96,6 +98,6 @@ Abbiamo riportato i dati in un diagramma di bode ed eseguito un fit con la funzi
 \end{figure}
     
 \subparagraph{c}
-Analizzando il circuito possiamo notare che $C_{in}$ e $R_2$ compongono un filtro passa alto con $f_T=1/(2\pi R_2 C_{in})=41\pm 2$, inoltre il transistor ha una piccola capacità e resistenza interna che si nota solo per frequenze elevate agendo da passa basso
+Analizzando il circuito possiamo notare che $C_{in}$ e $R_2$ compongono un filtro passa alto con $f_T=1/(2\pi R_2 C_{in})=41\pm 2$, inoltre il transistor ha una piccola capacità e resistenza interna che si nota solo per frequenze elevate agendo da passa basso. Dal fit otteniamo 
 		
 \end{document}

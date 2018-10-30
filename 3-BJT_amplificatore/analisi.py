@@ -70,9 +70,10 @@ t4=-3
 dVout = mz.dVosc(Vout)
 Av = Vout/Vin
 dAv = mz.drapp(Vout, dVout, Vin, mz.dVosc(Vin))
-popt1,pcov1=curve_fit(lineare,np.log10(f[:t1]),np.log10(Av[:t1]), sigma=dAv[:t1])
-popt2,pcov2=curve_fit(lineare,np.log10(f[t2:t3]),np.log10(Av[t2:t3]), sigma=dAv[t2:t3])
-popt3,pcov3=curve_fit(lineare,np.log10(f[t4:]),np.log10(Av[t4:]), sigma=dAv[t4:])
+popt1,pcov1=curve_fit(lineare,np.log10(f[:t1]),np.log10(Av[:t1]), sigma=mz.dlog10(Av[:t1],dAv[:t1]))
+popt2,pcov2=curve_fit(lineare,np.log10(f[t2:t3]),np.log10(Av[t2:t3]), sigma=mz.dlog10(Av[t2:t3],dAv[t2:t3]))
+popt3,pcov3=curve_fit(lineare,np.log10(f[t4:]),np.log10(Av[t4:]), sigma=mz.dlog10(Av[t4:],dAv[t4:]))
+
 
 lf,asd,dlf=int_rette(popt1,popt2,pcov1,pcov2)
 print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
