@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.25)  29 OCT 2018 19:55
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.25)  30 OCT 2018 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -651,35 +651,109 @@ Underfull \hbox (badness 10000) in paragraph at lines 54--56
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (13.86153pt too wide) in paragraph at lines 61--62
-[]\OT1/cmr/m/n/10 Analizzando il cir-cuito pos-si-amo no-tare che $\OML/cmm/m/i
-t/10 C[]$ \OT1/cmr/m/n/10 e $\OML/cmm/m/it/10 R[]$ \OT1/cmr/m/n/10 com-pon-gono
- un fil-tro passa alto con $\OML/cmm/m/it/10 f[] \OT1/cmr/m/n/10 = 1\OML/cmm/m/
-it/10 =\OT1/cmr/m/n/10 (2\OML/cmm/m/it/10 ^^YR[]C[]\OT1/cmr/m/n/10 ) =
- []
 
-
-! LaTeX Error: File `' not found.
+! LaTeX Error: Unknown float option `s'.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.65         \includegraphics{}
-                               
-I could not locate the file with any of these extensions:
-.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `s' ignored and `p' used.
 
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 70.
+! LaTeX Error: Unknown float option `c'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `c' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `a'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `a' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `l'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `l' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `e'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `e' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `='.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `=' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `0'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `0' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `.'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `.' ignored and `p' used.
+
+
+! LaTeX Error: Unknown float option `8'.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.63     \begin{table}[scale=0.8]
+                                 
+Option `8' ignored and `p' used.
 
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.73 ...$\sigma V_{out} [V]$& $A_V$& $\sigma A_V$&
+l.66 ...$\sigma V_{out} [V]$& $A_V$& $\sigma A_V$&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -688,7 +762,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.74 ... 13.7& 1.00& 0.04& 2.72& 0.12& 2.72& 0.17&
+l.67 ... 13.7& 1.00& 0.04& 2.72& 0.12& 2.72& 0.17&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -697,7 +771,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.75 ... 16.3& 1.00& 0.04& 3.02& 0.13& 3.02& 0.19&
+l.68 ... 16.3& 1.00& 0.04& 3.02& 0.13& 3.02& 0.19&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -706,7 +780,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.76 ...     47.0& 1.00& 0.04& 6.3& 0.3& 6.3& 0.4&
+l.69 ...     47.0& 1.00& 0.04& 6.3& 0.3& 6.3& 0.4&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -715,7 +789,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.77 ...     68.1& 1.00& 0.04& 7.4& 0.3& 7.4& 0.5&
+l.70 ...     68.1& 1.00& 0.04& 7.4& 0.3& 7.4& 0.5&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -724,7 +798,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.78 ...     98.4& 1.00& 0.04& 8.2& 0.4& 8.2& 0.5&
+l.71 ...     98.4& 1.00& 0.04& 8.2& 0.4& 8.2& 0.5&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -733,7 +807,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.79 ...      118& 1.00& 0.04& 8.6& 0.4& 8.6& 0.6&
+l.72 ...      118& 1.00& 0.04& 8.6& 0.4& 8.6& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -742,7 +816,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.80 ...      213& 1.00& 0.04& 9.2& 0.4& 9.2& 0.6&
+l.73 ...      213& 1.00& 0.04& 9.2& 0.4& 9.2& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -751,7 +825,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.81 ...      565& 1.00& 0.04& 9.3& 0.4& 9.3& 0.6&
+l.74 ...      565& 1.00& 0.04& 9.3& 0.4& 9.3& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -760,7 +834,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.82 ...   1.18 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
+l.75 ...   1.18 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -769,7 +843,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.83 ...   2.11 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
+l.76 ...   2.11 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -778,7 +852,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.84 ...   11.7 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
+l.77 ...   11.7 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -787,7 +861,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.85 ...   20.3 k& 1.00& 0.04& 9.0& 0.4& 9.0& 0.6&
+l.78 ...   20.3 k& 1.00& 0.04& 9.0& 0.4& 9.0& 0.6&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -796,7 +870,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.86 ...   71.3 k& 1.00& 0.04& 7.3& 0.3& 7.3& 0.4&
+l.79 ...   71.3 k& 1.00& 0.04& 7.3& 0.3& 7.3& 0.4&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -805,7 +879,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.87 ...  209 k& 1.00& 0.04& 3.74& 0.16& 3.7& 0.2&
+l.80 ...  209 k& 1.00& 0.04& 3.74& 0.16& 3.7& 0.2&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -814,7 +888,7 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.88 ...739 k& 1.00& 0.04& 1.14& 0.05& 1.14& 0.07&
+l.81 ...739 k& 1.00& 0.04& 1.14& 0.05& 1.14& 0.07&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
@@ -823,37 +897,66 @@ So I'll assume that you meant to type \cr instead.
 ! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
-l.89 ....10 M& 1.00& 0.04& 0.40& 0.02& 0.40& 0.03&
+l.82 ....10 M& 1.00& 0.04& 0.40& 0.02& 0.40& 0.03&
                                                   
 You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-[2 <./3_1.png>] [3] (./relazione.aux)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.89 ... ed eseguito un fit con la funzione curve_
+                                                  fit del modulo scipy di py...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.90 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (153.42867pt too wide) in paragraph at lines 89--90
+ \OT1/cmr/bx/n/10 b[] \OT1/cmr/m/n/10 Ab-bi-amo ri-por-tato i dati in un di-a-g
+ramma di bode ed es-e-guito un fit con la fun-zione curve$[]\OML/cmm/m/it/10 it
+delmoduloscipydipythonusandoabsolute[]igma \OT1/cmr/m/n/10 =
+ []
+
+<fit.png, id=16, 462.528pt x 346.896pt>
+File: fit.png Graphic file (type png)
+<use fit.png>
+Package pdftex.def Info: fit.png  used on input line 93.
+(pdftex.def)             Requested size: 370.02289pt x 277.51717pt.
+[2 <./3_1.png>] [3 <./fit.png>] (./relazione.aux)
 
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 3281 strings out of 494880
- 42261 string characters out of 6179600
- 108004 words of memory out of 5000000
- 6525 multiletter control sequences out of 15000+600000
- 10888 words of font info for 43 fonts, out of 8000000 for 9000
+ 3275 strings out of 494880
+ 42274 string characters out of 6179600
+ 108020 words of memory out of 5000000
+ 6530 multiletter control sequences out of 15000+600000
+ 11196 words of font info for 44 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 41i,9n,25p,540b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/
-fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (3 pages, 103661 bytes).
+ 41i,9n,25p,658b,294s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb>
+Output written on relazione.pdf (3 pages, 135998 bytes).
 PDF statistics:
- 49 PDF objects out of 1000 (max. 8388607)
- 33 compressed objects within 1 object stream
+ 55 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

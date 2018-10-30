@@ -3,12 +3,6 @@ import menzalib as mz
 import pylab as plt
 from scipy.optimize import curve_fit
 
-def errore_rapporto(x,dx,y,dy):
-    return(y**(-2))*np.sqrt(x**2*dy**2+y**2*dx**2)
-
-def errore_prodotto(x, dx, y, dy) :
-    return np.sqrt(y**2*dx**2 + x**2*dy**2)
-
 def lineare(x,q,m):
     return q+m*x
 
@@ -40,16 +34,16 @@ Vrc = 9.92
 dVcc, dVbe, dVrc = mz.dVdig([Vcc, Vbe, Vrc])
 
 Vbb = Vcc / (1+R1/R2)
-dVbb = errore_rapporto(Vcc, dVcc, 1+R1/R2, errore_rapporto(R1, dR1, R2, dR2))
+dVbb = mz.drapp(Vcc, dVcc, 1+R1/R2, mz.drapp(R1, dR1, R2, dR2))
 Ic_q = (Vbb-Vbe) / Re
-dIc_q = errore_rapporto(Vbb-Vbe, dVbb+dVbe, Re, dRe)
+dIc_q = mz.drapp(Vbb-Vbe, dVbb+dVbe, Re, dRe)
 Vce_q = Vcc - Ic_q*(Rc+Re)
-dVce_q = dVcc + errore_prodotto(Vbb-Vbe, dVbb+dVbe, 1+(Rc/Re), errore_rapporto(Rc, dRc, Re, dRe))
+dVce_q = dVcc + mz.dprod(Vbb-Vbe, dVbb+dVbe, 1+(Rc/Re), mz.drapp(Rc, dRc, Re, dRe))
 
 print(Vbb,dVbb)
 print("Ic_q %f+-%f\nVce_q %f+-%f" % (Ic_q, dIc_q, Vce_q, dVce_q))
 #print(18.24/R1, 1.644/R2, Ic_q/100)
-print(Vrc/Rc, errore_rapporto(Vrc, dVrc, Rc, dRc))
+print(Vrc/Rc, mz.drapp(Vrc, dVrc, Rc, dRc))
 
 
 Vin = 1
@@ -71,29 +65,14 @@ f,Vout=ordina_2_vett(f,Vout)
 
 t1=3
 t2=6
-t3=-6
+t3=-5
 t4=-3
-plt.plot(f, Vout, 'o')
-
-popt1,pcov1=curve_fit(lineare,np.log10(f[:t1]),np.log10(Vout[:t1]))
-popt2,pcov2=curve_fit(lineare,np.log10(f[t2:t3]),np.log10(Vout[t2:t3]))
-popt3,pcov3=curve_fit(lineare,np.log10(f[t4:]),np.log10(Vout[t4:]))
-
-x=np.linspace(1,2,10)
-y=lineare(x,*popt1)
-plt.plot(10**x,10**y)
-
-x=np.linspace(1.7,5,10)
-y=lineare(x,*popt2)
-plt.plot(10**x,10**y)
-
-x=np.linspace(4.7,6.7,10)
-y=lineare(x,*popt3)
-plt.plot(10**x,10**y)
-
-plt.xscale("log")
-plt.yscale("log")
-plt.savefig('fit.png')
+dVout = mz.dVosc(Vout)
+Av = Vout/Vin
+dAv = mz.drapp(Vout, dVout, Vin, mz.dVosc(Vin))
+popt1,pcov1=curve_fit(lineare,np.log10(f[:t1]),np.log10(Av[:t1]), sigma=dAv[:t1])
+popt2,pcov2=curve_fit(lineare,np.log10(f[t2:t3]),np.log10(Av[t2:t3]), sigma=dAv[t2:t3])
+popt3,pcov3=curve_fit(lineare,np.log10(f[t4:]),np.log10(Av[t4:]), sigma=dAv[t4:])
 
 lf,asd,dlf=int_rette(popt1,popt2,pcov1,pcov2)
 print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
@@ -101,3 +80,26 @@ print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
 lf,asd,dlf=int_rette(popt2,popt3,pcov2,pcov3)
 print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
 
+
+plt.figure(1)
+plt.rcParams['lines.linewidth'] = 1
+plt.errorbar(f, 20*np.log10(Vout), mz.dlog10(Av, dAv), fmt='.', label="dati")
+
+x=np.linspace(1,2,10)
+y=lineare(x,*popt1)
+plt.plot(10**x,20*y)
+
+x=np.linspace(1.7,5,10)
+y=lineare(x,*popt2)
+plt.plot(10**x,20*y)
+
+x=np.linspace(4.7,6.7,10)
+y=lineare(x,*popt3)
+plt.plot(10**x,20*y)
+
+plt.xlabel("Frequenza [Hz]")
+plt.ylabel("Av [dB]")
+plt.xscale("log")
+plt.legend()
+plt.savefig('fit.png')
+plt.show()

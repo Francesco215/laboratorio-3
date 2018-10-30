@@ -56,18 +56,11 @@ Inoltre la forma d'onda è rimasta pressocchè inalterata, quindi tutte le armon
 \item Il circuito risulta lineare per $V_{in}$ minore di circa $1.5 V$ quindi $V_{out} \approx 18 V$ oltre questa ddp si ha il clipping, inizialmente questo spiana l'onda ma alzando ancora di più il voltaggio l'onda si inarca all'interno. 
 \end{enumerate}		
 
-\section{Risposta in frequenza}
-\begin{enumerate}
-    \item Analizzando il circuito possiamo notare che $C_{in}$ e $R_2$ compongono un filtro passa alto con $f_T=1/(2\pi R_2 C_{in})=41\pm 2$ inoltre il transistor ha una piccola capacità e resistenza interna che si nota solo per frequenze elevate agendo da passa basso 
-    
-    \begin{figure}
-        \centering
-        \includegraphics{}
-        \caption{Grafico di bode del circuito}
-        \label{fig:my_label}
-    \end{figure}
-    
-    \begin{table}[]
+\paragraph{4) Risposta in frequenza}
+\subparagraph{a}
+Abbiamo valutato la risposta in frequenza del circuito per segnali sinusoidali di ampiezza $V_{in}=1V$ e frequenza compresa tra circa 10Hz e 1MHz, cercando di prendere abbastanza punti nelle zone dove il logaritmo del guadagno risulta lineare, cosi' da poter fare 3 fit delle rette che approssimano il guadagno a bassa, media e alta frequenza. I dati sono riportati in tabella \ref{tab:frequenza}, l'errore su $V_{in}$ e $V_{out}$ è dato dall'incertezza di misura con i cursori dell'oscilloscopio mentre l'errore su $A_V=V_{out}/V_{in}$ è stato fatto propagando l'errore sul rapporto considerando le due misure indipendenti
+
+    \begin{table}[scale=0.8]
         \centering
         \begin{tabular}{ccccccc}
             $f [Hz]$& $V_{in} [V]$& $\sigma V_{in} [V]$& $V_{out} [V]$& $\sigma V_{out} [V]$& $A_V$& $\sigma A_V$&
@@ -91,6 +84,18 @@ Inoltre la forma d'onda è rimasta pressocchè inalterata, quindi tutte le armon
         \caption{Dati della risposta in frequenza del circuito}
         \label{tab:frequenza}
     \end{table}
-\end{enumerate}
+
+\subparagraph{b}
+Abbiamo riportato i dati in un diagramma di bode ed eseguito un fit con la funzione curve_fit del modulo scipy di python usando absolute_sigma=False, gli errori sulle frequenze si sono trascurati in quanto molto minori di quelli sul guadagno (1\% vs 5-6\%). 
+
+\begin{figure}
+	\centering
+    \includegraphics[scale=0.8]{fit.png} 
+    \caption{Grafico di bode del circuito}
+    \label{fig:fit}
+\end{figure}
+    
+\subparagraph{c}
+Analizzando il circuito possiamo notare che $C_{in}$ e $R_2$ compongono un filtro passa alto con $f_T=1/(2\pi R_2 C_{in})=41\pm 2$, inoltre il transistor ha una piccola capacità e resistenza interna che si nota solo per frequenze elevate agendo da passa basso
 		
 \end{document}
