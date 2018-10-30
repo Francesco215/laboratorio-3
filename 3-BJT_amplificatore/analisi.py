@@ -70,9 +70,9 @@ t4=-3
 dVout = mz.dVosc(Vout)
 Av = Vout/Vin
 dAv = mz.drapp(Vout, dVout, Vin, mz.dVosc(Vin))
-popt1,pcov1=curve_fit(lineare,np.log10(f[:t1]),np.log10(Av[:t1]), sigma=mz.dlog10(Av[:t1],dAv[:t1]))
-popt2,pcov2=curve_fit(lineare,np.log10(f[t2:t3]),np.log10(Av[t2:t3]), sigma=mz.dlog10(Av[t2:t3],dAv[t2:t3]))
-popt3,pcov3=curve_fit(lineare,np.log10(f[t4:]),np.log10(Av[t4:]), sigma=mz.dlog10(Av[t4:],dAv[t4:]))
+popt1,pcov1=curve_fit(lineare,np.log10(f[:t1]),20*np.log10(Av[:t1]), sigma=20*mz.dlog10(Av[:t1],dAv[:t1]))
+popt2,pcov2=curve_fit(lineare,np.log10(f[t2:t3]),20*np.log10(Av[t2:t3]), sigma=20*mz.dlog10(Av[t2:t3],dAv[t2:t3]))
+popt3,pcov3=curve_fit(lineare,np.log10(f[t4:]),20*np.log10(Av[t4:]), sigma=20*mz.dlog10(Av[t4:],dAv[t4:]))
 
 
 lf,asd,dlf=int_rette(popt1,popt2,pcov1,pcov2)
@@ -84,19 +84,19 @@ print(10**lf,np.log(10)*10**lf*dlf,100*(np.log(10)*10**lf*dlf)/(10**lf))
 
 plt.figure(1)
 plt.rcParams['lines.linewidth'] = 1
-plt.errorbar(f, 20*np.log10(Vout), mz.dlog10(Av, dAv), fmt='.', label="dati")
+plt.errorbar(f, 20*np.log10(Vout), 20*mz.dlog10(Av, dAv), fmt='.', label="dati", markersize=5)
 
 x=np.linspace(1,2,10)
 y=lineare(x,*popt1)
-plt.plot(10**x,20*y)
+plt.plot(10**x,y)
 
 x=np.linspace(1.7,5,10)
 y=lineare(x,*popt2)
-plt.plot(10**x,20*y)
+plt.plot(10**x,y)
 
 x=np.linspace(4.7,6.7,10)
 y=lineare(x,*popt3)
-plt.plot(10**x,20*y)
+plt.plot(10**x,y)
 
 plt.xlabel("Frequenza [Hz]")
 plt.ylabel("Av [dB]")
