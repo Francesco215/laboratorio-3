@@ -25,7 +25,7 @@ Usando il multimetro digitale abbiamo misurato i valori delle resistenze e conde
 \end{itemize}
 \\
 \subparagraph{a.}
-Accendendo soltanto il generatore di ddp continua $V_{CC}=(19.97\pm0.10)$ abbiamo calcolato e misurato il punto di lavoro del transistor che risulta:
+Accendendo soltanto il generatore di ddp continua $V_{CC}=(19.9\pm0.1)$ abbiamo calcolato e misurato il punto di lavoro del transistor che risulta:
 \begin{itemize}
 \item $V_{CE,att}^Q = (7.3\pm0.4)V \quad$ $I_{C,att}^Q = (1.17\pm0.03)mA \quad$
 \item $V_{CE,mis}^Q = (9.00\pm0.05)V \quad$ $ I_{C,mis}^Q = (1.01\pm0.01)mA \quad$
@@ -40,7 +40,7 @@ Usando il multimetro digitale abbiamo misurato le tensioni ai terminali del tran
 Purtroppo è stato impossibile dare una stima accurata degli errori a causa dell'incognita su alcuni parametri del transistor
 \end{itemize}
 \subparagraph{c.}
-Sfruttando l'effetto transistor con $h_{fe}\approx 100$ abbiamo $I_B = I_C/h_{fe} \approx 10.1 \mu A$ dove $I_C$ è stata calcolata vedendo la ddp ai capi di $R_C$, inoltre sappiamo che $I_B = I_1-I_2 = (9\pm2)\mu A$ con $I_1$, $I_2$ calcolate prendendo la ddp su $R_1$, $R_2$ rispettivamente. L'errore risulta grande il quanto differenza di due misure simili, infatti $I_1=102.2\pm1.4\mu A$ $I_2=93.1\pm1.3\mu A$. Le due misure risultano compatibili, l'errore su 
+Sfruttando l'effetto transistor con $h_{fe}\approx 100$ abbiamo $I_B = I_C/h_{fe} \approx 10.1 \mu A$ dove $I_C$ è stata calcolata vedendo la ddp ai capi di $R_C$, inoltre sappiamo che $I_B = I_1-I_2 = (9\pm2)\mu A$ con $I_1$, $I_2$ calcolate prendendo la ddp su $R_1$, $R_2$ rispettivamente. L'errore risulta grande il quanto differenza di due misure simili, infatti $I_1=102.2\pm1.4\mu A$ $I_2=93.1\pm1.3\mu A$. Le due misure risultano quindi compatibili fra di loro.
 	
 \paragraph{3) Risposta a segnali sinusoidali a frequenza fissa}
 In questo punto colleghiamo il generatore di funzioni al circuito con $f=6.24kHz$ e tutti i voltaggi sono misurati picco-picco
@@ -57,8 +57,12 @@ Vedendo $V_{in}$ e $V_{out}$ accoppiando l'oscilloscopio in AC notiamo che i due
 Il guadagno atteso per piccoli segnali risulta $A_{V,att}=9.68\pm0.14$, per un onda sinusoidale con $V_{in} = (0.22\pm0.01)V$ si ha $V_{out} = (2.06\pm0.09)V$, $A_V=9.3\pm0.6$. Per verificare la linearità del sistema abbiamo preso un onda triangolare a diverse ampiezze. Con $V_{in} = (0.22\pm0.01)V$ si ha $V_{out} = (1.98\pm0.09V)$ $A_V=9.1\pm0.6$ e, con $V_{in} = 1.51\pm0.06V$  triangolare si ha $V_{out} = 13.7\pm0.6V$ $A_V=9.1\pm0.6$ i guadagni attesi risultano compatibili con quelli misurati.\newline
 Inoltre la forma d'onda è rimasta pressocchè inalterata, quindi tutte le armoniche dello spettro della triangolare hanno trasformato allo stesso modo, questo dimostra la linearità del circuito tra $1$kHz e $10$kHz.\newline
 \subparagraph{iii-iv}
-Il circuito risulta lineare per $V_{in}$ minore di circa $1.5 V$ quindi $V_{out} \approx 18 V$ oltre questa ddp si ha il clipping, inizialmente questo spiana l'onda ma alzando ancora di più il voltaggio l'onda si inarca all'interno. 
+Il circuito risulta lineare per $V_{in}$ minore di circa $1.5 V$ quindi $V_{out} \approx 18 V$ oltre questa ddp si ha il clipping da entrambi i lati.\newline
+Il clipping della parte inferiore si ha perchè $V_{CC}=I(R_C+R_E)+V_{CE}$, essendo $V_{CE}>0$ si ha che $V_{CC}>I(R_C+R_E)$. Quindi $V_{out}=V_{CC}-IR_C>V_{CC}[1-R_C/(R_C+R_E)]$, quindi $V_{out}>V_{CC}R_E/(R_C+R_E)\approx 1.8$.\newline
+D'altro canto $V_{out}<V_{CC}\approx 20V$, quindi l'ampiezza dell'oscillazione sarà di circa $18V$ che è in accordo con i dati sperimentali
 \end{enumerate}		
+
+
 
 \paragraph{4) Risposta in frequenza}
 \subparagraph{a}
@@ -70,8 +74,8 @@ Abbiamo valutato la risposta in frequenza del circuito per segnali sinusoidali d
         \hline
             $f [Hz]$& $V_{in} [V]$& $\sigma V_{in} [V]$& $V_{out} [V]$& $\sigma V_{out} [V]$& $A_V$& $\sigma A_V$&
             \hline
-            13.7& 1.00& 0.04& 2.72& 0.12& 2.72& 0.17&
-            16.3& 1.00& 0.04& 3.02& 0.13& 3.02& 0.19&
+            13.7& 1.00& 0.04& 2.7& 0.1& 2.7& 0.2&
+            16.3& 1.00& 0.04& 3.0& 0.1& 3.0& 0.2&
             47.0& 1.00& 0.04& 6.3& 0.3& 6.3& 0.4&
             68.1& 1.00& 0.04& 7.4& 0.3& 7.4& 0.5&
             98.4& 1.00& 0.04& 8.2& 0.4& 8.2& 0.5&
@@ -83,7 +87,7 @@ Abbiamo valutato la risposta in frequenza del circuito per segnali sinusoidali d
             11.7 k& 1.00& 0.04& 9.4& 0.4& 9.4& 0.6&
             20.3 k& 1.00& 0.04& 9.0& 0.4& 9.0& 0.6&
             71.3 k& 1.00& 0.04& 7.3& 0.3& 7.3& 0.4&
-            209 k& 1.00& 0.04& 3.74& 0.16& 3.7& 0.2&
+            209 k& 1.00& 0.04& 3.7& 0.2& 3.7& 0.2&
             739 k& 1.00& 0.04& 1.14& 0.05& 1.14& 0.07&
             2.10 M& 1.00& 0.04& 0.40& 0.02& 0.40& 0.03&
         \end{tabular}
