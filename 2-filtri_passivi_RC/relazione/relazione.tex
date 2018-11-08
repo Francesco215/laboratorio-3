@@ -30,22 +30,22 @@ Dalla misura con l'oscilloscopio risulta $A_V(2kHz)_{mis} = 0.92\pm0.05$ e $A_V(
 	\centering
 	\begin{tabular}{ccccccc}
 		\hline
-f[Hz]&$V_{in}[V]$&$\sigma[V]$&$V_{out}[V]$&$\sigma[V]$&$A_V$&$\sigma$&
+f[Hz]&$V_{in}[V]$&$\sigma[V]$&$V_{out}[V]$&$\sigma[V]$&$A_V$&$\sigma$\\
 		\hline
 		\hline
-56& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
-100& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06&
-194& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06&
-467& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06&
-2.08 k& 12.5& 0.5& 11.7& 0.5& 0.94& 0.06&
-4.85 k& 12.5& 0.5& 8.9& 0.4& 0.71& 0.04&
-8.56 k& 12.5& 0.5& 6.2& 0.3& 0.50& 0.03&
-20.0 k& 12.5& 0.5& 3.01& 0.13& 0.241& 0.015&
-22.5 k& 12.5& 0.5& 2.68& 0.11& 0.214& 0.012&
-76.1 k& 12.5& 0.5& 0.80& 0.04& $64\times 10^{-3}$& $4\times 10^{-3}$&
-96.4 k& 12.5& 0.5& 0.63& 0.03& $50\times 10^{-3}$& $3\times 10^{-3}$&
-294 k& 12.5& 0.5& 0.21& 0.01& $16.7\times 10^{-3}$& $0.9\times 10^{-3}$&
-1.07 M& 12.5& 0.5& $55\times 10^{-3}$ & $2\times 10^{-3}$& $4.4\times 10^{-3}$& $0.3\times 10^{-3}$&
+56& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06\\
+100& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06\\
+194& 12.5& 0.5& 12.5& 0.5& 1.00& 0.06\\
+467& 12.5& 0.5& 12.4& 0.5& 0.99& 0.06\\
+2.08 k& 12.5& 0.5& 11.7& 0.5& 0.94& 0.06\\
+4.85 k& 12.5& 0.5& 8.9& 0.4& 0.71& 0.04\\
+8.56 k& 12.5& 0.5& 6.2& 0.3& 0.50& 0.03\\
+20.0 k& 12.5& 0.5& 3.01& 0.13& 0.241& 0.015\\
+22.5 k& 12.5& 0.5& 2.68& 0.11& 0.214& 0.012\\
+76.1 k& 12.5& 0.5& 0.80& 0.04& $64\times 10^{-3}$& $4\times 10^{-3}$\\
+96.4 k& 12.5& 0.5& 0.63& 0.03& $50\times 10^{-3}$& $3\times 10^{-3}$\\
+294 k& 12.5& 0.5& 0.21& 0.01& $16.7\times 10^{-3}$& $0.9\times 10^{-3}$\\
+1.07 M& 12.5& 0.5& $55\times 10^{-3}$ & $2\times 10^{-3}$& $4.4\times 10^{-3}$& $0.3\times 10^{-3}$\\
 	\end{tabular}
 	\caption{Valori di tensione in entrata e in uscita in funzione della frequenza misurati per il filtro passa basso}
 \end{table}
@@ -67,7 +67,7 @@ Quindi se
 \item $\omega=\omega_T$ $|Z_{in}|=\sqrt{2R}$
 \item $\omega<<\omega_T$ $|Z_{in}|\rightarrow \infty$
 \end{itemize}
-\\b)
+b)
 Se si inserisce una resistenza di carico il guadagno risulta
 \begin{equation}
 	A(\omega)=\frac{1}{\sqrt{(1+R/R_c)^2+(\omega RC)^2}}
@@ -76,7 +76,7 @@ Ponendo l'espressione sopra uguale a $1/\sqrt{2}$ si può ottere una nuova frequ
 \begin{equation}
 	\omega_t^2=\bigg[2-\bigg(1+\frac{R}{R_c}\bigg)^2\bigg]\frac{1}{(RC)^2}
 \end{equation}
-Quindi per $R_c=100k \omega$ abbiamo che $R_c>>R$ e le espressioni sopra si semplificano al circuito passa basso, invece per $R_c=10k \omega$ non si può trascurare $R_c$ $R_c\simR$, di conseguenza alle stesse frequenze il guadagno risulta minore e in particolare si ha una diminuzione di $\omega_t$
+Quindi per $R_c=100k \omega$ abbiamo che $R_c>>R$ e le espressioni sopra si semplificano al circuito passa basso, invece per $R_c=10k \omega$ non si può trascurare $R_c$ $R_c\sim R$, di conseguenza alle stesse frequenze il guadagno risulta minore e in particolare si ha una diminuzione di $\omega_t$
 
 \section{Filtro passa banda}
 \subsection{Filtro RC passa alto}
