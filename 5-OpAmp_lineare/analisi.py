@@ -21,7 +21,7 @@ dVin=mz.dVosc(Vin)
 dVout=mz.dVosc(Vout)
 A=Vout/Vin
 dA=mz.drapp(Vout,dVout,Vin,dVin)
-
+print(dVin, dVout, A, dA)
 
 tab1=[mz.ne_tex(Vin,dVin),
 	  mz.ne_tex(Vout,dVout),
@@ -53,6 +53,3 @@ pl.xscale('log')
 pl.yscale('log')
 pl.savefig('dati/3a.png')
 pl.close()
-
-
-
