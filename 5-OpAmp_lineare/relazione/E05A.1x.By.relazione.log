@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.4)  8 NOV 2018 19:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.4)  9 NOV 2018 12:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -618,12 +618,26 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 17.
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+<circuit.png, id=1, 260.975pt x 200.75pt>
+File: circuit.png Graphic file (type png)
+<use circuit.png>
+Package pdftex.def Info: circuit.png  used on input line 37.
+(pdftex.def)             Requested size: 193.47578pt x 148.82835pt.
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<1c.png, id=2, 462.528pt x 346.896pt>
+File: 1c.png Graphic file (type png)
+<use 1c.png>
+Package pdftex.def Info: 1c.png  used on input line 108.
+(pdftex.def)             Requested size: 386.95897pt x 290.23143pt.
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./circuit.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -634,30 +648,30 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[3] [4] [5] (./E05A.1x.By.relazione.aux) ) 
+[3 <./1c.png>] [4] [5] (./E05A.1x.By.relazione.aux) ) 
 Here is how much of TeX's memory you used:
- 4022 strings out of 494912
- 51568 string characters out of 6180266
- 135088 words of memory out of 5000000
- 7264 multiletter control sequences out of 15000+600000
+ 4033 strings out of 494912
+ 51695 string characters out of 6180266
+ 134088 words of memory out of 5000000
+ 7272 multiletter control sequences out of 15000+600000
  12558 words of font info for 48 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  41i,13n,25p,805b,260s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on E05A.1x.By.relazione.pdf (5 pages, 142685 bytes).
+</usr/share/texlive/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on E05A.1x.By.relazione.pdf (5 pages, 159782 bytes).
 PDF statistics:
- 64 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 46 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

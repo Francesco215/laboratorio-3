@@ -6,6 +6,9 @@ def lineare(x,a,b):
 	return a*x + b
 def costante (x,a,b):
 	return a
+
+pl.rcParams['lines.linewidth'] = 1
+
 #Punto 1.a
 R1=1.187e3
 dR1=mz.dRdig(R1)
@@ -21,7 +24,17 @@ dVin=mz.dVosc(Vin)
 dVout=mz.dVosc(Vout)
 A=Vout/Vin
 dA=mz.drapp(Vout,dVout,Vin,dVin)
-print(dVin, dVout, A, dA)
+popt, pcov = mz.curve_fitdx(lineare, Vin, Vout, dVin, dVout)
+
+t = np.linspace(0,3, 1000)
+pl.figure(1)
+pl.xlabel("Vin [V]")
+pl.ylabel("Vout [V]")
+pl.errorbar(Vin, Vout, dVout, dVin, fmt='.')
+pl.plot(t, lineare(t, *popt))
+pl.savefig('dati/1c.png')
+pl.close()
+print(popt, np.sqrt(np.diag(pcov)))
 
 tab1=[mz.ne_tex(Vin,dVin),
 	  mz.ne_tex(Vout,dVout),
@@ -36,6 +49,7 @@ chi2,pval=mz.chi2_pval(lineare,Vin,Vout,dVout,popt,dx=dVin,df=costante)
 #punto 2.a
 Vout,f=np.genfromtxt('dati/2a.txt',unpack='True')
 Vin=np.ones(len(Vout))*1.14
+pl.figure()
 pl.plot(f,Vout/Vin,'.')
 pl.plot(7.519,10/np.sqrt(2),'.')
 pl.plot(210100,10/np.sqrt(2),'.')
@@ -45,9 +59,11 @@ pl.savefig('dati/2a.png')
 pl.close()
 
 
+
 #--------------------------------------------------------
 #punto 3.a
 Vout,f,Vin=np.genfromtxt('dati/3a.txt',unpack='True')
+pl.figure()
 pl.plot(f,Vout/Vin,'.')
 pl.xscale('log')
 pl.yscale('log')
