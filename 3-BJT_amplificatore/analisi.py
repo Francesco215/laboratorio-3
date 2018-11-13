@@ -29,7 +29,7 @@ Cout = 110.7e-9
 Cin = 221e-9
 
 Vcc = 19.97
-Vbe = 0.614 # ddp base emettitore al punto di lavoro
+Vbe = 0.7 # ddp base emettitore al punto di lavoro
 Vrc = 9.92
 dVcc, dVbe, dVrc = mz.dVdig([Vcc, Vbe, Vrc])
 
@@ -47,7 +47,7 @@ print(Vrc/Rc, mz.drapp(Vrc, dVrc, Rc, dRc))
 
 
 Vin = 1
-Vout, f = np.genfromtxt("dati/dati.txt", unpack=True)
+#Vout, f = np.genfromtxt("dati/dati.txt", unpack=True)
 plt.figure()
 
 def ordina_2_vett(v1,v2):

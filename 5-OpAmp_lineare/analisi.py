@@ -34,6 +34,7 @@ mz.stampa_matrice_latex(tab1)
 popt,pcov=mz.curve_fitdx(lineare,Vin,Vout,dx=dVin,dy=dVout)
 chi2,pval=mz.chi2_pval(lineare,Vin,Vout,dVout,popt,dx=dVin,df=costante)
 
+print(chi2/len(Vin))
 
 #-------------------------------------------------------
 #punto 2.a
@@ -53,12 +54,12 @@ pl.close()
 #--------------------------------------------------------
 #punto 3.a
 Vout,f,Vin,faset=np.genfromtxt('dati/3a.txt',unpack='True')
-pl.plot(f,(Vout/Vin)**20,'.')
+pl.plot(f,20*np.log10(Vout/Vin),'.', label="Misure")
 pl.xscale('log')
-pl.yscale('log')
 pl.ylabel('A[dB]')
 pl.xlabel('f[Hz]')
-pl.savefig('dati/3a.png')
+pl.legend()
+pl.savefig('relazione/3a.png')
 pl.close()
 
 dVin=mz.dVosc(Vin)

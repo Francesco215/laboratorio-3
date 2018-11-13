@@ -28,10 +28,8 @@ k$\Omega$ e con un amplificazione a centro banda di 10.
 
 Si monta il circuito secondo lo schema mostrato in figura \ref{fig:ampinv}, utilizzando la barra di 
 distribuzione verde per la tensione negativa, quella rosso per la tensione positiva, e quella nera per 
-la massa.
+la massa. Si sono scelti $R_1 = 1.2k\Omega$ e $R_2 = 12k\Omega$ nominali in quanto risolvendo il circuito considerando un OpAmp ideale si trova $A_V=R_2/R_1$
 
-\rem{Indicare i criteri di scelta delle resistenze ed i valori desiderati}
-%
 \begin{figure}[h]
 \begin{center}
 \includegraphics[width=0.4\linewidth]{circuit.png}
@@ -74,7 +72,7 @@ zona lineare (a sinistra) e non (a destra)}
 %
 
 Variando l'~ampiezza di $V_{in}$ si misura $V_{out}$ ed il relativo guadagno $A_V=V_{out}/V_{in}$ riportando i dati ottenuti in tabella~\ref{tab:guadagno} 
-e mostrandone un grafico in Fig. \ref{fig:lin}. 
+e mostrandone un grafico in Fig. \ref{fig:lin}. Il fit è stato fatto sulla retta $V_{out}$ vs $V_{in}$ usando la funzione curve\_fit di scipy con ablosute\_sigma=False, sono stati considerati anche gli errori sulla x.
 
 \begin{table}[h]
 \caption{$V_{out}$ in funzione di $V_{in}$ e relativo rapporto.}
@@ -98,6 +96,7 @@ $2.7 \pm 0.1 $ & $27 \pm 1 $ & $10 \pm 0.6 $ \\
 \end{tabular}
 \end{center}
 \end{table}
+
 
 \rem{Indicare in che modo si fa il fit, se sulla retta $V_{out}$ vs. $V_{in}$ oppure sui valori di $A_V$   }
 
@@ -124,7 +123,7 @@ tensione di alimentazione dell'~integrato ed a verificarne la correlazione con l
 \subsection{Risposta in frequenza del circuito}
 Si misura la risposta in frequenza del circuito, riportando i dati  in Tab. \ref{tab:bodeinv} e
 in un grafico di Bode in Fig. \ref{fig:bodeinv}, stimando la frequenza di taglio inferiore e 
-superiore \rem{indicare in che modo}.
+superiore. osservando la frequenza alla quale il guadagno risulta -3dB del massimo, l'errore è stato valutato variando la frequenza fino a che non si osserva un cambiamento nell'ampiezza del segnale di uscita.
 \[
 V_{in} = (1.14 \pm 0.05 )\,\mathrm{V}
 \]
@@ -161,8 +160,7 @@ $952 \pm 10 k$& $ 2.5 \pm 0.1$& $2.2\pm 0.1$ \\
 
 \begin{figure}[h]
 \begin{center}
-\includegraphics[width=7cm,height=6cm]{3a.png}
-%\includegraphics[width=0.7\textwidth]{}
+\includegraphics[width=0.7\linewidth]{3a.png}
 \caption{\small Plot di Bode in ampiezza per l'~amplificatore invertente.}
 \label{fig:bodeinv}
 \end{center}
@@ -172,7 +170,7 @@ $952 \pm 10 k$& $ 2.5 \pm 0.1$& $2.2\pm 0.1$ \\
 Si misura direttamente lo \emph{slew-rate} dell'op-amp inviando in ingresso un'~onda quadra 
 di frequenza di $\sim 2.11$~kHz e di ampiezza $\sim 2.70$~V. Si ottiene:
 \[
-SR_\mathrm{misurato} = (7.7 \pm 0.3 )\,\mathrm{V/\mu s} \quad \mathrm{valore \; tipico}\, (\exn )\,\mathrm{V/\mu s}\
+SR_\mathrm{misurato} = (7.7 \pm 0.3 )\,\mathrm{V/\mu s} \quad \mathrm{valore \; tipico}\, (13 )\,\mathrm{V/\mu s}\
 \]
 
 \rem{Commentare accordo o disaccordo. Eventualmente inserire screenshot dell'oscilloscopio}
@@ -192,7 +190,6 @@ nella tabella \ref{tab:bodeinte} e in un diagramma di Bode in Fig. \ref{fig:bode
 \[
 V_{in} = (1.03 \pm 0.04 )\,\mathrm{V}
 \]
-\rem{La fase pu\'o essere indicata in gradi, radianti, oppure come frazione $\phi/2\pi$}
 %
 \begin{table}[h]
 \caption{Guadagno e fase dell'~integratore invertente in funzione della frequenza.}
@@ -226,14 +223,16 @@ $f_{in}$ (kHz) & $V_{out}$ (V) & $A$ (dB) & $\Delta t (\mu s)$ & $\phi(rad/\pi)$
 %
 
 Si ricava una stima delle caratteristiche principali dell'andamento (guadagno a bassa frequenza, frequenza di taglio, e pendenza ad alta frequenza)
-e si confrontano con quanto atteso. Non si effettua la stima degli errori, trattandosi di misure qualitative.
-
-\rem{Indicare brevemente come sono stati ottenuti i valori attesi}
+e si confrontano con quanto atteso. Non si effettua la stima degli errori, trattandosi di misure qualitative. I valori attesi sono stati ottenuti calcolando il guadagno del circuito:
+\begin{equation*}
+A_V=|\frac{Z_2}{Z_1}|=\frac{R_2}{R_1}\frac{1}{\sqrt{(\omega C R_2)^2 +1}}
+\end{equation*}
+Si nota subito che il massimo si ha per $\omega=0, A_V=R2/R1$, la frequenza di taglio si ottiene ponendo $\omega R_2 C=1 \qquad f_H = 1/2\pi R_2 C$, infine in guadagno ad alta frequenza può essere approssimato con $A_V = 1/\omega C R_1$.
 
 \begin{align*}
-A_M &= (19.5)\,\mathrm{dB} & \mathrm{atteso} &:\,(20  )\, \mathrm{dB}  \\
-f_H &= (355)\,\mathrm{Hz} & \mathrm{atteso} &:\,(\exn  )\, \mathrm{Hz} \\
-{\mathrm{d}A_V}/{\mathrm{d}f} &= (18.6)\,\mathrm{dB/decade} & \mathrm{atteso} &:\,(20 )\, \mathrm{dB/decade}  \\
+A_M &= (19.5)\,\mathrm{dB} & \mathrm{atteso} &:\,(19.9  )\, \mathrm{dB}  \\
+f_H &= (355)\,\mathrm{Hz} & \mathrm{atteso} &:\,(330  )\, \mathrm{Hz} \\
+{\mathrm{d}A_V}/{\mathrm{d}f} &= (-18.6)\,\mathrm{dB/decade} & \mathrm{atteso} &:\,(-20 )\, \mathrm{dB/decade}  \\
 \end{align*}
 
 
@@ -241,16 +240,13 @@ f_H &= (355)\,\mathrm{Hz} & \mathrm{atteso} &:\,(\exn  )\, \mathrm{Hz} \\
 \subsection*{Risposta ad un'~onda quadra}
 Si invia all'~ingresso un'~onda quadra di frequenza $\sim 6.47\,kHz$ e ampiezza $\sim 1.09\,V$.
 Si riporta in Fig. \ref{fig:oscinte} le forme d'~onda acquisite all'~oscillografo per l'~ingresso
-e l'~uscita. 
+e l'~uscita. Il circuito si comporta come un integratore invertente infatti l'uscita presenta un'onda triangolare con minimi e massimi dove $V_{in}$ passa da alto a basso e basso a alto rispettivamente
 
-\rem{Commentare se che il circuito si comporta come un integratore.}
-%
 \begin{figure}[htb]
 \begin{center}
-\framebox(200,200){Inserire screenshot oscillografo per integratore}
-%\includegraphics[0.45\textwidth]{}
+\includegraphics[width=0.45\linewidth]{screenshot/foto3.png}
 \end{center}
-\caption{\small Ingresso (in alto) ed uscita (in basso) del circuito integratore per un'~onda quadra.}
+\caption{\small Ingresso (onda quadra) ed uscita (onda triangolare) del circuito integratore per un'~onda quadra.}
 \label{fig:oscinte}
 \end{figure}
 %
