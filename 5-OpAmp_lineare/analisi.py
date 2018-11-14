@@ -40,13 +40,13 @@ print(chi2/len(Vin))
 #punto 2.a
 Vout,f=np.genfromtxt('dati/2a.txt',unpack='True')
 Vin=np.ones(len(Vout))*1.14
-pl.plot(f,(Vout/Vin)**20,'.')
-pl.plot(7.519,(10/np.sqrt(2))**20,'.')
-pl.plot(210100,(10/np.sqrt(2))**20,'.')
+pl.errorbar(f,20*np.log10(Vout/Vin),20*mz.dlog10(Vout/Vin, Vout/Vin*0.06),fmt='.', color="blue", label="Misure")
+pl.errorbar(7.519,20*np.log10(10/np.sqrt(2)),20*np.log10(10/np.sqrt(2))*0.03,fmt='.', color="blue")
+pl.errorbar(210100,20*np.log10(10/np.sqrt(2)),20*np.log10(10/np.sqrt(2))*0.03,fmt='.', color="blue")
 pl.xscale('log')
-pl.yscale('log')
 pl.ylabel('A[dB]')
 pl.xlabel('f[Hz]')
+pl.legend()
 pl.savefig('dati/2a.png')
 pl.close()
 
@@ -54,13 +54,24 @@ pl.close()
 #--------------------------------------------------------
 #punto 3.a
 Vout,f,Vin,faset=np.genfromtxt('dati/3a.txt',unpack='True')
-pl.plot(f,20*np.log10(Vout/Vin),'.', label="Misure")
+pl.errorbar(f,20*np.log10(Vout/Vin),20*mz.dlog10(Vout/Vin, Vout/Vin*0.06),fmt='.', label="Misure")
 pl.xscale('log')
 pl.ylabel('A[dB]')
 pl.xlabel('f[Hz]')
 pl.legend()
-pl.savefig('relazione/3a.png')
+pl.savefig('dati/3a.png')
 pl.close()
+
+df=mz.dpoli(1/f,mz.dtosc(1/f),-1)
+dfaset=mz.dtosc(faset)
+fase=2*faset*f
+dfase=2*mz.dprod(faset,dfaset,f,df)
+pl.errorbar(f,fase,dfase,df,fmt='.', label="Misure")
+pl.xscale('log')
+pl.ylabel('fase [rad/pi]')
+pl.xlabel('f[Hz]')
+pl.legend()
+pl.savefig('dati/3fase.png')
 
 dVin=mz.dVosc(Vin)
 dVout=mz.dVosc(Vout)
@@ -68,10 +79,6 @@ A=Vout/Vin
 dA=mz.drapp(Vout,dVout,Vin,dVin)
 dA=20*mz.dlog10(A,dA)
 A=20*np.log10(A)
-df=mz.dpoli(1/f,mz.dtosc(1/f),-1)
-dfaset=mz.dtosc(faset)
-fase=2*faset*f
-dfase=2*mz.dprod(faset,dfaset,f,df)
 tab3a=[mz.ne_tex(f,df),mz.ne_tex(Vout,dVout),mz.ne_tex(A,dA),
 		mz.ne_tex(faset,dfaset),mz.ne_tex(fase,dfase)]
 mz.stampa_matrice_latex(tab3a)
