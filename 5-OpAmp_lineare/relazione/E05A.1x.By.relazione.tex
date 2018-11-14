@@ -244,11 +244,19 @@ e l'~uscita. Il circuito si comporta come un integratore invertente infatti l'us
 \end{figure}
 %
 
-Si misura l'~ampiezza dell'~onda  in uscita e si confronta il valore atteso.
+Si misura l'~ampiezza dell'~onda  in uscita e si confronta il valore atteso.\newline
 
-\rem{Indicare brevemente come sono stati ottenuti i valori attesi}
+risolvendo  il circuito si ottiene che
+\[
+	\frac{V_{out}}{V_{in}}=\frac{R_2}{R_1}\frac{1}{\omega C R_2 +1}\approx \frac{1}{R_1i\omega C}\quad \textrm{per frequenze alte}
+\]
+sfuttando la linearità del circuito si ottiene che $V_{out}=\frac{1}{R_1C}\int V_{in}(t)dt$, essendo $V_{in}$ un'onda quadra si può effettuare l'integrale sulla parte positiva dell'onda quadra per ottenere il valore massimo di $V_{outMax}$, supponendo che l'onda quadra passa da positivo a negativo a $t=0$ si ottene che
+\begin{equation}
+	V_{outMax}=\frac{1}{R_1C}\int_0^{T/2}V_{in}dt=\frac{V_{in}}{2R_1Cf}\approx 0.86
+\end{equation}
+
 \begin{align*}
-V_{out} &= (0.86 )\,\mathrm{V} & \mathrm{atteso} &:\,(\exn  )\, \mathrm{V}  \\
+V_{out} &= (0.86 )\,\mathrm{V} & \mathrm{atteso} &:\,(0.86  )\, \mathrm{V}  \\
 \end{align*}
 
 \rem{Inserire commento sulla dipendenza dell'~uscita dalla frequenza.}
