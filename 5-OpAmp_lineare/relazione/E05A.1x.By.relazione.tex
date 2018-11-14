@@ -65,7 +65,7 @@ Nel primo caso l'~OpAmp si comporta in modo lineare mentre nel secondo caso si o
 	\includegraphics[width=7cm,height=6cm]{screenshot/foto2.png}
 }
 \end{center}
-\caption{\small Ingresso (in alto) ed uscita (in basso) di un amplificatore invertente con OpAmp, in 
+\caption{\small Ingresso ed uscita di un amplificatore invertente con OpAmp, in 
 zona lineare (a sinistra) e non (a destra)}
 \label{fig:oscinv}
 \end{figure}
@@ -110,9 +110,7 @@ A_{best} = 10.07 \pm 0.03 \quad  \chi^2 = 0.02
 \end{figure}
 %
 
-\rem{Fino a quale tensione il circuito si comporta linearmente? Provare (facoltativamente) a ridurre la 
-tensione di alimentazione dell'~integrato ed a verificarne la correlazione con la tensione di 
-\emph{clipping} dell'~uscita. Commentare quanto osservato }
+Il circuito si comporta linearmente fino a $V_{in} \approx 2.8V$, questo rispecchia il funzionamento dell'OpAmp, infatti con una ddp di alimentazione $\approx 30V$ e con un guadagno atteso di $10.2$ ci aspettiamo che il clipping avvenga a circa 3V, in accordo con quanto misurato. Da questo si può dedurre che alzando o abbassando la ddp di alimentazione il clipping avverrà a una ddp maggiore o minore, rispettivamente.
 
 %%%%%%%%%%%%%%%%%%
 %
@@ -170,6 +168,7 @@ di frequenza di $\sim 2.11$~kHz e di ampiezza $\sim 2.70$~V. Si ottiene:
 SR_\mathrm{misurato} = (7.7 \pm 0.3 )\,\mathrm{V/\mu s} \quad \mathrm{valore \; tipico}\, (13 )\,\mathrm{V/\mu s}\
 \]
 
+Lo slew rate misurato risulta circa la metà rispetto a quello atteso
 \rem{Commentare accordo o disaccordo. Eventualmente inserire screenshot dell'oscilloscopio}
 %
 \section{Circuito integratore}
@@ -256,7 +255,7 @@ V_{out} &= (0.86 )\,\mathrm{V} & \mathrm{atteso} &:\,(\exn  )\, \mathrm{V}  \\
 %
 
 \subsection{Discussione}
-
+ 
 \rem{Inserire commenti su quanto osservato ed eventuali deviazioni. 
 In particolare: attenuazione ad alte frequenze, dipendenza della fase dalla frequenza, funzione di $R_2$. }
 
