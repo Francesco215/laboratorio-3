@@ -168,9 +168,7 @@ di frequenza di $\sim 2.11$~kHz e di ampiezza $\sim 2.70$~V. Si ottiene:
 SR_\mathrm{misurato} = (7.7 \pm 0.3 )\,\mathrm{V/\mu s} \quad \mathrm{valore \; tipico}\, (13 )\,\mathrm{V/\mu s}\
 \]
 
-Lo slew rate misurato risulta circa la metà rispetto a quello atteso
-\rem{Commentare accordo o disaccordo. Eventualmente inserire screenshot dell'oscilloscopio}
-%
+Lo slew rate misurato risulta circa la metà rispetto a quello atteso e non sappiamo perchè%
 \section{Circuito integratore}
 Si monta il circuito integratore con i seguenti valori  dei componenti indicati: 
 \[
@@ -218,7 +216,7 @@ $f_{in}$ (kHz) & $V_{out}$ (V) & $A$ (dB) & $\Delta t (\mu s)$ & $\phi(rad/\pi)$
 Si ricava una stima delle caratteristiche principali dell'andamento (guadagno a bassa frequenza, frequenza di taglio, e pendenza ad alta frequenza)
 e si confrontano con quanto atteso. Non si effettua la stima degli errori, trattandosi di misure qualitative. I valori attesi sono stati ottenuti calcolando il guadagno del circuito:
 \begin{equation*}
-A_V=|\frac{Z_2}{Z_1}|=\frac{R_2}{R_1}\frac{1}{\sqrt{(\omega C R_2)^2 +1}}
+A_V=\bigg|\frac{Z_2}{Z_1}\bigg|=\frac{R_2}{R_1}\frac{1}{\sqrt{(\omega C R_2)^2 +1}}
 \end{equation*}
 Si nota subito che il massimo si ha per $\omega=0, A_V=R2/R1$, la frequenza di taglio si ottiene ponendo $\omega R_2 C=1 \qquad f_H = 1/2\pi R_2 C$, infine in guadagno ad alta frequenza può essere approssimato con $A_V = 1/\omega C R_1$.
 
@@ -252,20 +250,19 @@ risolvendo  il circuito si ottiene che
 \]
 sfuttando la linearità del circuito si ottiene che $V_{out}=\frac{1}{R_1C}\int V_{in}(t)dt$, essendo $V_{in}$ un'onda quadra si può effettuare l'integrale sulla parte positiva dell'onda quadra per ottenere il valore massimo di $V_{outMax}$, supponendo che l'onda quadra passa da positivo a negativo a $t=0$ si ottene che
 \begin{equation}
+\label{eq:asd}
 	V_{outMax}=\frac{1}{R_1C}\int_0^{T/2}V_{in}dt=\frac{V_{in}}{2R_1Cf}\approx 0.86
+}
 \end{equation}
 
 \begin{align*}
 V_{out} &= (0.86 )\,\mathrm{V} & \mathrm{atteso} &:\,(0.86  )\, \mathrm{V}  \\
 \end{align*}
 
-\rem{Inserire commento sulla dipendenza dell'~uscita dalla frequenza.}
-%
 
 \subsection{Discussione}
- 
-\rem{Inserire commenti su quanto osservato ed eventuali deviazioni. 
-In particolare: attenuazione ad alte frequenze, dipendenza della fase dalla frequenza, funzione di $R_2$. }
+Come si vede dall'equazione \ref{eq:asd} l'ampiezza di $V_{out}$ è inversamente proporzionale alla frequenza e la fase $\phi$ del segnale è data da $\phi=\textrm{arctg}(\omega C R_2)$, il circuito rispetta le aspettative, in particolare il guadagno e la frequenza di taglio sono in accordo con le previsioni teoriche.\newline
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%
 

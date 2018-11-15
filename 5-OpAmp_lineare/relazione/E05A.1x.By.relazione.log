@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  14 NOV 2018 14:30
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  14 NOV 2018 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -657,13 +657,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 <3a.png, id=28, 462.528pt x 346.896pt>
 File: 3a.png Graphic file (type png)
  <use 3a.png>
-Package pdftex.def Info: 3a.png used on input line 210.
+Package pdftex.def Info: 3a.png used on input line 208.
 (pdftex.def)             Requested size: 217.66211pt x 163.24757pt.
 
 <3fase.png, id=29, 462.528pt x 346.896pt>
 File: 3fase.png Graphic file (type png)
  <use 3fase.png>
-Package pdftex.def Info: 3fase.png used on input line 211.
+Package pdftex.def Info: 3fase.png used on input line 209.
 (pdftex.def)             Requested size: 217.66211pt x 163.24757pt.
 
 
@@ -673,20 +673,29 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 File: screenshot/foto3.png Graphic file (type png)
 
 <use screenshot/foto3.png>
-Package pdftex.def Info: screenshot/foto3.png used on input line 240.
+Package pdftex.def Info: screenshot/foto3.png used on input line 238.
 (pdftex.def)             Requested size: 217.66211pt x 204.06387pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 247--248
+Underfull \hbox (badness 10000) in paragraph at lines 245--246
 
  []
 
-[4 <./2a.png>] [5 <./3a.png> <./3fase.png> <./screenshot/foto3.png>]
+! Extra }, or forgotten $.
+l.255 }
+       
+? 
+[4 <./2a.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+[5 <./3a.png> <./3fase.png> <./screenshot/foto3.png>]
 (./E05A.1x.By.relazione.aux) ) 
 Here is how much of TeX's memory you used:
- 4000 strings out of 493014
- 51501 string characters out of 6133350
- 137141 words of memory out of 5000000
- 7461 multiletter control sequences out of 15000+600000
+ 4001 strings out of 493014
+ 51509 string characters out of 6133350
+ 137149 words of memory out of 5000000
+ 7462 multiletter control sequences out of 15000+600000
  12558 words of font info for 48 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  38i,11n,24p,805b,310s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -705,7 +714,7 @@ m/cmr9.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/c
 msy10.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 sy7.pfb></usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmti
 10.pfb>
-Output written on E05A.1x.By.relazione.pdf (5 pages, 230750 bytes).
+Output written on E05A.1x.By.relazione.pdf (5 pages, 226824 bytes).
 PDF statistics:
  92 PDF objects out of 1000 (max. 8388607)
  55 compressed objects within 1 object stream
