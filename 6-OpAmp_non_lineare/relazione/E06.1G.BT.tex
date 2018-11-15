@@ -58,7 +58,7 @@
 			\]
 			Quindi si ottiene dal primo sottocircuito che\newline
 			\begin{equation}
-				V_{sh}=V_0e^{-t/C_FR_1}
+				V_{sh}=\pm V_Se^{-t/C_FR_1}
 			\end{equation}
 			CONTROLLA SE $V_0$ E' UGUALE A $V_S$!!!
 		\subsection{Teoria secondo sotto-circuito}
@@ -77,16 +77,38 @@
 			Adesso che sappiamo ciò possiamo spiegare il secondo sottocircuito:
 			Il secondo sotto circuito si può vedere nella figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
 			Chiamerò $V_P$\footnote{P sta per potenziometro} il potenziale che va nel terminale negativo dell'OpAmp, esso è possibile regolarlo grazie all'ausilio del potenziometro che funge da partitore di tenzione.\newline
-			Essendo (quasi sempre) $A|V_{sh}-V_P|>>1$ si ha che $V_{discr}=V_C$ se $V_{sh}>V_P$ e che $V_{discr}=V_E$ se $V_{sh}<V_E$.
+			Essendo (quasi sempre) $A|V_{sh}-V_P|>>1$ si ha che 
+			\begin{equation}
+				\begin{cases}
+					V_{discr}=V_C\textrm{ se } V_{sh}>V_P\\
+					V_{discr}=V_E \textrm{ se } V_{sh}<V_E
+				\end{cases}
+			\end{equation}
 			\begin{figure}
 				\label{fig:circ2}
 				\centering
 				\includegraphics[width=70mm]{immagini/circ2a.png}
-				\caption{sotto-circuito 2}
+				\caption{secondo sotto-circuito}
 			\end{figure}
 		\subsection{Quello che resta della Teoria}
-			asd
-
+			Unendo i due sottocircuiti come in figura \ref{fig:circ} si uniscono i risultati degli scorsi due paragrafi:
+			\begin{equation}
+				V_{sh}=\pm V_Se^{-t/C_FR_1}\quad \textrm{ e }\quad 
+				\begin{cases}
+					V_{discr}=V_C \textrm{ se } V_{sh}>V_P\\
+					V_{discr}=V_E \textrm{ se } V_{sh}<V_E
+				\end{cases}
+			\end{equation}
+			\begin{figure}
+				\label{fig:circ}
+				\centering
+				\includegraphics[width=120mm]{immagini/circa.png}
+				\caption{Circuito}
+			\end{figure}
+			Se si vuole ricavare per quanto tempo $V_{discr}=V_C$ basta risolvere rispetto al tempo $V_{sh}>V_P$, quindi
+			\begin{equation}
+				V_Se^{-t/C_FR_1}>V_P\qquad-\frac{t}{C_RR_1}>\ln \bigg(\frac{V_P}{V_S}\bigg)\qquad t<C_RR_1\ln \bigg(\frac{V_S}{V_P}\bigg)
+			\end{equation}
 
 
 \end{document}
