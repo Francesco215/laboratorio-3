@@ -13,7 +13,7 @@
 \begin{document}
 	\maketitle
 	\section{Amplificatore di carica}
-		Per spiegare il circuito dell'amplificatore di carica è meglio analizzarlo con i suoi due sotto-circuiti separatamente, e poi vedere come si incastrano assieme.\newline
+		Per spiegare il circuito dell'amplificatore di carica è meglio analizzare i suoi due sotto-circuiti separatamente, e poi vedere come funzionano assieme.\newline
 		\subsection{Teoria Primo sotto-circuito}
 			Il primo sottocircuito è quello che è collegato al voltaggio in ingresso $V_S$, esso si può vedere nella figura \ref{fig:circ1}
 			\begin{figure}
@@ -70,12 +70,12 @@
 				\includegraphics[width=40mm]{immagini/OpAmp1.png}
 				\caption{un OpAmp}
 			\end{figure}
-			L'OpAmp è in grado di amplificare il segnale per bene solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può dare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
+			L'OpAmp è in grado di amplificare il segnale per bene solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può erogare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
 
 			Essendo $A$ molto grande basta una differenza di potenziale molto piccola ai capi dei terminali + e - per mandare l'OpAmp a $V_{S+}$ e $V_{S-}$, quindi ciò viene usato per dire in modo binario se un voltaggio è maggiore di un'altro voltaggio, infatti se $A|V_+-V_-|>>1$ si ha che $V_{out}=V_{S+}$ se $V_+>V_-$ e $V_{out}=V_{S-}$ se $V_+<V_-$.\newline
 
-			Adesso che sappiamo ciò possiamo spiegare il secondo sottocircuito:
-			Il secondo sotto circuito si può vedere nella figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
+			Adesso che sappiamo questo possiamo spiegare il secondo sottocircuito:
+			come si può vedere nella figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
 			Chiamerò $V_P$\footnote{P sta per potenziometro} il potenziale che va nel terminale negativo dell'OpAmp, esso è possibile regolarlo grazie all'ausilio del potenziometro che funge da partitore di tenzione.\newline
 			Essendo (quasi sempre) $A|V_{sh}-V_P|>>1$ si ha che 
 			\begin{equation}
