@@ -1,4 +1,5 @@
 \documentclass{article}
+%\documentclass{exam}
 \usepackage[italian]{babel}
 \usepackage[T1]{fontenc}
 \usepackage{graphicx}
@@ -13,7 +14,7 @@
 \begin{document}
 	\maketitle
 	\section{Amplificatore di carica}
-		Per spiegare il circuito dell'amplificatore di carica è meglio analizzare i suoi due sotto-circuiti separatamente, e poi vedere come funzionano assieme.\newline
+		Per spiegare il circuito dell'amplificatore di carica è meglio analizzarlo con i suoi due sotto-circuiti separatamente, e poi vedere come si incastrano assieme.\newline
 		\subsection{Teoria Primo sotto-circuito}
 			Il primo sottocircuito è quello che è collegato al voltaggio in ingresso $V_S$, esso si può vedere nella figura \ref{fig:circ1}
 			\begin{figure}
@@ -25,7 +26,7 @@
 			, risolvere il circuito equivale a risolvere questo sistema di 3 equazioni
 			\begin{equation}
 				\begin{cases}
-					V_s-V_-=\frac{Q_T}{C_T}\\
+					V_S-V_-=\frac{Q_T}{C_T}\\
 					V_--V_{sh}=I_1R_1\\
 					V_--V_{sh}=\frac{Q_F}{C_F}
 				\end{cases}
@@ -70,12 +71,12 @@
 				\includegraphics[width=40mm]{immagini/OpAmp1.png}
 				\caption{un OpAmp}
 			\end{figure}
-			L'OpAmp è in grado di amplificare il segnale per bene solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può erogare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
+			L'OpAmp è in grado di amplificare il segnale per bene solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può dare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
 
 			Essendo $A$ molto grande basta una differenza di potenziale molto piccola ai capi dei terminali + e - per mandare l'OpAmp a $V_{S+}$ e $V_{S-}$, quindi ciò viene usato per dire in modo binario se un voltaggio è maggiore di un'altro voltaggio, infatti se $A|V_+-V_-|>>1$ si ha che $V_{out}=V_{S+}$ se $V_+>V_-$ e $V_{out}=V_{S-}$ se $V_+<V_-$.\newline
 
-			Adesso che sappiamo questo possiamo spiegare il secondo sottocircuito:
-			come si può vedere nella figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
+			Adesso che sappiamo ciò possiamo spiegare il secondo sottocircuito:
+			Il secondo sotto circuito si può vedere nella figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
 			Chiamerò $V_P$\footnote{P sta per potenziometro} il potenziale che va nel terminale negativo dell'OpAmp, esso è possibile regolarlo grazie all'ausilio del potenziometro che funge da partitore di tenzione.\newline
 			Essendo (quasi sempre) $A|V_{sh}-V_P|>>1$ si ha che 
 			\begin{equation}
@@ -109,6 +110,33 @@
 			\begin{equation}
 				V_Se^{-t/C_FR_1}>V_P\qquad-\frac{t}{C_RR_1}>\ln \bigg(\frac{V_P}{V_S}\bigg)\qquad t<C_RR_1\ln \bigg(\frac{V_S}{V_P}\bigg)
 			\end{equation}
-
-
+		\subsection{Raccolta e analisi dati}
+			dopo scrivi qualcosa!
+	\section{Multivibratore astabile}
+		\subsection{Teoria trigger di Schmitt}
+			Il trigger di Schmitt (immagine \ref{fig:smith}) è uno squadratore d'onda, che funziona nel seguente modo:\newline
+			\begin{figure}
+				\label{fig:smith}
+				\centering
+				\includegraphics[width=70mm]{immagini/smitha.png}
+				\caption{Trigger di Schmitt}
+			\end{figure}
+			\begin{equation}
+				\begin{cases}
+					V_{out}=V_{CE}\textrm{ se }V_->\frac{V_{CC}}{1+R_1/R_2}\\
+					V_{out}=V_{CC}\textrm{ se }V_-<\frac{V_{CE}}{1+R_1/R_2}\\
+					\textrm{se }\frac{V_{CE}}{1+R_1/R_2}<V_-<\frac{V_{CC}}{1+R_1/R_2}\textrm{ allora }V_{out}\textrm{ assume l'ultimo valore assunto}
+				\end{cases}
+			\end{equation}
+		\subsection{Teoria Multivibratore astabile}
+			Il multivibratore astabile è quello in figura \ref{fig:multivibratore}, esso è un trigger di Schmitt con due diodi zener che limitano $-V_{br}<V_{out}<V_{br}$, dove $V_{br}$ è il voltaggio di breakdown dei zener. Inoltre $V_-$, grazie al condensatore si carica dello stesso segno di $V_{out}$, ciò crea un fenomeno oscillatorio.
+			\begin{figure}
+				\label{fig:multivibratore}
+				\centering
+				\includegraphics[width=100mm]{immagini/multivibratore.png}
+				\caption{Multivibratore astabile}
+			\end{figure}
+			Per dimostrare quanto detto sopra, possiamo immaginare il circuito a regime
+		\subsection{Raccolta e analisi dati}
+		asd
 \end{document}
