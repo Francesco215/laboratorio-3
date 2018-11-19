@@ -20,7 +20,7 @@
 			\begin{figure}
 				\label{fig:circ1}
 				\centering
-				\includegraphics[width=70mm]{immagini/circ1b.png}
+				\includegraphics[width=70mm]{immagini/circ1a.png}
 				\caption{sotto-circuito 1}
 			\end{figure}
 			, risolvere il circuito equivale a risolvere questo sistema di 3 equazioni
@@ -69,15 +69,15 @@
 				\label{fig:OpAmp1}
 				\centering
 				\includegraphics[width=40mm]{immagini/OpAmp1.png}
-				\caption{un OpAmp}
+				\caption{Un OpAmp}
 			\end{figure}
 			L'OpAmp è in grado di amplificare il segnale per bene solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può dare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
 
-			Essendo $A$ molto grande basta una differenza di potenziale molto piccola ai capi dei terminali + e - per mandare l'OpAmp a $V_{S+}$ e $V_{S-}$, quindi ciò viene usato per dire in modo binario se un voltaggio è maggiore di un'altro voltaggio, infatti se $A|V_+-V_-|>>1$ si ha che $V_{out}=V_{S+}$ se $V_+>V_-$ e $V_{out}=V_{S-}$ se $V_+<V_-$.\newline
+			Essendo $A$ molto grande basta una differenza di potenziale molto piccola ai capi dei terminali + e - per mandare l'OpAmp a $V_{S+}$ e $V_{S-}$, questo viene usato per dire in modo binario se un voltaggio è maggiore di un'altro voltaggio, infatti se $A|V_+-V_-|>>1$ si ha che $V_{out}=V_{S+}$ se $V_+>V_-$ e $V_{out}=V_{S-}$ se $V_+<V_-$.\newline
 
 			Adesso che sappiamo ciò possiamo spiegare il secondo sottocircuito:
 			Il secondo sotto circuito si può vedere nella figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
-			Chiamerò $V_P$\footnote{P sta per potenziometro} il potenziale che va nel terminale negativo dell'OpAmp, esso è possibile regolarlo grazie all'ausilio del potenziometro che funge da partitore di tenzione.\newline
+			Chiamerò $V_P$\footnote{P sta per potenziometro} il potenziale che entra nel terminale negativo dell'OpAmp, esso è possibile regolarlo grazie al potenziometro che funge da partitore di tensione.\newline
 			Essendo (quasi sempre) $A|V_{sh}-V_P|>>1$ si ha che 
 			\begin{equation}
 				\begin{cases}
@@ -88,11 +88,11 @@
 			\begin{figure}
 				\label{fig:circ2}
 				\centering
-				\includegraphics[width=70mm]{immagini/circ2a.png}
+				\includegraphics[width=70mm]{immagini/circ1b.png}
 				\caption{secondo sotto-circuito}
 			\end{figure}
 		\subsection{Quello che resta della Teoria}
-			Unendo i due sottocircuiti come in figura \ref{fig:circ} si uniscono i risultati degli scorsi due paragrafi:
+			Unendo i due sottocircuiti come in figura \ref{fig:circ} si uniscono i risultati dei paragrafi precedenti:
 			\begin{equation}
 				V_{sh}=\pm V_Se^{-t/C_FR_1}\quad \textrm{ e }\quad 
 				\begin{cases}
@@ -129,7 +129,7 @@
 				\end{cases}
 			\end{equation}
 		\subsection{Teoria Multivibratore astabile}
-			Il multivibratore astabile è quello in figura \ref{fig:multivibratore}, esso è un trigger di Schmitt con due diodi zener che limitano $-V_{br}<V_{out}<V_{br}$, dove $V_{br}$ è il voltaggio di breakdown dei zener. Inoltre $V_-$, grazie al condensatore si carica dello stesso segno di $V_{out}$, ciò crea un fenomeno oscillatorio.
+			Il multivibratore astabile è mostrato in figura \ref{fig:multivibratore}, esso è un trigger di Schmitt con due diodi zener che limitano $-V_{br}<V_{out}<V_{br}$, dove $V_{br}$ è il voltaggio di breakdown degli zener. Inoltre $V_-$, grazie al condensatore si carica dello stesso segno di $V_{out}$, ciò crea un fenomeno oscillatorio.
 			\begin{figure}
 				\label{fig:multivibratore}
 				\centering
