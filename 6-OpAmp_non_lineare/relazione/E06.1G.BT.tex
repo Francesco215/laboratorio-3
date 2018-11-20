@@ -175,6 +175,71 @@
 			\end{equation}
 		\subsection{Raccolta e analisi dati}
 		asd
+		
+		\paragraph{1)}
+		\subparagraph{a.}
+		Abbiamo collegato il circuito e alimentato a $\pm 15V$, i componenti, misurati con il multimetro digitale, risultano:
+		\begin{itemize}
+			\item $C_T=0.95\pm0.04 nF$
+			\item $C_F=1.02\pm0.04 nF$
+			\item $R_1=99.7\pm0.8 k\Omega$
+			\item $R_2=99.3\pm0.8 \Omega$
+			\item $C_1=21.0\pm0.9 nF$
+		\end{itemize}
+		Il potenziomentro è stato regolato in modo da produrre una tensione $V_P=184.3\pm0.9 mV$ misurata con il multimetro digitale
+		
+		\subparagraph{c.}
+		Per vedere la relazione tra durata del segnale in uscita e ampiezza del segnale in ingresso abbiamo tenuto $V_P=184.3\pm0.9 mV$ costante e abbiamo fatto variare l'ampiezza $V_S$, i dati raccolti sono mostrati in tabella \ref{tab:durata}. E' stato fatto anche un fit dei dati con la funzione $t=a \log(bx)$ lasciando $a$ e $b$ come parametri di fit (figura \ref{fit:1c}), per il fit non si sono considerati i punti in cui la durata del segnale in uscita è nulla, ovvero non è presente un segnale, in quanto questi punti vanno a formare una retta t=0 e non ha neanche senso parlare di durata del segnale di uscita. Il fit  è stato fatto con absolute-sigma=False in quanto gli errori non sono statistici, i parametri risultano $a=102.7\pm0.4 \mu s$ $b=8.02\pm0.09 V^{-1}$ con un $\chi^2_{ridotto}=0.036$, il chi quadro risulta basso probabilmente a causa della sovrastima degli errori di misura del voltaggio con l'oscilloscopio. Confrontando i parametri ottenuti con la teoria 
+		
+		\begin{table}[h]
+			\label{tab:durata}
+			\begin{center}
+				\begin{tabular}{cc}
+					\hline
+					$V_S [\mathrm{V}]$&$t[\mu s]$ \\
+					\hline
+					$63.2\pm0.3 \mathrm{m}$ & $0$ \\
+					$0.200\pm0.001$ & $0$ \\
+					$0.412\pm0.002$ & $(1.23\pm0.01)\times 10^{2}$ \\
+					$1.34\pm0.007$ & $(2.44\pm0.01)\times 10^{2}$ \\
+					$3.32\pm0.02$ & $(3.36\pm0.02)\times 10^{2}$ \\
+					$9.52\pm0.05$ & 	$(4.46\pm0.02)\times 10^{2}$ \\
+				\end{tabular}
+			\end{center}
+			\caption{Durata del segnale in uscita in funzione dell'ampiezza di $V_S$}
+		\end{table}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{immagini/1c.png}
+			\label{fit:1c}
+			\caption{Fit della durata del segnale in uscita in funzione dell'ampiezza $V_S$}
+		\end{figure}
+		
+		Facendo variare la tensione fornita dal potenziometro $V_P$ abbiamo misurato la minima tensione $V_S$ richiesta per avere un segnale $V_{discr}$, le misure sono riportate in \ref{tab 1c2}. Abbiamo anche eseguito un fit dei dati ottenuti con la funzione $f=a*x+b$ usando absolute-sigma=False, i parametri ottimali risultano $a=1.06\pm0.01$ $b=0.012\pm0.004 V$ con un $\chi^2_{ridotto}=0.09$, il chi quadro risulta basso probabilmente a causa della sovrastima degli errori di misura del voltaggio con l'oscilloscopio.
+		\begin{table}
+			\begin{center}
+				\begin{tabular}{cc}
+					\hline
+					$V_P [\mathrm{V}]$&$V_{Smin} [\mathrm{V}]$ \\
+					\hline
+					$184.3\pm0.9 \mathrm{m}$ & $208\pm1\mathrm{m}$ \\
+					$0.308\pm0.002$ & $0.338\pm0.002$ \\
+					$0.49\pm0.003$ & $0.54\pm0.003$ \\
+					$0.937\pm0.005$ & $1.02\pm0.005$ \\
+					$1.823\pm0.009$ & $1.92\pm0.01$ \\
+				\end{tabular}
+			\end{center}
+			\label{tab 1c2}
+			\caption{Tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}	
+		\end{table}
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=\linewidth]{immagini/1c-2.png}
+			\label{fit:1c-2}
+			\caption{Fit della tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}
+		\end{figure}
 \end{document}
 
 
