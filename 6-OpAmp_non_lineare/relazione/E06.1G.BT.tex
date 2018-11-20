@@ -11,6 +11,8 @@
 \author{Francesco Sacco, Lorenzo Cavuoti}
 \title{Usi non lineari dell'OpAmp}
 
+\newcommand{\vz}{V_S}
+
 \begin{document}
 	\maketitle
 	\section{Amplificatore di carica}
@@ -59,7 +61,7 @@
 			\]
 			Quindi si ottiene dal primo sottocircuito che\newline
 			\begin{equation}
-				V_{sh}=\pm V_Se^{-t/C_FR_1}
+				V_{sh}=\pm \vz e^{-t/C_FR_1}
 			\end{equation}
 			CONTROLLA SE $V_0$ E' UGUALE A $V_S$!!!
 		\subsection{Teoria secondo sotto-circuito}
@@ -129,14 +131,56 @@
 				\end{cases}
 			\end{equation}
 		\subsection{Teoria Multivibratore astabile}
-			Il multivibratore astabile è mostrato in figura \ref{fig:multivibratore}, esso è un trigger di Schmitt con due diodi zener che limitano $-V_{br}<V_{out}<V_{br}$, dove $V_{br}$ è il voltaggio di breakdown degli zener. Inoltre $V_-$, grazie al condensatore si carica dello stesso segno di $V_{out}$, ciò crea un fenomeno oscillatorio.
+			Il multivibratore astabile è mostrato in figura \ref{fig:multivibratore}, esso è un trigger di Schmitt con due diodi zener che limitano $-V_{br}<V_{out}<V_{br}$, dove $V_{br}$ è il voltaggio di breakdown degli zener. Inoltre grazie al passa-basso $V_-$ si carica dello stesso segno di $V_{out}$, ciò porta $V_-$ a raggiungere $V_+$.\newline
+			Una volta che ciò succede, $V_+$ cambia di segno, e $V_-$ insegue $V_+$, tutto ciò crea un fenomeno oscillatorio.\newline
 			\begin{figure}
 				\label{fig:multivibratore}
 				\centering
 				\includegraphics[width=100mm]{immagini/multivibratore.png}
 				\caption{Multivibratore astabile}
 			\end{figure}
-			Per dimostrare quanto detto sopra, possiamo immaginare il circuito a regime
+			Il sistema che descrive il circuito è questo
+			\begin{equation}
+				\begin{cases}
+					V_{out}-V_-=IR\\
+					V_{out}-V_+=I_1R_1\\
+					V_+=I_1R_2\\
+					Q/C=V_-
+				\end{cases}
+				\begin{cases}
+					V_{out}-V_-=IR\\
+					\frac{V_{out}}{V_+}=\frac{R_1}{R_2}+1\equiv \alpha\\
+					V_+=I_1R_2\\
+					\frac{dV_-}{dt}=\frac{V_{out}-V_-}{RC}
+				\end{cases}
+			\end{equation}
+			Supponiamo che a $t=0$ $V_{out}=V_{th}$ e $V_-=-\frac{V_{th}}{\alpha}$, risolvendo l'ultima equazione del secondo sistema si ottiene che
+			\[
+				V_-=V_{th}\bigg[1-\bigg(\frac{1}{\alpha}+1\bigg)e^{-t/RC}\bigg]
+			\]
+			Viceversa se a $t=0$ $V_{out}=-V_{th}$ e $V_-=\frac{V_{th}}{\alpha}$ si ottiene
+			\[
+				V_-=-V_{th}\bigg[1-\bigg(\frac{1}{\alpha}+1\bigg)e^{-t/RC}\bigg]
+			\]
+			Per trovare il periodo dell'oscillazione basta imporre che 
+			\[
+				V_-=V_{th}\bigg[1-\bigg(\frac{1}{\alpha}+1\bigg)e^{-t/RC}\bigg]=\frac{V_{th}}{\alpha}
+			\]
+			risolvendo per t, e moltiplicanto per due equivale a trovare il periodo
+			\[
+				-(1+\alpha)e^{-t/RC}=1-\alpha\qquad -\frac{t}{RC}=\ln\frac{1-\alpha}{1+\alpha}\qquad t=\frac{\ln}{RC}\bigg(1+2\frac{R_2}{R_1} \bigg)
+			\]
+			\begin{equation}
+				T=\frac{2}{RC}\ln\bigg(1+2\frac{R_2}{R_1} \bigg)
+			\end{equation}
 		\subsection{Raccolta e analisi dati}
 		asd
 \end{document}
+
+
+
+
+
+
+
+
