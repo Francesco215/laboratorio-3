@@ -20,7 +20,7 @@ Vin, tmin, tmax = np.genfromtxt("dati/1c.txt", unpack=True)
 #tmin, tmax = tmin*10**-6, tmax*10**-6
 
 dVin, dtmax = mz.dVosc(Vin), mz.dtosc(tmax)
-tmax, dtmax = tmax, mz.dtosc(tmax)
+tmax, dtmax = tmin, mz.dtosc(tmin)
 popt, pcov, dpopt, chi2, pvalue = mz.curve_fitdx(logaritmico, Vin, tmax, dVin, dtmax, dlogaritmico)
 print(popt,dpopt, chi2/2)
 
@@ -30,7 +30,7 @@ pl.plot(t, logaritmico(t, *popt), label="Fit")
 pl.xlabel("Vin [V]")
 pl.ylabel("Durata segnale in uscita [us]")
 pl.legend()
-#pl.savefig("dati/1c.png")
+pl.savefig("dati/1c.png")
 pl.close()
 
 #2c-2

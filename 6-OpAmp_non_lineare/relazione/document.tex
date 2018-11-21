@@ -1,0 +1,154 @@
+\documentclass{article}
+%\documentclass{exam}
+\usepackage[italian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{hyperref}
+\date{Novembre 2015}
+\author{Francesco Sacco, Lorenzo Cavuoti}
+\title{Usi non lineari dell'OpAmp}
+
+\newcommand{\vz}{V_S}
+
+\begin{document}
+	\maketitle
+	\paragraph{1)}
+	\subparagraph{a.}
+	Abbiamo collegato il circuito e alimentato a $\pm 15V$, i componenti, misurati con il multimetro digitale, risultano:
+	\begin{itemize}
+		\item $C_T=0.95\pm0.04 nF$
+		\item $C_F=1.02\pm0.04 nF$
+		\item $R_1=99.7\pm0.8 k\Omega$
+		\item $R_2=99.3\pm0.8 \Omega$
+		\item $C_1=21.0\pm0.9 nF$
+	\end{itemize}
+	Il potenziomentro è stato regolato in modo da produrre una tensione $V_P=184.3\pm0.9 mV$ misurata con il multimetro digitale
+	
+	\subparagraph{b.}
+	Per spiegare il circuito dell'amplificatore di carica è meglio analizzarlo con i suoi due sotto-circuiti separatamente, e poi vedere come questi funzionano assieme.\newline
+	Il primo sottocircuito è quello che è collegato al voltaggio in ingresso $V_S$, esso si può vedere nella figura \ref{fig:circ1}
+	\begin{figure}
+		\label{fig:circ1}
+		\centering
+		\includegraphics[width=0.45\linewidth]{immagini/circ1a.png}
+		\caption{sotto-circuito 1}
+	\end{figure}
+	, risolvere il circuito equivale a risolvere questo sistema di 3 equazioni
+	\begin{equation}
+	\begin{cases}
+	V_S-V_-=\frac{Q_T}{C_T}\\
+	V_--V_{sh}=I_1R_1\\
+	V_--V_{sh}=\frac{Q_F}{C_F}
+	\end{cases}
+	\end{equation}
+	Risolvendo il sistema usando $I_T=I_1+I_F$ e facendo il limite in cui $A$ è molto grande si ottiene:
+	\[
+	\frac{dV_-}{dt}\approx-\frac{V_-}{C_FR_1}\qquad\qquad
+	A\frac{dV_-}{dt}\approx-A\frac{V_-}{C_FR_1}\qquad\qquad
+	\frac{dV_{sh}}{dt}\approx-\frac{V_{sh}}{C_FR_1}
+	\]
+	In particolare $V_{sh}$ è data dall'equazione:\newline
+	\begin{equation}
+	V_{sh}=\pm \vz e^{-t/C_FR_1}
+	\end{equation}
+	
+	L'OpAmp è in grado di amplificare il segnale correttamente solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può dare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
+	
+	Essendo $A$ molto grande basta una differenza di potenziale molto piccola ai capi dei terminali + e - per mandare l'OpAmp a $V_{S+}$ e $V_{S-}$, questo viene usato per dire in modo binario se un voltaggio è maggiore di un'altro voltaggio, infatti se $A|V_+-V_-|>>1$ si ha che $V_{out}=V_{S+}$ se $V_+>V_-$ e $V_{out}=V_{S-}$ se $V_+<V_-$.\newline
+	
+	Adesso che sappiamo ciò possiamo spiegare il secondo sottocircuito figura \ref{fig:circ2}, il terminale positivo è collegato a $V_{sh}$ attraverso una resistenza di $100\Omega$, quindi visto che la corrente che passa per il terminale positivo è circa zero possiamo assumere che la differenza di potenziale ai capi sia trascurabile.\newline
+	Chiamerò $V_P$\footnote{P sta per potenziometro} il potenziale che entra nel terminale negativo dell'OpAmp, esso è possibile regolarlo grazie al potenziometro che funge da partitore di tensione.\newline
+	Essendo (quasi sempre) $A|V_{sh}-V_P|>>1$ si ha che 
+	\begin{equation}
+	\begin{cases}
+	V_{discr}=V_C\textrm{ se } V_{sh}>V_P\\
+	V_{discr}=V_E \textrm{ se } V_{sh}<V_E
+	\end{cases}
+	\end{equation}
+	
+	\begin{figure}
+		\label{fig:circ2}
+		\centering
+		\includegraphics[width=0.45\linewidth]{immagini/circ1b.png}
+		\caption{Secondo sotto-circuito}
+	\end{figure}
+	
+	Unendo i due sottocircuiti come in figura \ref{fig:circ} si uniscono i risultati dei paragrafi precedenti:
+	\begin{equation}
+	V_{sh}=\pm V_Se^{-t/C_FR_1}\quad \textrm{ e }\quad 
+	\begin{cases}
+	V_{discr}=V_C \textrm{ se } V_{sh}>V_P\\
+	V_{discr}=V_E \textrm{ se } V_{sh}<V_E
+	\end{cases}
+	\end{equation}
+	\begin{figure}
+		\label{fig:circ}
+		\centering
+		\includegraphics[width=0.7\linewidth]{immagini/circa.png}
+		\caption{Circuito completo}
+	\end{figure}
+	Se si vuole ricavare per quanto tempo $V_{discr}=V_C$ basta risolvere rispetto al tempo $V_{sh}>V_P$, quindi
+	\begin{equation}
+	V_Se^{-t/C_FR_1}>V_P\qquad-\frac{t}{C_RR_1}>\ln \bigg(\frac{V_P}{V_S}\bigg)\qquad t<C_RR_1\ln \bigg(\frac{V_S}{V_P}\bigg)
+	\end{equation}
+	
+	\subparagraph{c.}
+	Per vedere la relazione tra durata del segnale in uscita e ampiezza del segnale in ingresso abbiamo tenuto $V_P=184.3\pm0.9 mV$ costante e abbiamo fatto variare l'ampiezza $V_S$, i dati raccolti sono mostrati in tabella \ref{tab:durata}. E' stato fatto anche un fit dei dati con la funzione $t=a \log(bx)$ lasciando $a$ e $b$ come parametri di fit (figura \ref{fit:1c}), per il fit non si sono considerati i punti in cui la durata del segnale in uscita è nulla, ovvero non è presente un segnale, in quanto questi punti vanno a formare una retta t=0 e non ha neanche senso parlare di durata del segnale di uscita. Il fit  è stato fatto con absolute-sigma=False in quanto gli errori non sono statistici, i parametri risultano $a=102.7\pm0.4 \mu s$ $b=8.02\pm0.09 V^{-1}$ con un $\chi^2_{ridotto}=0.036$, il chi quadro risulta basso probabilmente a causa della sovrastima degli errori di misura del voltaggio con l'oscilloscopio. Confrontando i parametri ottenuti con la teoria 
+	
+	\begin{table}[h]
+		\label{tab:durata}
+		\begin{center}
+			\begin{tabular}{cc}
+				\hline
+				$V_S [\mathrm{V}]$&$t[\mu s]$ \\
+				\hline
+				$63.2\pm0.3 \mathrm{m}$ & $0$ \\
+				$0.200\pm0.001$ & $0$ \\
+				$0.412\pm0.002$ & $(1.23\pm0.01)\times 10^{2}$ \\
+				$1.34\pm0.007$ & $(2.44\pm0.01)\times 10^{2}$ \\
+				$3.32\pm0.02$ & $(3.36\pm0.02)\times 10^{2}$ \\
+				$9.52\pm0.05$ & 	$(4.46\pm0.02)\times 10^{2}$ \\
+			\end{tabular}
+		\end{center}
+		\caption{Durata del segnale in uscita in funzione dell'ampiezza di $V_S$}
+	\end{table}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{immagini/1c.png}
+		\label{fit:1c}
+		\caption{Fit della durata del segnale in uscita in funzione dell'ampiezza $V_S$}
+	\end{figure}
+	
+	Facendo variare la tensione fornita dal potenziometro $V_P$ abbiamo misurato la minima tensione $V_S$ richiesta per avere un segnale $V_{discr}$, le misure sono riportate in \ref{tab 1c2}. Abbiamo anche eseguito un fit dei dati ottenuti con la funzione $f=ax+b$ usando absolute-sigma=False, i parametri ottimali risultano $a=1.06\pm0.01$ $b=0.012\pm0.004 V$ con un $\chi^2_{ridotto}=0.09$, il chi quadro risulta basso probabilmente a causa della sovrastima degli errori di misura del voltaggio con l'oscilloscopio.
+	\begin{table}
+		\begin{center}
+			\begin{tabular}{cc}
+				\hline
+				$V_P [\mathrm{V}]$&$V_{Smin} [\mathrm{V}]$ \\
+				\hline
+				$184.3\pm0.9 \mathrm{m}$ & $208\pm1\mathrm{m}$ \\
+				$0.308\pm0.002$ & $0.338\pm0.002$ \\
+				$0.49\pm0.003$ & $0.54\pm0.003$ \\
+				$0.937\pm0.005$ & $1.02\pm0.005$ \\
+				$1.823\pm0.009$ & $1.92\pm0.01$ \\
+			\end{tabular}
+		\end{center}
+		\label{tab 1c2}
+		\caption{Tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}	
+	\end{table}
+	
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{immagini/1c-2.png}
+		\label{fit:1c-2}
+		\caption{Fit della tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}
+	\end{figure}
+
+\paragraph{2)}
+	Abbiamo montato il circuito il figura 
+	\subparagraph{a.}
+\end{document}
