@@ -32,10 +32,10 @@
 
 		Il primo sottocircuito è quello che è collegato al voltaggio in ingresso $V_S$, esso si può vedere nella figura \ref{fig:circ1}
 		\begin{figure}
-			\label{fig:circ1}
 			\centering
 			\includegraphics[width=70mm]{immagini/circ1a.png}
 			\caption{sotto-circuito 1}
+			\label{fig:circ1}
 		\end{figure}
 		, risolvere il circuito equivale a risolvere questo sistema di 3 equazioni
 		\begin{equation}
@@ -84,10 +84,10 @@
 		Prima di spiegare direttamente il secondo sottocircuito è meglio dare un paio di informazioni parecchio approssimative sull'OpAmp.\newline
 		L'OpAmp è un dispositivo a 5 terminali, per indicare il voltaggio in ciascun terminale useremo la convenzione dell'immagine \ref{fig:OpAmp1}\newline
 		\begin{figure}
-			\label{fig:OpAmp1}
 			\centering
 			\includegraphics[width=40mm]{immagini/OpAmp1.png}
 			\caption{Un OpAmp}
+			\label{fig:OpAmp1}
 		\end{figure}
 		L'OpAmp è in grado di amplificare il segnale per bene solo se $V_{S-}<A(V_+-V_-)<V_{S+}$, se per caso $A(V_+-V_-)>V_{S+}$, l'amplificatore porta $V_{out}$ al massimo voltaggio che può dare, cioè $V_{S+}$, e se $A(V_+-V_-)<V_{S-}$ $V_{out}=V_{S-}$.\newline
 
@@ -104,10 +104,10 @@
 			\end{cases}
 		\end{equation}
 		\begin{figure}
-			\label{fig:circ2}
 			\centering
 			\includegraphics[width=70mm]{immagini/circ1b.png}
 			\caption{secondo sotto-circuito}
+			\label{fig:circ2}
 		\end{figure}
 
 		Unendo i due sottocircuiti come in figura \ref{fig:circ} si uniscono i risultati dei paragrafi precedenti:
@@ -119,10 +119,10 @@
 			\end{cases}
 		\end{equation}
 		\begin{figure}
-			\label{fig:circ}
 			\centering
 			\includegraphics[width=120mm]{immagini/circa.png}
 			\caption{Circuito}
+			\label{fig:circ}
 		\end{figure}
 		Se si vuole ricavare per quanto tempo $V_{discr}=V_C$ basta risolvere rispetto al tempo $V_{sh}>V_P$, quindi
 		\begin{equation}
@@ -135,7 +135,6 @@
 		Il fit  è stato fatto con absolute-sigma=False in quanto gli errori non sono statistici, i parametri risultano $a=(102.7\pm0.4)\mu s$ $b=8.02\pm0.09 V^{-1}$ con un $\chi^2_{ridotto}=0.036$, il chi quadro risulta basso probabilmente a causa della sovrastima degli errori di misura del voltaggio con l'oscilloscopio. Confrontando i parametri ottenuti con la teoria si ottiene che $a=(101.6\pm4.2)\mu s$ e $(b=10.1\pm0.5)V^{-1}$. $a$ è compatibile con i dati sperimentali, mentre $b$ non tanto...
 	
 		\begin{table}[h]
-			\label{tab:durata}
 			\begin{center}
 				\begin{tabular}{cc}
 					\hline
@@ -151,13 +150,14 @@
 				\end{tabular}
 			\end{center}
 			\caption{Durata del segnale in uscita in funzione dell'ampiezza di $V_S$}
+			\label{tab:durata}
 		\end{table}
 		
 		\begin{figure}
 			\centering
 			\includegraphics[width=\linewidth]{immagini/1c.png}
-			\label{fit:1c}
 			\caption{Fit della durata del segnale in uscita in funzione dell'ampiezza $V_S$}
+			\label{fit:1c}
 		\end{figure}
 		
 		Facendo variare la tensione fornita dal potenziometro $V_P$ abbiamo misurato la minima tensione $V_S$ richiesta per avere un segnale $V_{discr}$, le misure sono riportate in \ref{tab 1c2}. Abbiamo anche eseguito un fit dei dati ottenuti con la funzione $f=a*x+b$ usando absolute-sigma=False, i parametri ottimali risultano $a=1.06\pm0.01$ $b=0.012\pm0.004 V$ con un $\chi^2_{ridotto}=0.09$, il chi quadro risulta basso probabilmente a causa della sovrastima degli errori di misura del voltaggio con l'oscilloscopio.
@@ -175,15 +175,15 @@
 					\hline
 				\end{tabular}
 			\end{center}
+			\caption{Tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}
 			\label{tab 1c2}
-			\caption{Tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}	
 		\end{table}
 		
 		\begin{figure}
 			\centering
 			\includegraphics[width=\linewidth]{immagini/1c-2.png}
-			\label{fit:1c-2}
 			\caption{Fit della tensione minima per avere un segnale $V_{Smin}$ in funzione di $V_{P}$}
+			\label{fit:1c-2}
 		\end{figure}
 		\newpage
 
@@ -193,10 +193,10 @@
 	\subparagraph{a.}
 		Partiamo dalle seguenti informazioni riguardanti il trigger di Schmitt (immagine \ref{fig:smith}): esso è uno squadratore d'onda, che funziona nel seguente modo:\newline
 		\begin{figure}
-			\label{fig:smith}
 			\centering
 			\includegraphics[width=70mm]{immagini/smitha.png}
 			\caption{Trigger di Schmitt}
+			\label{fig:smith}
 		\end{figure}
 		\begin{equation}
 			\begin{cases}
@@ -209,10 +209,10 @@
 		Il multivibratore astabile è mostrato in figura \ref{fig:multivibratore}, esso è un trigger di Schmitt con due diodi zener che limitano $-V_{br}<V_{out}<V_{br}$, dove $V_{br}$ è il voltaggio di breakdown degli zener. Inoltre grazie al passa-basso $V_-$ si carica dello stesso segno di $V_{out}$, ciò porta $V_-$ a raggiungere $V_+$.\newline
 		Una volta che ciò succede, $V_+$ cambia di segno, e $V_-$ insegue $V_+$, tutto ciò crea un fenomeno oscillatorio.\newline
 		\begin{figure}
-			\label{fig:multivibratore}
 			\centering
 			\includegraphics[width=100mm]{immagini/multivibratore.png}
 			\caption{Multivibratore astabile}
+			\label{fig:multivibratore}
 		\end{figure}
 		Il sistema che descrive il circuito è questo
 		\begin{equation}
@@ -239,11 +239,27 @@
 		\]
 		risolvendo per t, e moltiplicanto per due equivale a trovare il periodo
 		\[
-			-(1+\alpha)e^{-t/RC}=1-\alpha\qquad -\frac{t}{RC}=\ln\frac{1-\alpha}{1+\alpha}\qquad t=\frac{\ln}{RC}\bigg(1+2\frac{R_2}{R_1} \bigg)
+			-(1+\alpha)e^{-t/RC}=1-\alpha\qquad -\frac{t}{RC}=\ln\frac{1-\alpha}{1+\alpha}\qquad t=RC\ln\bigg(1+2\frac{R_2}{R_1} \bigg)
 		\]
 		\begin{equation}
-			T=\frac{2}{RC}\ln\bigg(1+2\frac{R_2}{R_1} \bigg)
+			T=2RC\ln\bigg(1+2\frac{R_2}{R_1} \bigg)
+		\label{eq:Tvibr}
 		\end{equation}
+	\subparagraph{b.}
+		Grazie all'equazione \ref{eq:Tvibr} è stato possibile scegliere una resistenza $R=(120.3\pm0.9)k\Omega$ e una capacità $C=(10.8\pm0.4)nF$ che ci da un periodo di $T=2.88\pm0.02)ms$
+	\subparagraph{c.}
+		
+	\subparagraph{d.}
+		Come già accennato nel punto a. la funzione dei diodi è quella di fare oscillare $V_{out}$ intorno a $V_{th}$.\newline 
+		La funzione della resistenza $R_3$ invece è quella di non far esplodere niente, infatti, se si considera quando il voltaggio d'uscita dell'OpAmp è $V_CC$ l'intensità di corrente attraverso $R_3$ sarà uguale a  $I_3=(V_{CC}-V_{th})/R_3$, quindi levare la resistenza $R_3$ equivale a far divergere $I_3$ e friggere il circuito 
+	\subparagraph{e.}
+		se $V_{CC}$ e $V_{CE}$ sono un pò maggiori in modulo di $V_{th}$ il voltaggio in uscita non dipende dalle tenzioni di alimentazione, se invece sono minori, allora si notano delle differenze.\newline
+		Purtroppo a causa della complessità del sistema di equazioni\footnote{in particolare $R_3$ aggiunge 2 equazioni al sistema} non ci è stato possibile determinare esattamente come variano i parametri, tuttavia è possibile dare delle stime qualitative.\newline
+		A causa di $R_3$ il $V_{out}$ è circa il $0.95$ volte il voltaggio in uscita del OpAmp, quindi se il voltaggio dell'uscita scende anche $V_{out}$ scende (quasi) allo stesso modo, l'abbassamento di $V_{out}$ causa un rallentamento nella carica o scarica del condensatore modificando il duty cicle.\newline
+		in particolare se $V_{CC}$ scende, il duty cicle aumenta e il massimo di $V_{out}$ scende, se $V_{CE}$ sale\footnote{ricodati che è negativo, quindi in modulo scende}, il duty cicle scende e il minimo di $V_{out}$ sale.
+	\subparagraph{f.}
+		La massima frequenza dell'oscillatore è dato dallo stew-rate dell'operazionale, essendo lo stew-rate $\approx 10V/\mu s$ la massima frequenza che si può ottenere prima che l'onda diventi triangolare a $5V$ è $500kHz$, quindi in generale l'onda è abbastanza quadra a frequenze inferiori ai $50kHz$
+
 \end{document}
 
 
