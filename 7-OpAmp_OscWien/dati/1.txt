@@ -1,0 +1,13 @@
+#Ampiezza picco picco V_s=260mV +- 2sqrt(2)
+#frequenza di taglio=1.59834, V_t=164 mv
+#f_s Hz	 	#delta f_s 	V_A(picco-picco)mV
+1004.67		22730		172
+2174.34		67570		174
+517.0		4237		90
+767.6		9709		88
+1216.9		38760		175
+
+
+
+#98.2		500			33.6
+#10003.9		56180		79.2
