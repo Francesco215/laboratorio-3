@@ -1,4 +1,9 @@
+punto #3
 fmax=1.5496
 fmin=1.541
 
 fnon_lin=1.501
+
+punto #4
+V_s=0.242 V
+V_out=0.716V
