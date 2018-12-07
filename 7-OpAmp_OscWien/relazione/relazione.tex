@@ -17,26 +17,46 @@
 	Per il primo punto ho usato un segnale in ingresso $V_s$ con un ampiezza picco picco di $260\pm11 mV$, e ho fatto delle misurazioni con dei segnali con frequenza compresa tra i $500$Hz e $3$kHz. I valori delle misure e i grafici sono riportati qui sotto\newline
 	\begin{center}
 		\input{tabella.tex}\\
-		\begin{figure}
-			\centering
-			\includegraphics[width=\linewidth]{figure/1.png}
-			\caption{sfasamento del segnale in funzione della frequenza in ingresso}
-			\label{fig:1}
-		\end{figure}
-		\begin{figure}
-			\centering
-			\includegraphics[width=\linewidth]{figure/2.png}
-			\caption{Attenuazione del segnale in funzione della frequenza in infresso}
-			\label{fig:2}
-		\end{figure}
 	\end{center}
-	dalla figura \ref{fig:1} si evince chiaramente che lo sfasamento aumenta al diminuire della frequenza e si ha uno zero alla frequenza di taglio $f_t=1/2\pi\sqrt{R_1R_2C_1C_2}$, dove $R_1,R_2,C_1,C_2$ sono quelle indicate nel circuito in figura \ref{fig:circ1}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\linewidth]{figure/1.png}
+		\caption{sfasamento del segnale in funzione della frequenza in ingresso}
+		\label{fig:1}
+	\end{figure}
+	\begin{figure}[h]
+		\centering
+		\includegraphics[width=\linewidth]{figure/1res.png}
+		\caption{Residui dello sfasamento}
+		\label{fig:1res}
+	\end{figure}
+	\begin{figure}
+		\centering
+		\includegraphics[width=\linewidth]{figure/2.png}
+		\caption{Attenuazione del segnale in funzione della frequenza in infresso}
+		\label{fig:2}
+	\end{figure}
+	dalla figura \ref{fig:1} si evince chiaramente che lo sfasamento diminuisce al'aumentare della frequenza e si ha uno zero alla frequenza di taglio $f_t=1/2\pi\sqrt{R_1R_2C_1C_2}$, i valori delle componenti indicate nel circuito in figura \ref{fig:circ1} sono disponibili nella lista qui sotto
+	\begin{itemize}
+		\item $R_1=9.99\pm0.08k\Omega$
+		\item $R_2=9.91\pm0.08k\Omega$
+		\item $C_1=11.1\pm0.4nF$
+		\item $C_2=9.8\pm 0.4nF$
+	\end{itemize}
+	Ne consegue che $f_t=1.5\pm0.4 k$Hz\footnote{L'errore risulta grande perchè quando ho propagato $R_1R_2C_1C_2$ sull'inverso della radice, essendo la derivata intorno allo zero molto alta l'errore è esploso. Infatti\newline $R_1R_2C_1C_2=(1.07\pm 0.06)\times 10^{-8}$}. Essendo in un regime con frequenze vicine a quella di taglio mi sono permesso di fare un fit lineare per vedere nel grafico dei residui gli errori (fig \ref{fig:1res})\newline
 	\begin{figure}
 		\centering
 		\includegraphics[width=\linewidth]{figure/circ1.png}
 		\caption{Circuito 1}
 		\label{fig:circ1}
 	\end{figure}
-	
-
+	Per quanto riguarda l'attenuazione si nota dall'immagine \ref{fig:2} un massimo nella frequenza di taglio, mentre le altre frequenze vengono attenuate di più il valore teorico dell'attenuazione è $A\times \beta(f)$ dove $A$ è l'attenuazione del partitore di tenzione messo a feedback, mentre $\beta(f)$ è l'attenuazione del partitore di tenzione generalizzato composto dalle resistenze e capacità.\newline
+\paragraph{2)}
+	girando il potenziometro il segnale aumenta o diminuisce di ampiezza, finchè a un certo punto scompare, perchè $|A\beta|<1$
+\paragraph{3)}
+	La frequenza varia in modo insignificante al variare della posizione del potenziometro, come detto prima l'ampiezza è il parametro che varia di più al variare dell'oscillazione
+\paragraph{4)}
+	Misurando con l'oscilloscopio i voltaggi si ottiene che $V_{A}=242\pm1mV$ e $V_{out}=716\pm3mV$, facendo il rapporto si ottiene $V_{out}/V_{A}=2.9\pm0.2$, che è in linea con la teoria
+\paragraph{5)}
+	Succede che non si trovano più nel circuito
 \end{document}

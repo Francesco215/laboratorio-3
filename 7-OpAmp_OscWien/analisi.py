@@ -1,7 +1,8 @@
 import menzalib as mz
 import numpy as np
 import pylab as pl
-from numpy import floor,log10,absolute,round,vectorize,transpose
+from numpy import floor,log10,absolute,round,vectorize,transpose,sqrt
+from scipy.optimize import curve_fit
 
 
 def ordina_2_vett(v1,v2):
@@ -15,30 +16,6 @@ def ordina_2_vett(v1,v2):
 				break
 	return s1,s2
 
-
-def numero_con_errore_latex(x,dx):
-	if x!=0:
-		exp=int(floor(log10(absolute(x))))#guardo l'ordine di grandezza di x
-		if absolute(exp)==1: exp=0 #nel caso l'esponente è uno o meno uno non uso la n.s.
-		x=x/10**exp     #porto la virgola dopo la prima cifra
-		dx=dx/10**exp   #porto la virgola dove si trova quella della x
-	if dx!=0: cifr=int(floor(log10(absolute(dx))))  #guardo l'ordine di grandezza di dx
-	if x==0: 
-		if dx!=0: 
-			dx=round(dx/10**cifr)#arrotondo dx
-			return "$0\\pm"+str(round(dx))+"\\times 10^{"+str(cifr)+"}$"
-		else: return "$0\\pm0$"
-	#taglio le di x con un ordine di grandezza inferiore a dx
-	x=round(x,absolute(cifr))       
-	dx=round(dx,absolute(cifr)) #taglio le cifre significative di dx dopo la prima
-	#ritorno la stringa in latex
-	if exp==0:
-		return  "$"+str(x)+"\\pm"+str(dx)+"$" 
-	return  "$("+str(x)+"\\pm"+str(dx)+")\\times 10^{"+str(exp)+"}$"
-#vettorizzo la funzione
-ne_tex=vectorize(numero_con_errore_latex)
-
-
 Vt,dVt=[0.260,mz.dVosc(0.260)]#voltaggio in ingresso
 
 
@@ -50,10 +27,10 @@ dfase=360*mz.drapp(f,df,deltaf,ddeltaf)
 
 #metto i dati alla frequenza di taglio
 f=np.append(f,1598.34)#frequenza di tagli
-df=np.append(df,0.04)
+df=np.append(df,0.01)
 V=np.append(V,182)#ampiezza di taglio
 fase=np.append(fase,0)
-dfase=np.append(dfase,0.0007*360/2*np.pi)#aggiusta l'errore sullo sfasamento
+dfase=np.append(dfase,0.08)#aggiusta l'errore sullo sfasamento
 
 #ordino in i dati
 f_temp=f
@@ -68,20 +45,62 @@ dV=mz.dVosc(V)#calcolo l'errore del voltaggio
 A=V/Vt#calcolo l'attenuazione
 dA=mz.drapp(V,dV,Vt,dVt)#errore attenuazione
 
-M=[mz.ne_tex(f,df),ne_tex(V,dV),ne_tex(20*np.log10(A),20* mz.dlog10(A,dA)),ne_tex(fase,dfase)]
-mz.mat_tex(M,'$f$[Hz] & $V_A$[V] & $V_A/V_{in}[dB]$ & fase [gradi]','relazione/tabella.tex')
+#tampa tabella misurazioni
+M=[mz.ne_tex(f/1000,df/1000),mz.ne_tex(V*1000,dV*1000),mz.ne_tex(20*np.log10(A),20* mz.dlog10(A,dA)),mz.ne_tex(fase,dfase)]
+mz.mat_tex(M,'$f$[kHz] & $V_A$[mV] & $V_A/V_{in}[dB]$ & fase [gradi]','relazione/tabella.tex')
+"""
+#Errori componenti
+R=[9990,9910,9930,9880,9970]
+dR=mz.dRdig(R)
+C=[11.09e-9,9.76e-9]
+dC=mz.dCdig(C,unit='1')
+
+def errore_prodotto(x, dx, y, dy):
+	return np.sqrt((y*dx)**2 + (x*dy)**2)
+
+def errore_produttoria(x,dx):
+	if len(x)!=len(dx): return 0
+	temp=x[0]
+	dtemp=dx[0]
+	for i in range(1,len(x)):	
+		dtemp=errore_prodotto(temp,dtemp,x[i],dx[i])
+		temp=temp*x[i]
+	return temp,dtemp
+
+X=[R[0],R[1],C[0],C[1]]
+dX=[dR[0],dR[1],dC[0],dC[1]]
+X,dX=errore_produttoria(X,dX)
+#print(X,dX)
+# print(1/(2*np.pi*sqrt(X)),(1/2*np.pi)*mz.dpoli(X,dX,-1/2))
+
+
+#fit lineare
+def lin(x,a,b):
+	return a*x+b
+popt,pcov=curve_fit(lin,np.log10(f),fase,sigma=dfase)
 
 
 pl.errorbar(f,fase,yerr=dfase,fmt='.')
-pl.plot([400,3000],[0,0])#linea x=0
+x=np.logspace(log10(400),log10(3000),30)
+pl.plot(x,np.zeros(len(x)))#linea x=0
+pl.plot(x,lin(np.log10(x),*popt))
 pl.xlim(400,3000)
 pl.xscale('log')
 pl.ylabel('fase del segnale [gradi]')
 pl.xlabel('frequenza in ingresso [Hz]')
 pl.savefig('relazione/figure/1.png')
-#pl.show()
 pl.close()
 
+
+pl.errorbar(f,fase-lin(np.log10(f),*popt),yerr=dfase,fmt='.')
+pl.plot([400,3000],[0,0])
+pl.xlim(400,3000)
+pl.xscale('log')
+pl.ylabel('residui della fase [gradi]')
+pl.xlabel('frequenza in ingresso [Hz]')
+pl.savefig('relazione/figure/1res.png')
+pl.show()
+pl.close()
 
 pl.errorbar(f,20*np.log10(A),yerr=20* mz.dlog10(A,dA),fmt='.')
 pl.plot([400,3000],[0,0])#linea x=0
@@ -91,3 +110,4 @@ pl.xlabel('frequenza in ingresso [Hz]')
 pl.xscale('log')
 pl.savefig('relazione/figure/2.png')
 pl.close()
+"""

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  6 DEC 2018 16:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  7 DEC 2018 19:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -361,60 +361,96 @@ Underfull \hbox (badness 10000) in paragraph at lines 17--18
 (./tabella.tex) <figure/1.png, id=4, 462.528pt x 346.896pt>
 File: figure/1.png Graphic file (type png)
  <use figure/1.png>
-Package pdftex.def Info: figure/1.png used on input line 22.
+Package pdftex.def Info: figure/1.png used on input line 23.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
 
-<figure/2.png, id=6, 462.528pt x 346.896pt>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figure/1res.png, id=6, 462.528pt x 346.896pt>
+File: figure/1res.png Graphic file (type png)
+ <use figure/1res.png>
+Package pdftex.def Info: figure/1res.png used on input line 29.
+(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<figure/2.png, id=7, 462.528pt x 346.896pt>
 File: figure/2.png Graphic file (type png)
  <use figure/2.png>
-Package pdftex.def Info: figure/2.png used on input line 28.
+Package pdftex.def Info: figure/2.png used on input line 35.
 (pdftex.def)             Requested size: 345.0pt x 258.76335pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 41.
 
-<figure/circ1.png, id=9, 320.19624pt x 545.03625pt>
+(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 41.
+
+(/usr/local/texlive/2016/texmf-dist/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
+)
+<figure/circ1.png, id=12, 320.19624pt x 545.03625pt>
 File: figure/circ1.png Graphic file (type png)
  <use figure/circ1.png>
-Package pdftex.def Info: figure/circ1.png used on input line 36.
+Package pdftex.def Info: figure/circ1.png used on input line 49.
 (pdftex.def)             Requested size: 345.0pt x 587.26648pt.
 
 
-LaTeX Warning: Float too large for page by 61.21045pt on input line 39.
+LaTeX Warning: Float too large for page by 61.21045pt on input line 52.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 42.
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--54
+
+ []
+
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-[2 <./figure/1.png>] [3 <./figure/2.png>] [4 <./figure/circ1.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 42.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 62.
 
-(./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 42.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 42.
+[2 <./figure/1.png>] [3 <./figure/1res.png>] [4 <./figure/2.png>] [5 <./figure/
+circ1.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 62.
+ (./relazione.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 62.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 62.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 6913 strings out of 493014
- 98938 string characters out of 6133350
- 207477 words of memory out of 5000000
- 10365 multiletter control sequences out of 15000+600000
- 10575 words of font info for 32 fonts, out of 8000000 for 9000
+ 7439 strings out of 493014
+ 104553 string characters out of 6133350
+ 209523 words of memory out of 5000000
+ 10874 multiletter control sequences out of 15000+600000
+ 12873 words of font info for 35 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 29i,8n,23p,798b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 29i,8n,23p,798b,593s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
 /usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
-cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
-/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/t
-exlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texli
-ve/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on relazione.pdf (4 pages, 145151 bytes).
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
+ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/loca
+l/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/t
+exlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texli
+ve/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive
+/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2
+016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/201
+6/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/
+texmf-dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2016/te
+xmf-dist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texm
+f-dist/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-
+dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-di
+st/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist
+/fonts/type1/public/cm-super/sfrm1728.pfb>
+Output written on relazione.pdf (5 pages, 262764 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 58 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 16 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 16 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
