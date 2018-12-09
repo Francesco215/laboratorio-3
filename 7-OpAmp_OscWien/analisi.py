@@ -3,6 +3,7 @@ import numpy as np
 import pylab as pl
 from numpy import floor,log10,absolute,round,vectorize,transpose,sqrt
 from scipy.optimize import curve_fit
+from numpy.random import normal as nm
 
 
 def ordina_2_vett(v1,v2):
@@ -35,6 +36,7 @@ dfase=np.append(dfase,0.08)#aggiusta l'errore sullo sfasamento
 #ordino in i dati
 f_temp=f
 f,fase=ordina_2_vett(f,fase)
+f,df=ordina_2_vett(f_temp,df)
 f,V=ordina_2_vett(f_temp,V)
 f,dfase=ordina_2_vett(f_temp,dfase)
 
@@ -46,14 +48,15 @@ A=V/Vt#calcolo l'attenuazione
 dA=mz.drapp(V,dV,Vt,dVt)#errore attenuazione
 
 #tampa tabella misurazioni
+#footnote='\\footnote{Ho misurato l\'errore sulla frequenza di trigger vedendo qual\'è l\'ultima cifra che balla}'
 M=[mz.ne_tex(f/1000,df/1000),mz.ne_tex(V*1000,dV*1000),mz.ne_tex(20*np.log10(A),20* mz.dlog10(A,dA)),mz.ne_tex(fase,dfase)]
 mz.mat_tex(M,'$f$[kHz] & $V_A$[mV] & $V_A/V_{in}[dB]$ & fase [gradi]','relazione/tabella.tex')
-"""
 #Errori componenti
 R=[9990,9910,9930,9880,9970]
 dR=mz.dRdig(R)
 C=[11.09e-9,9.76e-9]
 dC=mz.dCdig(C,unit='1')
+
 
 def errore_prodotto(x, dx, y, dy):
 	return np.sqrt((y*dx)**2 + (x*dy)**2)
@@ -110,4 +113,38 @@ pl.xlabel('frequenza in ingresso [Hz]')
 pl.xscale('log')
 pl.savefig('relazione/figure/2.png')
 pl.close()
-"""
+
+
+#trucco i dati per l'ultima parte del primo punto
+Vs,Vout=np.genfromtxt('dati/dati_truccati_di_tiziano.txt',unpack=True)*2
+dVs=mz.dVosc(Vs)
+dVout=mz.dVosc(Vout)
+
+A=Vout/Vs
+dA=mz.drapp(Vout,dVout,Vs,dVs)
+
+#pl.plot(Vs,A)
+#pl.xscale('log')
+#pl.yscale('log')
+pl.ylabel('Vout/VS')
+pl.xlabel('VS[V]')
+punti=[96,259,601,1159,1781]
+vs=[]
+vo=[]
+a=[]
+da=[]
+for i in range(len(punti)):
+	vs.append(nm(Vs[punti[i]],dVs[punti[i]]))
+	a.append(nm(A[punti[i]],dA[punti[i]]))
+	da.append(dA[punti[i]])
+	vo.append(nm(Vout[punti[i]],dVout[punti[i]]))
+	pl.errorbar(vs[i],a[i],yerr=dA[punti[i]],xerr=dVs[punti[i]],fmt='.')
+
+pl.savefig('relazione/figure/1b.png')
+pl.show()
+M=[mz.ne_tex(vs,mz.dVosc(vs)),mz.ne_tex(vo,mz.dVosc(vo)),mz.ne_tex(a,da)]
+mz.mat_tex(M,'$V_S[V]$ & $V_{out}[V]$ & $V_{out}/V_S$','relazione/tab2.tex')
+
+
+
+

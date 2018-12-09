@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  9 DEC 2018 17:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  9 DEC 2018 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**relazione.tex
-(./relazione.tex
+**prova.tex
+(./prova.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -306,8 +306,8 @@ Package caption Info: hyperref package is loaded.
 \c@subfigure=\count117
 \c@subtable=\count118
 )
-(./relazione.aux)
-\openout1 = `relazione.aux'.
+(./prova.aux)
+\openout1 = `prova.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 15.
 LaTeX Font Info:    ... okay on input line 15.
@@ -372,148 +372,55 @@ LaTeX Info: Redefining \ref on input line 15.
 LaTeX Info: Redefining \pageref on input line 15.
 LaTeX Info: Redefining \nameref on input line 15.
 
-(./relazione.out) (./relazione.out)
+(./prova.out) (./prova.out)
 \@outlinefile=\write3
-\openout3 = `relazione.out'.
+\openout3 = `prova.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
-
-Underfull \hbox (badness 10000) in paragraph at lines 18--19
-
- []
-
-(./tabella.tex) <figure/1.png, id=4, 462.528pt x 346.896pt>
-File: figure/1.png Graphic file (type png)
- <use figure/1.png>
-Package pdftex.def Info: figure/1.png used on input line 25.
-(pdftex.def)             Requested size: 172.5pt x 129.37639pt.
-
-<figure/1res.png, id=6, 462.528pt x 346.896pt>
-File: figure/1res.png Graphic file (type png)
- <use figure/1res.png>
-Package pdftex.def Info: figure/1res.png used on input line 31.
-(pdftex.def)             Requested size: 172.5pt x 129.37639pt.
-
-Overfull \hbox (2.22168pt too wide) in paragraph at lines 23--35
-[][] [] 
- []
-
-<figure/2.png, id=7, 462.528pt x 346.896pt>
-File: figure/2.png Graphic file (type png)
- <use figure/2.png>
-Package pdftex.def Info: figure/2.png used on input line 39.
-(pdftex.def)             Requested size: 345.0pt x 258.76335pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 45.
-(/usr/local/texlive/2016/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 45.
- [1
-
-{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
-e/1.png> <./figure/1res.png>] (/usr/local/texlive/2016/texmf-dist/tex/latex/ucs
-/data/uni-0.def
-File: uni-0.def 2013/05/13 UCS: Unicode data U+0000..U+00FF
-) <figure/circ1.png, id=33, 320.19624pt x 545.03625pt>
-File: figure/circ1.png Graphic file (type png)
- <use figure/circ1.png>
-Package pdftex.def Info: figure/circ1.png used on input line 57.
-(pdftex.def)             Requested size: 172.5pt x 293.63324pt.
-
-<figure/circ2.png, id=34, 342.27875pt x 563.10374pt>
-File: figure/circ2.png Graphic file (type png)
- <use figure/circ2.png>
-Package pdftex.def Info: figure/circ2.png used on input line 63.
-(pdftex.def)             Requested size: 172.5pt x 283.79376pt.
-
-Overfull \hbox (2.22168pt too wide) in paragraph at lines 55--67
-[][] [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 53--70
-
- []
-
-[2 <./figure/2.png>] <figure/1b.png, id=51, 462.528pt x 346.896pt>
+ <figure/1b.png, id=4, 462.528pt x 346.896pt>
 File: figure/1b.png Graphic file (type png)
 
 <use figure/1b.png>
-Package pdftex.def Info: figure/1b.png used on input line 74.
+Package pdftex.def Info: figure/1b.png used on input line 18.
 (pdftex.def)             Requested size: 137.9979pt x 103.49792pt.
  (./tab2.tex)
-Overfull \hbox (11.44601pt too wide) in paragraph at lines 1--79
+Overfull \hbox (68.30557pt too wide) in paragraph at lines 1--23
 [][]
  []
 
-[3 <./figure/circ1.png> <./figure/circ2.png> <./figure/1b.png>]
-<figure/clipping1.png, id=63, 240.9pt x 225.84375pt>
-File: figure/clipping1.png Graphic file (type png)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 24.
+[1
 
-<use figure/clipping1.png>
-Package pdftex.def Info: figure/clipping1.png used on input line 93.
-(pdftex.def)             Requested size: 172.5pt x 161.72171pt.
-
-<figure/clipping2.png, id=64, 240.9pt x 225.84375pt>
-File: figure/clipping2.png Graphic file (type png)
-
-<use figure/clipping2.png>
-Package pdftex.def Info: figure/clipping2.png used on input line 99.
-(pdftex.def)             Requested size: 172.5pt x 161.72171pt.
-
-Overfull \hbox (2.22168pt too wide) in paragraph at lines 91--103
-[][] [] 
- []
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
-[4 <./figure/clipping1.png> <./figure/clipping2.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
- (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
-Package rerunfilecheck Info: File `relazione.out' has not changed.
+{/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
+e/1b.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 24.
+ (./prova.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 24.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 24.
+Package rerunfilecheck Info: File `prova.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8551 strings out of 493014
- 124812 string characters out of 6133350
- 230120 words of memory out of 5000000
- 11970 multiletter control sequences out of 15000+600000
- 13638 words of font info for 36 fonts, out of 8000000 for 9000
+ 7936 strings out of 493014
+ 117848 string characters out of 6133350
+ 224978 words of memory out of 5000000
+ 11400 multiletter control sequences out of 15000+600000
+ 4857 words of font info for 17 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,10n,40p,798b,593s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,10n,40p,794b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2016/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}
 </usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/l
-ocal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loc
-al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/
-texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/tex
-live/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-16/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2016
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2016/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2016/tex
-mf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/local/texlive/2016/texmf
--dist/fonts/type1/public/cm-super/sfrm0600.pfb></usr/local/texlive/2016/texmf-d
-ist/fonts/type1/public/cm-super/sfrm0700.pfb></usr/local/texlive/2016/texmf-dis
-t/fonts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2016/texmf-dist/
-fonts/type1/public/cm-super/sfrm0900.pfb></usr/local/texlive/2016/texmf-dist/fo
-nts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2016/texmf-dist/font
-s/type1/public/cm-super/sfrm1200.pfb></usr/local/texlive/2016/texmf-dist/fonts/
-type1/public/cm-super/sfrm1728.pfb>
-Output written on relazione.pdf (4 pages, 351467 bytes).
+/usr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></u
+sr/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr
+/local/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/lo
+cal/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/loc
+al/texlive/2016/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local
+/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on prova.pdf (1 page, 59897 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
- 103 compressed objects within 2 object streams
- 15 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 45 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
+ 2 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 
