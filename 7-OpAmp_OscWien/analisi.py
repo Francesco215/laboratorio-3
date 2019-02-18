@@ -92,6 +92,7 @@ pl.xscale('log')
 pl.ylabel('fase del segnale [gradi]')
 pl.xlabel('frequenza in ingresso [Hz]')
 pl.savefig('relazione/figure/1.png')
+pl.show()
 pl.close()
 
 
@@ -112,6 +113,7 @@ pl.ylabel('A*beta[dB]')
 pl.xlabel('frequenza in ingresso [Hz]')
 pl.xscale('log')
 pl.savefig('relazione/figure/2.png')
+pl.show()
 pl.close()
 
 
