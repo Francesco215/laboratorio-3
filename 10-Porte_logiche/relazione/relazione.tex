@@ -38,7 +38,20 @@
 
 \paragraph{2)}
 	Per il secondo punto abbiamo montato all'uscita del NOT una resistenza di $3.31\pm0.03 k\Omega$ verso $V_{CC}$ e abbiamo mandato all'ingresso del NOT un'onda quadra di ampiezza tra $0$ e $5.0\pm0.2 V$ con una frequenza di circa 1kHz.
-	I tempi misurati sono $t_{PHL}=(7.2\pm0.8)ns$ (quello di datasheet è $10ns$), mentre $t_{PLH}=55\pm 1 ns$ (quello di datasheet è $25ns$).
+	I tempi misurati sono $t_{PHL}\approx7.2ns$ (quello di datasheet è $10ns$), mentre $t_{PLH}\approx55ns$ (quello di datasheet è $25ns$).
+	I dati presentano un'elevata incertezza perchè il segnale era parecchio rumoroso, come si più vedere dalle immagini \ref{fig:THL} e \ref{fig:TLH}.
+	\begin{minipage}{.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figure/THL}
+		\captionof{figure}{$t_{PHL}$}
+		\label{fig:THL}
+	\end{minipage}
+	\begin{minipage}{.5\linewidth}
+		\centering
+		\includegraphics[width=\linewidth]{figure/TLH}
+		\captionof{figure}{$t_{PLH}$}
+		\label{fig:TLH}
+	\end{minipage}
 	
 \paragraph{3)}
 	\subparagraph{a.}
@@ -51,38 +64,29 @@
 		\item[i.] Per costruire la porta AND (figura \ref{fig:AND}) si sono utilizzate 2 porte NAND. Prima si esegue A NAND B, successivamente si nega il segnale in uscita cosi' da ottenere A AND B
 		\item[ii.] Per la porta OR (figura \ref{fig:OR}) si sono utilizzate 3 porte NAND, infatti sfruttando le leggi di De Morgan si ha: A OR B = (!A) NAND (!B) 
 		\item[iii.] Per la porta XOR (figura \ref{fig:XOR}) si sono utilizzate 4 porte NAND,  il circuito è sempre stato ricavato dalle leggi di De Morgan
-		\item[iv.] Per il sommatore ad un bit (figura \ref{fig:sommatore}) si sono utilizzate 6 porte NAND, anche se il circuito risulta abbastanza complicato in realtà questo è composto  da uno XOR, che da il valore del bit più significativo, e da un AND che da il valore del bit meno significativo. In fase di analisi ci siamo accorti che per il circuito bastavano 5 porte NAND, infatti A NAND B viene già fatto nello XOR e di conseguenza si può risparmiare una porta nel calcolo di A AND B; tuttavia questo porta il gate NAND1 ad avere 3 porte in uscita al posto di 2, mentre il tempo di propagazione resta teoricamente invariato rispetto al circuito precedente.\newline
+		\item[iv.] Per il sommatore ad un bit (figura \ref{fig:sommatore}) si sono utilizzate 5 porte NAND, anche se il circuito risulta abbastanza complicato in realtà questo è composto  da uno XOR, che da il valore del bit più significativo, e da un AND che da il valore del bit meno significativo.\newline
 	\end{description}
 
-	\begin{minipage}{.45\linewidth}
-		\centering
-		\includegraphics[width=\linewidth]{figure/NAND}
-		\captionof{figure}{Schema circuitale NAND}
-		\label{fig:NAND}
-	\end{minipage}
-	\begin{minipage}{.6\linewidth}
-		\includegraphics[width=\linewidth]{figure/AND}
+	\begin{minipage}{.5\linewidth}
+		\includegraphics[width=\linewidth]{figure/AND1}
 		\captionof{figure}{Schema circuitale AND}
 		\label{fig:AND}
-	\end{minipage}\newline
-	
+	\end{minipage}
 	\begin{minipage}{.5\linewidth}
 		\centering
-		\includegraphics[width=\linewidth]{figure/OR}
+		\includegraphics[width=\linewidth]{figure/OR1}
 		\captionof{figure}{Schema circuitale OR}
 		\label{fig:OR}
-	\end{minipage}
-	\begin{minipage}{.55\linewidth}
-		\includegraphics[width=\linewidth]{figure/XOR}
+	\end{minipage}\newline
+	\begin{minipage}{.5\linewidth}
+		\includegraphics[width=\linewidth]{figure/XOR1}
 		\captionof{figure}{Schema circuitale XOR}
 		\label{fig:XOR}
+	\end{minipage}
+	\begin{minipage}{.5\linewidth}
+		\includegraphics[width=\linewidth]{figure/SOMMA1}
+		\captionof{figure}{Schema circuitale sommatore}
+		\label{fig:XOR}
 	\end{minipage}\newline
-	
-	\begin{figure}
-		\centering
-		\includegraphics[width=\linewidth]{figure/Sommatore}
-		\caption{Schema circuitale sommatore a un bit}
-		\label{fig:sommatore}
-	\end{figure}
 
 \end{document}
