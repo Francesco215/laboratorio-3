@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  27 FEB 2019 01:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  27 FEB 2019 11:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -459,17 +459,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 57--68
 
  []
 
-<figure/OR.png, id=31, 595.22375pt x 297.11pt>
+[2]
+<figure/OR.png, id=45, 595.22375pt x 297.11pt>
 File: figure/OR.png Graphic file (type png)
 <use figure/OR.png>
 Package pdftex.def Info: figure/OR.png  used on input line 71.
 (pdftex.def)             Requested size: 172.5pt x 86.10075pt.
 
+
 Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 72.
 See the caption package documentation for explanation.
 
-<figure/XOR.png, id=32, 680.5425pt x 361.35pt>
+<figure/XOR.png, id=46, 680.5425pt x 361.35pt>
 File: figure/XOR.png Graphic file (type png)
 <use figure/XOR.png>
 Package pdftex.def Info: figure/XOR.png  used on input line 76.
@@ -489,25 +491,25 @@ Underfull \hbox (badness 10000) in paragraph at lines 69--80
 
  []
 
-[2 <./figure/NAND.png> <./figure/AND.png>]
-<figure/Sommatore.png, id=49, 588.1975pt x 440.64626pt>
+<figure/Sommatore.png, id=47, 588.1975pt x 440.64626pt>
 File: figure/Sommatore.png Graphic file (type png)
 <use figure/Sommatore.png>
 Package pdftex.def Info: figure/Sommatore.png  used on input line 83.
 (pdftex.def)             Requested size: 345.0pt x 258.45274pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 90.
- [3 <./figure/Sommatore.png> <./figure/OR.png> <./figure/XOR.png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 90.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 88.
+[3 <./figure/NAND.png> <./figure/AND.png> <./figure/OR.png> <./figure/XOR.png>]
+[4 <./figure/Sommatore.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 88.
  (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 90.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 90.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 88.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 88.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 8780 strings out of 494871
- 126748 string characters out of 6179250
- 225099 words of memory out of 5000000
+ 8781 strings out of 494871
+ 126754 string characters out of 6179250
+ 225115 words of memory out of 5000000
  11990 multiletter control sequences out of 15000+600000
  10575 words of font info for 32 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -520,10 +522,10 @@ crm1728.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmm
 i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on relazione.pdf (3 pages, 153062 bytes).
+Output written on relazione.pdf (4 pages, 153002 bytes).
 PDF statistics:
- 197 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 17 named destinations out of 1000 (max. 500000)
+ 202 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
+ 18 named destinations out of 1000 (max. 500000)
  31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

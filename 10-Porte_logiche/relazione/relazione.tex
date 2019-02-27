@@ -22,7 +22,7 @@
 	\begin{minipage}{.6\linewidth}
 		\centering
 		\includegraphics[width=\linewidth]{figure/circuito1}
-		\captionof{figure}{Circuito 1}
+		\captionof{figure}{Circuito usato nel punto 1}
 		\label{fig:circuito-1}
 	\end{minipage}
 	\begin{minipage}{.4\linewidth}
@@ -37,12 +37,12 @@
 	\end{center}
 
 \paragraph{2)}
-	Per il secondo punto abbiamo usato una resistenza di $3.31\pm0.03 k\Omega$, una frequenza di circa $1kHz$ e abbiamo mandato un'onda quadra di $5.0\pm0.2 V$.
-	i tempi misurati sono $t_{PHL}=(7.2\pm0.8)ns$ (quello di datasheet è $10ns$), mentre $t_{PLH}=55\pm 1 ns$ (quello di datasheet è $25ns$).
+	Per il secondo punto abbiamo montato all'uscita del NOT una resistenza di $3.31\pm0.03 k\Omega$ verso $V_{CC}$ e abbiamo mandato all'ingresso del NOT un'onda quadra di ampiezza tra $0$ e $5.0\pm0.2 V$ con una frequenza di circa 1kHz.
+	I tempi misurati sono $t_{PHL}=(7.2\pm0.8)ns$ (quello di datasheet è $10ns$), mentre $t_{PLH}=55\pm 1 ns$ (quello di datasheet è $25ns$).
 	
 \paragraph{3)}
 	\subparagraph{a.}
-	Si è montato il circuito in figura \ref{fig:NAND} dove i segnali A, B sono dati dallo DIP Switch a 4 interuttori con l'altro estremo collegato a massa.
+	Si è montato il circuito in figura \ref{fig:NAND} dove i segnali A, B sono dati da uno DIP Switch a 4 interuttori con l'altro estremo collegato a massa.
 	\subparagraph{b.}
 	Per verificare velocemente la tabella di verità si è collegato un led all'uscita dei circuiti logici, cosi' da notare il passaggio di corrente senza dover misurare con il multimetro o l'oscilloscopio.
 	
@@ -84,7 +84,5 @@
 		\caption{Schema circuitale sommatore a un bit}
 		\label{fig:sommatore}
 	\end{figure}
-
-
 
 \end{document}
