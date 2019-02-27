@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  27 FEB 2019 14:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=pdflatex 2016.11.22)  27 FEB 2019 17:20
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**relazione.tex
-(./relazione.tex
+**E10.1G.BT.tex
+(./E10.1G.BT.tex
 LaTeX2e <2016/03/31>
 Babel <3.9r> and hyphenation patterns for 83 language(s) loaded.
 (/usr/local/texlive/2016/texmf-dist/tex/latex/base/article.cls
@@ -300,12 +300,8 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@ContinuedFloat=\count116
 Package caption Info: hyperref package is loaded.
 )
-(./relazione.aux
-
-LaTeX Warning: Label `fig:XOR' multiply defined.
-
-)
-\openout1 = `relazione.aux'.
+(./E10.1G.BT.aux)
+\openout1 = `E10.1G.BT.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
@@ -323,7 +319,8 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Info: Redefining \it@ocap on input line 14.
 LaTeX Info: Redefining \it@ccap on input line 14.
- (/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/local/texlive/2016/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count117
 \scratchdimen=\dimen126
@@ -369,9 +366,9 @@ LaTeX Info: Redefining \ref on input line 14.
 LaTeX Info: Redefining \pageref on input line 14.
 LaTeX Info: Redefining \nameref on input line 14.
 
-(./relazione.out) (./relazione.out)
+(./E10.1G.BT.out) (./E10.1G.BT.out)
 \@outlinefile=\write3
-\openout3 = `relazione.out'.
+\openout3 = `E10.1G.BT.out'.
 
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -459,34 +456,21 @@ Overfull \hbox (2.22168pt too wide) in paragraph at lines 40--55
 [1
 
 {/usr/local/texlive/2016/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./figur
-e/circuito1.png>]
+e/circuito1.png>] <figure/NAND.png, id=29, 391.4625pt x 270.00874pt>
+File: figure/NAND.png Graphic file (type png)
 
-LaTeX Warning: Reference `fig:NAND' on page 2 undefined on input line 58.
-
-
-LaTeX Warning: Reference `fig:sommatore' on page 2 undefined on input line 67.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 67--68
+<use figure/NAND.png>
+Package pdftex.def Info: figure/NAND.png used on input line 63.
+(pdftex.def)             Requested size: 172.5pt x 118.98137pt.
+ [2 <./figure/NAND.png> <./figure/THL.png> <./figure/TLH.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-[2 <./figure/THL.png> <./figure/TLH.png>]
-<figure/AND1.png, id=47, 401.5pt x 401.5pt>
+<figure/AND1.png, id=48, 401.5pt x 401.5pt>
 File: figure/AND1.png Graphic file (type png)
  <use figure/AND1.png>
-Package pdftex.def Info: figure/AND1.png used on input line 71.
-(pdftex.def)             Requested size: 172.5pt x 172.50072pt.
-
-
-Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 72.
-See the caption package documentation for explanation.
-
-<figure/OR1.png, id=48, 401.5pt x 401.5pt>
-File: figure/OR1.png Graphic file (type png)
- <use figure/OR1.png>
-Package pdftex.def Info: figure/OR1.png used on input line 77.
+Package pdftex.def Info: figure/AND1.png used on input line 77.
 (pdftex.def)             Requested size: 172.5pt x 172.50072pt.
 
 
@@ -494,65 +478,69 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 78.
 See the caption package documentation for explanation.
 
-<figure/XOR1.png, id=49, 602.25pt x 401.5pt>
+<figure/OR1.png, id=49, 401.5pt x 401.5pt>
+File: figure/OR1.png Graphic file (type png)
+ <use figure/OR1.png>
+Package pdftex.def Info: figure/OR1.png used on input line 83.
+(pdftex.def)             Requested size: 172.5pt x 172.50072pt.
+
+
+Package caption Warning: The option `hypcap=true' will be ignored for this
+(caption)                particular \caption on input line 84.
+See the caption package documentation for explanation.
+
+<figure/XOR1.png, id=50, 602.25pt x 401.5pt>
 File: figure/XOR1.png Graphic file (type png)
  <use figure/XOR1.png>
-Package pdftex.def Info: figure/XOR1.png used on input line 82.
+Package pdftex.def Info: figure/XOR1.png used on input line 88.
 (pdftex.def)             Requested size: 172.5pt x 114.99843pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 83.
+(caption)                particular \caption on input line 89.
 See the caption package documentation for explanation.
 
-<figure/SOMMA1.png, id=50, 602.25pt x 401.5pt>
+<figure/SOMMA1.png, id=51, 602.25pt x 401.5pt>
 File: figure/SOMMA1.png Graphic file (type png)
  <use figure/SOMMA1.png>
-Package pdftex.def Info: figure/SOMMA1.png used on input line 87.
+Package pdftex.def Info: figure/SOMMA1.png used on input line 93.
 (pdftex.def)             Requested size: 172.5pt x 114.99843pt.
 
 
 Package caption Warning: The option `hypcap=true' will be ignored for this
-(caption)                particular \caption on input line 88.
+(caption)                particular \caption on input line 94.
 See the caption package documentation for explanation.
 
 
-Overfull \hbox (17.22168pt too wide) in paragraph at lines 70--91
+Overfull \hbox (17.22168pt too wide) in paragraph at lines 76--97
 []$[]$ $[]$ 
  []
 
 
-Overfull \hbox (2.22168pt too wide) in paragraph at lines 70--91
+Overfull \hbox (2.22168pt too wide) in paragraph at lines 76--97
 []$ $[]$ 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 70--91
+Underfull \hbox (badness 10000) in paragraph at lines 76--97
 
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 92.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 98.
 [3 <./figure/AND1.png> <./figure/OR1.png> <./figure/XOR1.png> <./figure/SOMMA1.
 png>]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 92.
- (./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 92.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 92.
-Package rerunfilecheck Info: File `relazione.out' has not changed.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 98.
+ (./E10.1G.BT.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 98.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 98.
+Package rerunfilecheck Info: File `E10.1G.BT.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: There were multiply-defined labels.
-
  ) 
 Here is how much of TeX's memory you used:
- 8717 strings out of 493014
- 126223 string characters out of 6133350
- 229392 words of memory out of 5000000
- 12141 multiletter control sequences out of 15000+600000
+ 8723 strings out of 493014
+ 126326 string characters out of 6133350
+ 229450 words of memory out of 5000000
+ 12145 multiletter control sequences out of 15000+600000
  10575 words of font info for 32 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,10n,39p,798b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -565,10 +553,10 @@ local/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfbx1000.pfb></usr/lo
 cal/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb></usr/loca
 l/texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></usr/local/
 texlive/2016/texmf-dist/fonts/type1/public/cm-super/sfrm1728.pfb>
-Output written on relazione.pdf (3 pages, 147952 bytes).
+Output written on E10.1G.BT.pdf (3 pages, 155850 bytes).
 PDF statistics:
- 92 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
- 18 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 98 PDF objects out of 1000 (max. 8388607)
+ 68 compressed objects within 1 object stream
+ 19 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

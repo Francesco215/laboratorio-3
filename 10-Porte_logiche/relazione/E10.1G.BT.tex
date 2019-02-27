@@ -58,13 +58,19 @@
 	Si è montato il circuito in figura \ref{fig:NAND} dove i segnali A, B sono dati da uno DIP Switch a 4 interuttori con l'altro estremo collegato a massa.
 	\subparagraph{b.}
 	Per verificare velocemente la tabella di verità si è collegato un led all'uscita dei circuiti logici, cosi' da notare il passaggio di corrente senza dover misurare con il multimetro o l'oscilloscopio.
-	
+	\begin{figure}
+	\begin{center}
+		\includegraphics[width=0.5\linewidth]{figure/NAND}
+		\captionof{figure}{Schema circuitale NAND}
+		\label{fig:NAND}
+	\end{center}
+	\end{figure}
 	\subparagraph{c.}
 	\begin{description}
 		\item[i.] Per costruire la porta AND (figura \ref{fig:AND}) si sono utilizzate 2 porte NAND. Prima si esegue A NAND B, successivamente si nega il segnale in uscita cosi' da ottenere A AND B
 		\item[ii.] Per la porta OR (figura \ref{fig:OR}) si sono utilizzate 3 porte NAND, infatti sfruttando le leggi di De Morgan si ha: A OR B = (!A) NAND (!B) 
 		\item[iii.] Per la porta XOR (figura \ref{fig:XOR}) si sono utilizzate 4 porte NAND,  il circuito è sempre stato ricavato dalle leggi di De Morgan
-		\item[iv.] Per il sommatore ad un bit (figura \ref{fig:sommatore}) si sono utilizzate 5 porte NAND, anche se il circuito risulta abbastanza complicato in realtà questo è composto  da uno XOR, che da il valore del bit più significativo, e da un AND che da il valore del bit meno significativo.\newline
+		\item[iv.] Per il sommatore ad un bit (figura \ref{fig:sommatore}) si sono utilizzate 5 porte NAND, anche se il circuito risulta abbastanza complicato in realtà questo è composto  da uno XOR, che da la seconda cifra, e da un AND che da la prima cifra della somma.\newline
 	\end{description}
 
 	\begin{minipage}{.5\linewidth}
@@ -86,7 +92,7 @@
 	\begin{minipage}{.5\linewidth}
 		\includegraphics[width=\linewidth]{figure/SOMMA1}
 		\captionof{figure}{Schema circuitale sommatore}
-		\label{fig:XOR}
+		\label{fig:sommatore}
 	\end{minipage}\newline
 
 \end{document}
