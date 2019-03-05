@@ -16,7 +16,7 @@
 \maketitle
 \paragraph{2)}
 	\subparagraph{a.} Si è montato un flip-flop D-Latch usando le porte NAND dell'integrato SN74LS00 come in figura \ref{fig:d-latch}, l'ingresso EN è stato collegato ad un terminale di un DIP Switch con l'altro messo a terra, mentre l'ingresso D è stato collegato all'uscita TTL del generatore di funzioni con $f\approx1$Hz.
-	\subparagraph{b.} Si è ottenuta la tabella di verità \ref{tab:d-latch}, in accordo con le aspettative, inoltre si è misurato il ritardo tra l'ingresso D e l'uscita Q: $t_{LH}=27.3\pm0.9 ns$ $t_{HL}=63.20\pm3 ns$. Considerando che il segnale in ingresso attraversa 3 porte NAND i tempi sono in accordo con quelli del datasheet dell'integrato.
+	\subparagraph{b.} Si è ottenuta la tabella di verità \ref{tab:d-latch}, in accordo con le aspettative, inoltre si è misurato il ritardo tra l'ingresso D e l'uscita Q: $t_{pLH}=27.3\pm0.9 ns$ $t_{pHL}=63\pm3 ns$. Considerando che il segnale in ingresso attraversa 3 porte NAND i tempi sono in accordo con quelli del datasheet dell'integrato.
 	\subparagraph{c.} Abbiamo verificato che l'ingresso ENABLE è di predefinito attivo alto\newline
 	
 	\begin{minipage}{.6\linewidth}
@@ -35,8 +35,8 @@
 	\subparagraph{a.} Abbiamo montato il divisore in frequenza come nell'immagine, \ref{fig:div_freq1}, le resistenze ($330\Omega$ nominali) sono state utilizzate per limitare la corrente che passa nei led.
 	\subparagraph{b.} Si è inviato un clock a circa 1Hz e abbiamo verificato che il circuito sia effettivamente un contatore da 0 a 15 in codifica binaria.
 	\subparagraph{c.} Abbiamo inviato un segnale di clock a $80.7\pm0.3$kHz e verificato che le uscite dividono il segnale. Sotto sono fornite le immagini dei segnali visti all'oscilloscopio, in tutte le immagini il segnale di clock è posizionato in basso mentre l'uscita in alto.\newline
-	Per misurare i tempi di sfasamento delle uscite notiamo che essendo un contatore sincrono i tempi di sfasamento delle varie uscite sono uguali tra di loro. Il tempo di sfasamento da LOW a HIGH è $t_{LH}=27.3\pm0.9ns$ e $t_{HL}=63\pm1ns$. La stima degli errori è stata effettuata considerando il valore massimo e quello minimo per cui lo sfasamento è notabile e facendo la media e la somma dimezzata. (non so spiegarlo decentemente lorenzo aiuto!)\newline
-	Purtroppo ci siamo dimenticati ad acquisire le immagini dell'acquisizione dall'oscilloscopio.\newline
+	I tempi di sfasamento da LOW a HIGH per ciascuna uscita sono: $t_{pLH} Q_0=20.0\pm0.9ns \quad t_{pLH} Q_1=18.0\pm0.9ns \quad t_{pLH} Q_2=17.0\pm0.9ns \quad t_{pLH} Q_3=17.0\pm0.9ns$. Siccome il segnale era frastagliato la stima degli errori è stata effettuata considerando l'incertezza nel determinare la posizione di $V=V_{max}/2$. Notiamo infine che i tempi di sfasamento delle uscite sono molto simili tra loro, questo è in accordo con il fatto che abbiamo utilizzato un contatore sincrono.
+	%la stima degli errori è stata effettuata considerando il valore massimo e quello minimo per cui lo sfasamento è notabile e facendo la media e la somma dimezzata. (non so spiegarlo decentemente lorenzo aiuto!)\newline
 	
 	\begin{figure}
 	\begin{center}

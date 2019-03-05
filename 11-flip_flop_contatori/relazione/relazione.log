@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  5 MAR 2019 01:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  5 MAR 2019 23:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -405,11 +405,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--33
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--40
-
- []
-
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./immagini/dlach.png>]
@@ -510,7 +505,7 @@ Package rerunfilecheck Info: File `relazione.out' has not changed.
 Here is how much of TeX's memory you used:
  8557 strings out of 494871
  124438 string characters out of 6179250
- 225315 words of memory out of 5000000
+ 224315 words of memory out of 5000000
  11757 multiletter control sequences out of 15000+600000
  10575 words of font info for 32 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
@@ -525,7 +520,7 @@ i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on relazione.pdf (6 pages, 426871 bytes).
+Output written on relazione.pdf (6 pages, 428246 bytes).
 PDF statistics:
  239 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
