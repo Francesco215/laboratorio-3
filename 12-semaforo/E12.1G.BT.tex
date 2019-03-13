@@ -8,7 +8,7 @@
 \usepackage{hyperref}
 \usepackage{caption}
 %\usepackage{tikz}
-\date{}
+\date{13 Marzo 2019}
 \author{Gruppo 1G.BT \\Lorenzo Cavuoti, Francesco Sacco}
 \title{Caratteristiche porte logiche e semplici circuiti logici}
 
@@ -18,13 +18,14 @@
 	\subparagraph{a)}
 		\begin{center}
 			\begin{minipage}{.7\linewidth}
+				\centering
 				\includegraphics[width=0.5\linewidth]{foto/diagramma_a_stati}
 				\captionof{figure}{Diagramma a Stati}
 				\label{fig:stati}
 			\end{minipage}
 		\end{center}
 	\subparagraph{b)}
-		Indicheremo uno stato $S=Q_1Q_2$ dove $Q_1$ figura \ref{fig:circ} è lo stato del primo flip flop, mentre $Q_2$ è lo stato del secondo flip-flop.\newline
+		Indicheremo uno stato $S=Q_1Q_2$ dove $Q_1$ figura \ref{fig:circuito} è lo stato del primo flip flop, mentre $Q_2$ è lo stato del secondo flip-flop.\newline
 		In totale gli stati sono 3: $00, 01, 10, 11$ lo stato 11 è "in più", nel senso che quando il circuito è a regime gli stati che vengono attivati sono $00,01,10$ come si può vedere in figura\ref{fig:stati}.
 	\subparagraph{c)}
 		La tabella di verità è la seguente\newline
@@ -57,8 +58,6 @@
 			\caption{Schema circuitale del semaforo, V, G, R indicano rispettivamente i LED verde, giallo, rosso}
 			\label{fig:circuito}
 		\end{figure}
-				
-		ma che minchia di domanda è?\footnote{Una risposta del cazzo a una domanda del cazzo}
 
 \paragraph{4)}
 	\subparagraph{e)}
@@ -85,7 +84,7 @@
 		(Q_2)_{n+1}=(Q_1)_n
 		\]
 	\subparagraph{g)}
-		Abbiamo montato il circuito in figura \ref{fig:circuito} scegliendo R1, R2, R3 $\approx 330 \Omega$ nominali e $V_{CC}=4.97\pm0.03$V, infine si è inviato un clock a circa 1Hz. Si è verificato che il circuito funzioni come un semaforo, si è anche verificata la transizione dallo stato 11 allo stato 01 come previsto dalla teoria. Successivamente si è aumentata la frequenza di clock a $\approx1$kHz e abbiamo visualizzato all'oscilloscopio i segnali all'ingresso dei LED verde e giallo (figure \ref{fig:uscitagiallo} e \ref{fig:uscitaverde}).
+		Abbiamo montato il circuito in figura \ref{fig:circuito} scegliendo R1, R2, R3 $\approx 330 \Omega$ nominali e $V_{CC}=4.97\pm0.03$V, infine si è inviato un clock a circa 1Hz. Si è verificato che il circuito funzioni come un semaforo, si è anche verificata la transizione dallo stato 11 allo stato 01 come previsto dalla teoria. Successivamente si è aumentata la frequenza di clock a $\approx300k$Hz e abbiamo visualizzato all'oscilloscopio i segnali all'ingresso dei LED verde e giallo (figure \ref{fig:uscitagiallo} e \ref{fig:uscitaverde}).
 		
 		\begin{minipage}{.45\linewidth}
 			\centering
