@@ -49,5 +49,57 @@
 			(Q_2)_{n+1}=(Q_1)_n
 		\]
 	\subparagraph{e)}
+		Si implementato il circuito usando una macchina di Moore come spiegato sopra, lo schema circuitale è mostrato in figura \ref{fig:circuito}. Usando le uscite $\overline{Q}$ degli FF D-Latch siamo riusciti ad utilizzare solamente una porta AND nella parte combinatoria in quanto $(Q_1)_{n+1}=\overline{(Q_1)_n+(Q_2)_n} = \overline{(Q_1)_n} \; \overline{(Q_2)_n}$.
+		
+		\begin{figure}
+			\centering
+			\includegraphics[width=0.7\linewidth]{foto/circuito}
+			\caption{Schema circuitale del semaforo, V, G, R indicano rispettivamente i LED verde, giallo, rosso}
+			\label{fig:circuito}
+		\end{figure}
+				
 		ma che minchia di domanda è?\footnote{Una risposta del cazzo a una domanda del cazzo}
+
+\paragraph{4)}
+	\subparagraph{e)}
+		Ecco la tabella di verità, uguale al punto 3
+	\begin{center}
+		\begin{tabular}{ccc}
+			\hline
+			$S_n$ & $S_{n+1}$ &OUT V/G\\
+			\hline
+			$00$ & $10$ & 10\\
+			$01$ & $00$ & 00\\
+			$10$ & $01$ & 11\\
+			$11$ & $01$ & X\\
+			\hline
+		\end{tabular}
+	\end{center}
+	
+	\subparagraph{f)}
+		Le funzioni logiche sono uguali al punto 3:
+		\[
+		(Q_1)_{n+1}=\overline{(Q_1)_n} \; \overline{(Q_2)_n}
+		\]
+		\[
+		(Q_2)_{n+1}=(Q_1)_n
+		\]
+	\subparagraph{g)}
+		Abbiamo montato il circuito in figura \ref{fig:circuito} scegliendo R1, R2, R3 $\approx 330 \Omega$ nominali e $V_{CC}=4.97\pm0.03$V, infine si è inviato un clock a circa 1Hz. Si è verificato che il circuito funzioni come un semaforo, si è anche verificata la transizione dallo stato 11 allo stato 01 come previsto dalla teoria. Successivamente si è aumentata la frequenza di clock a $\approx1$kHz e abbiamo visualizzato all'oscilloscopio i segnali all'ingresso dei LED verde e giallo (figure \ref{fig:uscitagiallo} e \ref{fig:uscitaverde}).
+		
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{foto/uscita_giallo}
+			\captionof{figure}{In basso segnale di clock, in alto segnale ingresso LED giallo}
+			\label{fig:uscitagiallo}
+		\end{minipage}
+		\begin{minipage}{0.1\linewidth}
+			
+		\end{minipage}
+		\begin{minipage}{.45\linewidth}
+			\centering
+			\includegraphics[width=\linewidth]{foto/uscita_verde}
+			\captionof{figure}{In basso segnale di clock, in alto segnale ingresso LED verde}
+			\label{fig:uscitaverde}
+		\end{minipage}
 \end{document}

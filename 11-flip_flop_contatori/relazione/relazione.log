@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  5 MAR 2019 23:01
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.11.21)  13 MAR 2019 01:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -408,12 +408,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 22--33
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map} <./immagini/dlach.png>]
-<immagini/div_freq1.png, id=35, 790.955pt x 553.06625pt>
+<immagini/div_freq1.png, id=34, 790.955pt x 553.06625pt>
 File: immagini/div_freq1.png Graphic file (type png)
 <use immagini/div_freq1.png>
 Package pdftex.def Info: immagini/div_freq1.png  used on input line 43.
 (pdftex.def)             Requested size: 241.49895pt x 168.8664pt.
-<immagini/f1_2.png, id=36, 240.9pt x 225.84375pt>
+<immagini/f1_2.png, id=35, 240.9pt x 225.84375pt>
 File: immagini/f1_2.png Graphic file (type png)
 <use immagini/f1_2.png>
 Package pdftex.def Info: immagini/f1_2.png  used on input line 51.
@@ -424,7 +424,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 52.
 See the caption package documentation for explanation.
 
-<immagini/f1_4.png, id=37, 240.9pt x 225.84375pt>
+<immagini/f1_4.png, id=36, 240.9pt x 225.84375pt>
 File: immagini/f1_4.png Graphic file (type png)
 <use immagini/f1_4.png>
 Package pdftex.def Info: immagini/f1_4.png  used on input line 57.
@@ -434,7 +434,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 58.
 See the caption package documentation for explanation.
 
-<immagini/f1_8.png, id=38, 240.9pt x 225.84375pt>
+<immagini/f1_8.png, id=37, 240.9pt x 225.84375pt>
 File: immagini/f1_8.png Graphic file (type png)
 <use immagini/f1_8.png>
 Package pdftex.def Info: immagini/f1_8.png  used on input line 63.
@@ -444,7 +444,7 @@ Package caption Warning: The option `hypcap=true' will be ignored for this
 (caption)                particular \caption on input line 64.
 See the caption package documentation for explanation.
 
-<immagini/f1_16.png, id=39, 240.9pt x 225.84375pt>
+<immagini/f1_16.png, id=38, 240.9pt x 225.84375pt>
 File: immagini/f1_16.png Graphic file (type png)
 <use immagini/f1_16.png>
 Package pdftex.def Info: immagini/f1_16.png  used on input line 69.
@@ -509,7 +509,7 @@ Here is how much of TeX's memory you used:
  11757 multiletter control sequences out of 15000+600000
  10575 words of font info for 32 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 36i,10n,39p,1114b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 36i,10n,39p,1122b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/lorenzo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1000.6
 00pk> </home/lorenzo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx100
 0.600pk> </home/lorenzo/.texlive2017/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm
@@ -520,9 +520,9 @@ i10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/te
 xlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on relazione.pdf (6 pages, 428246 bytes).
+Output written on relazione.pdf (6 pages, 428675 bytes).
 PDF statistics:
- 239 PDF objects out of 1000 (max. 8388607)
+ 240 PDF objects out of 1000 (max. 8388607)
  93 compressed objects within 1 object stream
  30 named destinations out of 1000 (max. 500000)
  46 words of extra memory for PDF output out of 10000 (max. 10000000)
